@@ -1,11 +1,10 @@
 import Link from "next/link";
-import HomeStyles from "../styles/sass/Home.module.scss";
 
 export default function Home() {
   return (
-    <div className={HomeStyles.homeSection}>
+    <div className="home-cont">
       {/* Navigation */}
-      <div className={HomeStyles.navContainer}>
+      <div className="nav-cont">
         <Link href="">Home</Link>
         <Link href="/about" passHref>
           About
@@ -17,6 +16,9 @@ export default function Home() {
           Projects
         </Link>
       </div>
+
+      {/* Hero Section */}
+      <div className="hero-cont"></div>
     </div>
   );
 }
