@@ -30,6 +30,9 @@
   font-size: 3.5em;
   margin: 0;
 }
+.home-cont .hero-cont .hero-jobs {
+  color: #3aff8f;
+}
 .home-cont .about-cont {
   padding: 6.5rem 13rem;
   background-color: #313131;

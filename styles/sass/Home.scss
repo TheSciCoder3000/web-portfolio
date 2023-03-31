@@ -1,4 +1,5 @@
 $content-padding: 13rem;
+$primary-color: #3aff8f;
 
 .home-cont {
   background-color: #1b1b1b;
@@ -33,6 +34,10 @@ $content-padding: 13rem;
     .hero-title {
       font-size: 3.5em;
       margin: 0;
+    }
+
+    .hero-jobs {
+      color: $primary-color;
     }
   }
 

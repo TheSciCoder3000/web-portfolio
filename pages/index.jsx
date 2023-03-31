@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import TypingComponent from "../components/TypingComponent";
 
 export default function Home() {
   const { pathname } = useRouter();
@@ -30,7 +31,13 @@ export default function Home() {
       {/* Hero Section */}
       <div className="hero-cont">
         <h1 className="hero-title">Hi, I'm John Juvi</h1>
-        <h1 className="hero-title">A PROGRAMMER</h1>
+        <h1 className="hero-title">
+          A{" "}
+          <TypingComponent
+            className="hero-jobs"
+            strings={["PROGRAMMER", "WEB DEVELOPER", "CODER", "FREELANCER"]}
+          />
+        </h1>
       </div>
 
       {/* About Me Section */}
