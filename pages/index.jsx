@@ -41,14 +41,32 @@ export default function Home() {
       </div>
 
       {/* About Me Section */}
-      <div className="about-cont">
-        <h2 className="section-header">About Me</h2>
-        <p className="about-content">
-          Hello my name is John Juvi De Villa and I’m from the Philippines. I
-          have experiences in programming such as game development (Godot) and
-          app development but I am most experienced in the field of web
-          development using Reactjs library.
-        </p>
+      <div className="desc-section about-cont">
+        <div className="section-row">
+          <div className="section-content section-about">
+            <h2 className="section-header">About Me</h2>
+            <p className="about-content">
+              Hello my name is John Juvi De Villa and I’m from the Philippines.
+              I have experiences in programming such as game development (Godot)
+              and app development but I am most experienced in the field of web
+              development using Reactjs library.
+            </p>
+          </div>
+          <div className="section-media"></div>
+        </div>
+
+        <div className="section-row">
+          <div className="section-media"></div>
+          <div className="section-content section-skills">
+            <h2 className="section-header">Skills</h2>
+            <p className="skills-content">
+              I specialized in frontend development as a React Developer. I am
+              also experienced in the Nextjs framework and other web development
+              libraries like SASS and handling APIs. As a programmer, I am also
+              well versed in using github for version control and collaboration.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

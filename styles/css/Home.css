@@ -33,10 +33,23 @@
 .home-cont .hero-cont .hero-jobs {
   color: #3aff8f;
 }
-.home-cont .about-cont {
-  padding: 6.5rem 13rem;
+.home-cont .desc-section {
+  padding: 10rem 13rem 2rem;
   background-color: #313131;
 }
-.home-cont .about-cont .about-content {
+.home-cont .desc-section p {
   max-width: 34rem;
+}
+.home-cont .desc-section .section-row {
+  margin-bottom: 15rem;
+  display: flex;
+}
+.home-cont .desc-section .section-row .section-about {
+  flex: 1.2;
+}
+.home-cont .desc-section .section-row .section-skills {
+  flex: 0.8;
+}
+.home-cont .desc-section .section-row .section-media {
+  flex: 1;
 }/*# sourceMappingURL=Home.css.map */
