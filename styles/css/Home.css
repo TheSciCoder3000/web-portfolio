@@ -28,14 +28,18 @@
   max-width: 34rem;
 }
 .home-cont .desc-section .section-row {
-  margin-bottom: 15rem;
+  margin-bottom: 10rem;
   display: flex;
+}
+.home-cont .desc-section .section-row #tagCloud {
+  color: #3aff8f;
 }
 .home-cont .desc-section .section-row .section-about {
   flex: 1.2;
 }
 .home-cont .desc-section .section-row .section-skills {
   flex: 0.8;
+  padding-top: 5rem;
 }
 .home-cont .desc-section .section-row .section-media {
   flex: 1;

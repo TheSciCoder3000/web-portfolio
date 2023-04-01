@@ -1,6 +1,28 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import TypingComponent from "@components/TypingComponent";
 import Navbar from "@components/Navbar";
+import Footer from "@components/Footer";
+import TagCloud from "TagCloud";
+
+const Tags = [
+  "JavaScript",
+  "CSS",
+  "HTML",
+  "Vscode",
+  "React",
+  "Python",
+  "Linux",
+  "git",
+  "Firebase",
+  "SASS",
+  "JSON",
+  "Figma",
+  "Typescript",
+  "Java",
+  "Django",
+  "REST Framework",
+  "API",
+];
 
 export default function Home() {
   const navLinks = [
@@ -10,8 +32,21 @@ export default function Home() {
     { name: "Projects", path: "/projects" },
   ];
 
+  const IsTagCloudLoaded = useRef(false);
+
   useEffect(() => {
     document.title = "John Juvi | Web Developer";
+    if (IsTagCloudLoaded.current) return;
+
+    TagCloud("#tagCloud", Tags, {
+      radius: 250,
+      maxSpeed: "fast",
+      initSpeed: "fast",
+      direction: 135,
+      keep: true,
+    });
+
+    IsTagCloudLoaded.current = true;
   }, []);
 
   return (
@@ -52,7 +87,7 @@ export default function Home() {
         </div>
 
         <div className="section-row">
-          <div className="section-media"></div>
+          <div className="section-media" id="tagCloud"></div>
           <div className="section-content section-skills">
             <h2 className="section-header">Skills</h2>
             <p className="skills-content">
@@ -64,6 +99,9 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }

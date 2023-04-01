@@ -35,14 +35,19 @@
     }
 
     .section-row {
-      margin-bottom: 15rem;
+      margin-bottom: 10rem;
       display: flex;
+
+      #tagCloud {
+        color: $primary-color;
+      }
 
       .section-about {
         flex: 1.2;
       }
       .section-skills {
         flex: 0.8;
+        padding-top: 5rem;
       }
 
       .section-media {
