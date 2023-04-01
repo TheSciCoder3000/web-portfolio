@@ -1,10 +1,8 @@
-import Link from "next/link";
-import { useRouter } from "next/router";
 import { useEffect } from "react";
 import TypingComponent from "@components/TypingComponent";
+import Navbar from "@components/Navbar";
 
 export default function Home() {
-  const { pathname } = useRouter();
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
@@ -19,17 +17,7 @@ export default function Home() {
   return (
     <div className="home-cont">
       {/* Navigation */}
-      <div className="nav-cont">
-        {navLinks.map((nav, indx) => (
-          <Link
-            key={indx}
-            className={`nav-link ${pathname == nav.path ? "disabled" : ""}`}
-            href={nav.path}
-          >
-            {nav.name}
-          </Link>
-        ))}
-      </div>
+      <Navbar navLinks={navLinks} />
 
       {/* Hero Section */}
       <div className="hero-cont">
