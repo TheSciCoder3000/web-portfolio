@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import TypingComponent from "../components/TypingComponent";
+import { useEffect } from "react";
+import TypingComponent from "@components/TypingComponent";
 
 export default function Home() {
   const { pathname } = useRouter();
@@ -11,7 +12,9 @@ export default function Home() {
     { name: "Projects", path: "/projects" },
   ];
 
-  console.log(pathname);
+  useEffect(() => {
+    document.title = "John Juvi | Web Developer";
+  }, []);
 
   return (
     <div className="home-cont">
@@ -38,6 +41,11 @@ export default function Home() {
             strings={["PROGRAMMER", "WEB DEVELOPER", "CODER", "FREELANCER"]}
           />
         </h1>
+        <p className="hero-desc">
+          I build budget-friendly landing pages and web applications for
+          customers and businesses who wants a responsive and user-friendly
+          websites.
+        </p>
       </div>
 
       {/* About Me Section */}

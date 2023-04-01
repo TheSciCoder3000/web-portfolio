@@ -18,7 +18,10 @@
 .home-cont .nav-cont .nav-link.disabled {
   pointer-events: none;
   cursor: default;
-  color: white;
+  color: #3aff8f;
+}
+.home-cont .nav-cont .nav-link:not(.disabled):hover {
+  color: #cdcdcd;
 }
 .home-cont .hero-cont {
   height: 100vh;
@@ -33,9 +36,14 @@
 .home-cont .hero-cont .hero-jobs {
   color: #3aff8f;
 }
+.home-cont .hero-cont .hero-desc {
+  margin-top: 2rem;
+  font-size: 0.95em;
+  max-width: 23rem;
+}
 .home-cont .desc-section {
   padding: 10rem 13rem 2rem;
-  background-color: #313131;
+  background-color: #262626;
 }
 .home-cont .desc-section p {
   max-width: 34rem;

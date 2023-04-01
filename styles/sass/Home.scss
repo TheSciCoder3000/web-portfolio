@@ -20,7 +20,11 @@ $primary-color: #3aff8f;
       &.disabled {
         pointer-events: none;
         cursor: default;
-        color: white;
+        color: $primary-color;
+      }
+
+      &:not(.disabled):hover {
+        color: #cdcdcd;
       }
     }
   }
@@ -39,11 +43,17 @@ $primary-color: #3aff8f;
     .hero-jobs {
       color: $primary-color;
     }
+
+    .hero-desc {
+      margin-top: 2rem;
+      font-size: 0.95em;
+      max-width: 23rem;
+    }
   }
 
   .desc-section {
     padding: 10rem $content-padding 2rem;
-    background-color: #313131;
+    background-color: #262626;
 
     p {
       max-width: 34rem;
