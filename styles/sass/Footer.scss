@@ -2,5 +2,24 @@
 
 .footer-cont {
   background-color: #1b1b1b;
-  padding: 7rem $content-padding;
+  padding: 4.5rem $content-padding;
+
+  .footer-content {
+    display: flex;
+
+    .footer-media {
+      flex: 1;
+      margin-bottom: 2rem;
+    }
+
+    .footer-links {
+      flex: 2;
+    }
+  }
+
+  .copyright {
+    font-size: 0.83em;
+    color: #d9d9d9;
+    text-align: center;
+  }
 }
