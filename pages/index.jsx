@@ -3,6 +3,7 @@ import TypingComponent from "@components/TypingComponent";
 import Navbar from "@components/Navbar";
 import Footer from "@components/Footer";
 import TagCloud from "TagCloud";
+import Projects from "@components/Projects";
 
 const Tags = [
   "JavaScript",
@@ -99,6 +100,9 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* Projects */}
+      <Projects />
 
       {/* Footer */}
       <Footer />
