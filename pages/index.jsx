@@ -4,6 +4,8 @@ import Navbar from "@components/Navbar";
 import Footer from "@components/Footer";
 import TagCloud from "TagCloud";
 import Projects from "@components/Projects";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Tags = [
   "JavaScript",
@@ -24,6 +26,24 @@ const Tags = [
   "REST Framework",
   "API",
 ];
+
+const callToActionBkgVariant = {
+  visible: {
+    width: "125%",
+  },
+  hidden: {
+    width: "0px",
+  },
+};
+
+const callToActionTextVariant = {
+  visible: {
+    color: "#000000",
+  },
+  hidden: {
+    color: "#3aff8f",
+  },
+};
 
 export default function Home() {
   const navLinks = [
@@ -69,7 +89,22 @@ export default function Home() {
           I provide clients and small businesses who are looking for
           budget-friendly, responsive and reliable websites and web applications
         </p>
-        <button className="call-to-action">Get in Touch</button>
+        <motion.button
+          className="call-to-action"
+          initial="hidden"
+          whileHover="visible"
+        >
+          <motion.span
+            className="call-to-action-text"
+            variants={callToActionTextVariant}
+          >
+            Get in Touch{" "}
+          </motion.span>
+          <motion.div
+            className="hover-bkg"
+            variants={callToActionBkgVariant}
+          ></motion.div>
+        </motion.button>
       </div>
 
       {/* About Me Section */}
@@ -85,6 +120,9 @@ export default function Home() {
               young age and have garnered a significant amount of experience
               along the way.
             </p>
+            <Link className="about-me-link" href="/about">
+              More About Me
+            </Link>
           </div>
           <div className="section-media"></div>
         </div>
@@ -100,6 +138,9 @@ export default function Home() {
               frontend library. You can learn more about my experiences and
               journey as a software developer by clicking on the link below.
             </p>
+            <Link className="learn-more" href="/about">
+              Learn More
+            </Link>
           </div>
         </div>
       </div>
