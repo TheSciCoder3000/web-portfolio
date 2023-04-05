@@ -36,8 +36,8 @@ function Projects() {
     <div className="project-cont">
       <h1 className="section-header project-header">PROJECTS</h1>
       <div className="project-items-cont">
-        {projectCollection.map((proj) => (
-          <div className="project-item">
+        {projectCollection.map((proj, indx) => (
+          <div className="project-item" key={indx}>
             <img className="project-img" src={proj.img.src} />
             <div className="proj-details">
               <h3 className="item-title">{proj.name}</h3>
