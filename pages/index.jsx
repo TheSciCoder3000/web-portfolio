@@ -66,10 +66,10 @@ export default function Home() {
           />
         </h1>
         <p className="hero-desc">
-          I build budget-friendly landing pages and web applications for
-          customers and businesses who wants a responsive and user-friendly
-          websites.
+          I provide clients and small businesses who are looking for
+          budget-friendly, responsive and reliable websites and web applications
         </p>
+        <button className="call-to-action">Get in Touch</button>
       </div>
 
       {/* About Me Section */}
@@ -78,10 +78,12 @@ export default function Home() {
           <div className="section-content section-about">
             <h2 className="section-header">About Me</h2>
             <p className="about-content">
-              Hello my name is John Juvi De Villa and I’m from the Philippines.
-              I have experiences in programming such as game development (Godot)
-              and app development but I am most experienced in the field of web
-              development using Reactjs library.
+              Hello, my name is John Juvi De Villa, you can call me Juvi. I am
+              an undergraduate student taking up BS Computer Engineering in the
+              Philippines. I am a passionate programmer and have always enjoyed
+              coding since I was young. This lead me to learn how to code at a
+              young age and have garnered a significant amount of experience
+              along the way.
             </p>
           </div>
           <div className="section-media"></div>
@@ -92,10 +94,11 @@ export default function Home() {
           <div className="section-content section-skills">
             <h2 className="section-header">Skills</h2>
             <p className="skills-content">
-              I specialized in frontend development as a React Developer. I am
-              also experienced in the Nextjs framework and other web development
-              libraries like SASS and handling APIs. As a programmer, I am also
-              well versed in using github for version control and collaboration.
+              My experiences covers a wide range of fields from basic game
+              development to app development but the field in which I
+              specialized the most is web development with Reactjs as my main
+              frontend library. You can learn more about my experiences and
+              journey as a software developer by clicking on the link below.
             </p>
           </div>
         </div>
