@@ -1,10 +1,12 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
+import LogoSvg from "@svg/LogoSvg";
 
 function Navbar({ navLinks }) {
   const { pathname } = useRouter();
   return (
     <div className="nav-cont">
+      <LogoSvg className="nav-logo" />
       {navLinks.map((nav, indx) => (
         <Link
           key={indx}

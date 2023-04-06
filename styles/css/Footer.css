@@ -1,20 +1,53 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 .footer-cont {
   background-color: #1b1b1b;
-  padding: 4.5rem 13rem;
+  padding: 3rem 15rem 2rem;
 }
 .footer-cont .footer-content {
   display: flex;
 }
 .footer-cont .footer-content .footer-media {
   flex: 1;
-  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer-cont .footer-content .footer-media .logo-cont .footer-logo {
+  display: block;
+  flex: 1;
+  height: 5rem;
+  width: 7rem;
+  text-align: left;
+}
+.footer-cont .footer-content .footer-media .media-links {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 2rem;
+  flex: 1;
+  align-items: flex-end;
+}
+.footer-cont .footer-content .footer-media .media-links .media-icon {
+  display: block;
+  fill: rgb(190, 190, 190);
+  height: 1.5rem;
+}
+.footer-cont .footer-content .footer-media .media-links .media-icon:hover {
+  cursor: pointer;
 }
 .footer-cont .footer-content .footer-links {
-  flex: 2;
+  flex: 5;
+  padding-top: 2rem;
+}
+.footer-cont .footer-content .footer-links .footer-link {
+  display: block;
+  text-align: right;
+  margin-bottom: 1.25rem;
+  font-size: 0.9em;
 }
 .footer-cont .copyright {
-  font-size: 0.83em;
+  font-size: 0.7em;
   color: #d9d9d9;
   text-align: center;
+  margin-top: 5rem;
 }/*# sourceMappingURL=Footer.css.map */
