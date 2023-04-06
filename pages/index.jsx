@@ -46,6 +46,24 @@ const callToActionTextVariant = {
   },
 };
 
+const redirectLinkArrowVariant = {
+  rest: {
+    x: 0,
+  },
+  hover: {
+    x: "0.4rem",
+  },
+};
+
+const redirectLinkUnderlineVariant = {
+  rest: {
+    width: 0,
+  },
+  hover: {
+    width: "105%",
+  },
+};
+
 export default function Home() {
   const navLinks = [
     { name: "Home", path: "/" },
@@ -123,8 +141,24 @@ export default function Home() {
               young age and have garnered a significant amount of experience
               along the way.
             </p>
-            <Link className="about-me-link" href="/about">
-              More About Me
+            <Link className="redirect-link about-me-link" href="/about">
+              <motion.div
+                className="link-cont"
+                initial="rest"
+                whileHover="hover"
+              >
+                More About Me
+                <motion.span
+                  class="material-icons arrow-icon"
+                  variants={redirectLinkArrowVariant}
+                >
+                  arrow_forward
+                </motion.span>
+                <motion.span
+                  className="underline-cont"
+                  variants={redirectLinkUnderlineVariant}
+                ></motion.span>
+              </motion.div>
             </Link>
           </div>
           <div className="section-media"></div>
@@ -141,8 +175,24 @@ export default function Home() {
               frontend library. You can learn more about my experiences and
               journey as a software developer by clicking on the link below.
             </p>
-            <Link className="learn-more" href="/about">
-              Learn More
+            <Link className="redirect-link learn-more" href="/about">
+              <motion.div
+                className="link-cont"
+                initial="rest"
+                whileHover="hover"
+              >
+                Learn More
+                <motion.span
+                  class="material-icons arrow-icon"
+                  variants={redirectLinkArrowVariant}
+                >
+                  arrow_forward
+                </motion.span>
+                <motion.span
+                  className="underline-cont"
+                  variants={redirectLinkUnderlineVariant}
+                ></motion.span>
+              </motion.div>
             </Link>
           </div>
         </div>

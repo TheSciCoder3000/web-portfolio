@@ -80,6 +80,29 @@
       margin-bottom: 2.75rem;
     }
 
+    .redirect-link {
+      color: $dark-primary;
+
+      .link-cont {
+        display: inline-flex;
+        align-items: center;
+        position: relative;
+
+        .arrow-icon {
+          margin-left: 0.75rem;
+        }
+
+        .underline-cont {
+          position: absolute;
+          bottom: -0.5rem;
+          left: 0;
+          background-color: $dark-primary;
+          height: 2px;
+          width: 0;
+        }
+      }
+    }
+
     .section-row {
       margin-bottom: 10rem;
       display: flex;

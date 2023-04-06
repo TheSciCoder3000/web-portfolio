@@ -69,6 +69,25 @@
   font-size: 0.9em;
   margin-bottom: 2.75rem;
 }
+.home-cont .desc-section .redirect-link {
+  color: #00e061;
+}
+.home-cont .desc-section .redirect-link .link-cont {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+.home-cont .desc-section .redirect-link .link-cont .arrow-icon {
+  margin-left: 0.75rem;
+}
+.home-cont .desc-section .redirect-link .link-cont .underline-cont {
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  background-color: #00e061;
+  height: 2px;
+  width: 0;
+}
 .home-cont .desc-section .section-row {
   margin-bottom: 10rem;
   display: flex;
