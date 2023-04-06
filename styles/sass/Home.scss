@@ -108,7 +108,7 @@
       display: flex;
 
       #tagCloud {
-        color: $primary-color;
+        color: $light-primary;
       }
 
       .section-about {
@@ -198,10 +198,26 @@
             font-size: 0.8em;
             max-height: 4rem;
             overflow: hidden;
+            margin-bottom: 3rem;
           }
 
-          .details-link {
-            margin-top: auto;
+          .redirect-link {
+            color: $primary-color;
+            font-size: 0.85em;
+
+            .redirect-link-cont {
+              position: relative;
+              display: inline;
+
+              .underline {
+                position: absolute;
+                bottom: -0.5rem;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background-color: $primary-color;
+              }
+            }
           }
         }
       }

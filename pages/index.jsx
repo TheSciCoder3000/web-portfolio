@@ -26,6 +26,9 @@ const Tags = [
   "Django",
   "REST Framework",
   "API",
+  "Arduino",
+  "C++",
+  "Godot",
 ];
 
 const callToActionBkgVariant = {
@@ -149,7 +152,7 @@ export default function Home() {
               >
                 More About Me
                 <motion.span
-                  class="material-icons arrow-icon"
+                  className="material-icons arrow-icon"
                   variants={redirectLinkArrowVariant}
                 >
                   arrow_forward
@@ -183,7 +186,7 @@ export default function Home() {
               >
                 Learn More
                 <motion.span
-                  class="material-icons arrow-icon"
+                  className="material-icons arrow-icon"
                   variants={redirectLinkArrowVariant}
                 >
                   arrow_forward
@@ -202,7 +205,7 @@ export default function Home() {
       <Projects />
 
       {/* Footer */}
-      <Footer />
+      <Footer navLinks={navLinks} />
     </div>
   );
 }

@@ -1,8 +1,10 @@
 import React from "react";
-import StoreImg from "../styles/img/kokomi.jpg";
-import LandingImg from "../styles/img/yelan.jpg";
-import KalikasanImg from "../styles/img/aaka.jpg";
-import SchoolImg from "../styles/img/ningguang.jpg";
+import StoreImg from "@styles/img/kokomi.jpg";
+import LandingImg from "@styles/img/yelan.jpg";
+import KalikasanImg from "@styles/img/aaka.jpg";
+import SchoolImg from "@styles/img/ningguang.jpg";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 const projectCollection = [
   {
@@ -31,21 +33,77 @@ const projectCollection = [
   },
 ];
 
+const cardItemHoverVariant = {
+  rest: {
+    y: "16.5rem",
+  },
+  hover: {
+    y: 0,
+  },
+};
+
+const cardItemHeaderVariant = {
+  rest: {
+    color: "#ffffff",
+  },
+  hover: {
+    color: "#3aff8f",
+  },
+};
+
+const cardItemLinkVariant = {
+  rest: {
+    width: 0,
+  },
+  hover: {
+    width: "100%",
+  },
+};
+
 function Projects() {
   return (
     <div className="project-cont">
+      {/* Project Header */}
       <h1 className="section-header project-header">PROJECTS</h1>
+
+      {/* Project Item Container */}
       <div className="project-items-cont">
         {projectCollection.map((proj, indx) => (
-          <div className="project-item" key={indx}>
+          <motion.div
+            className="project-item"
+            key={indx}
+            initial="rest"
+            whileHover="hover"
+          >
             <img className="project-img" src={proj.img.src} />
-            <div className="proj-details">
-              <h3 className="item-title">{proj.name}</h3>
+            <motion.div
+              className="proj-details"
+              variants={cardItemHoverVariant}
+              transition={{ type: "tween", ease: "easeInOut" }}
+            >
+              <motion.h3
+                className="item-title"
+                variants={cardItemHeaderVariant}
+              >
+                {proj.name}
+              </motion.h3>
               <hr />
               <p className="item-desc">{proj.desc}</p>
-              <p className="details-link">Learn More</p>
-            </div>
-          </div>
+              <Link className="redirect-link" href="">
+                <motion.div
+                  className="redirect-link-cont"
+                  initial="rest"
+                  whileHover="hover"
+                >
+                  Learn More
+                  <motion.span
+                    className="underline"
+                    variants={cardItemLinkVariant}
+                  ></motion.span>
+                </motion.div>
+              </Link>
+            </motion.div>
+          </motion.div>
         ))}
       </div>
     </div>
