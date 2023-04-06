@@ -8,6 +8,8 @@
   padding-left: 13rem;
   padding-right: 13rem;
   padding-top: 9rem;
+  overflow: hidden;
+  position: relative;
 }
 .home-cont .hero-cont .hero-title {
   font-size: 3.5em;
@@ -49,6 +51,14 @@
   transform: skew(-30deg);
   border: 1px solid #3aff8f;
   z-index: 0;
+}
+.home-cont .hero-cont .hero-img {
+  position: absolute;
+  top: -7rem;
+  right: -25rem;
+  opacity: 80%;
+  width: 115%;
+  display: none;
 }
 .home-cont .desc-section {
   padding: 10rem 13rem 5rem;

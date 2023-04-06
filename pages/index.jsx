@@ -6,6 +6,7 @@ import TagCloud from "TagCloud";
 import Projects from "@components/Projects";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import HeroImg from "@styles/img/heroImg.png";
 
 const Tags = [
   "JavaScript",
@@ -105,6 +106,8 @@ export default function Home() {
             variants={callToActionBkgVariant}
           ></motion.div>
         </motion.button>
+
+        <img className="hero-img" src={HeroImg.src} alt="" />
       </div>
 
       {/* About Me Section */}

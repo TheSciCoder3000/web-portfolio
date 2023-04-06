@@ -9,6 +9,8 @@
     padding-left: $content-padding;
     padding-right: $content-padding;
     padding-top: 9rem;
+    overflow: hidden;
+    position: relative;
 
     .hero-title {
       font-size: 3.5em;
@@ -56,6 +58,15 @@
         border: 1px solid $primary-color;
         z-index: 0;
       }
+    }
+
+    .hero-img {
+      position: absolute;
+      top: -7rem;
+      right: -25rem;
+      opacity: 80%;
+      width: 115%;
+      display: none;
     }
   }
 
