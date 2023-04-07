@@ -94,7 +94,7 @@ function Projects() {
             <motion.div
               className="proj-details"
               variants={cardItemHoverVariant}
-              transition={{ type: "tween", ease: "easeInOut" }}
+              transition={{ type: "tween", ease: "easeInOut", delay: 0.05 }}
             >
               <motion.h3
                 className="item-title"
