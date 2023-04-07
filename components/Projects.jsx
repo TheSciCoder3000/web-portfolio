@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import StoreImg from "@styles/img/kokomi.jpg";
 import LandingImg from "@styles/img/yelan.jpg";
 import KalikasanImg from "@styles/img/aaka.jpg";
 import SchoolImg from "@styles/img/ningguang.jpg";
-import { motion } from "framer-motion";
+import { motion, stagger, useAnimate, useInView } from "framer-motion";
 import Link from "next/link";
 
 const projectCollection = [
@@ -61,13 +61,28 @@ const cardItemLinkVariant = {
 };
 
 function Projects() {
+  const [scope, animate] = useAnimate();
+  const isInView = useInView(scope, {
+    once: false,
+    amount: 0.3,
+  });
+
+  useEffect(() => {
+    console.log("is in view effect");
+    if (isInView) {
+      animate(".project-item", { opacity: 1, y: 0 }, { delay: stagger(0.15) });
+    } else {
+      animate(".project-item", { opacity: 0, y: 50 });
+    }
+  }, [isInView]);
+
   return (
     <div className="project-cont">
       {/* Project Header */}
       <h1 className="section-header project-header">PROJECTS</h1>
 
       {/* Project Item Container */}
-      <div className="project-items-cont">
+      <div className="project-items-cont" ref={scope}>
         {projectCollection.map((proj, indx) => (
           <motion.div
             className="project-item"

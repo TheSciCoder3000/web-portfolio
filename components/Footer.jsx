@@ -14,6 +14,27 @@ const iconHoverVariant = {
 };
 
 function Footer({ navLinks }) {
+  const socialMedia = [
+    {
+      id: 0,
+      name: "fb",
+      url: "https://web.facebook.com/johnjuvi.devilla.9",
+      component: FbSvg,
+    },
+    {
+      id: 1,
+      name: "github",
+      url: "https://github.com/TheSciCoder3000",
+      component: GithubSvg,
+    },
+    {
+      id: 3,
+      name: "linkedin",
+      url: "https://www.linkedin.com/in/john-juvi-de-villa/",
+      component: LinkedinSvg,
+    },
+  ];
+
   return (
     <div className="footer-cont">
       <div className="footer-content">
@@ -22,24 +43,21 @@ function Footer({ navLinks }) {
             <LogoSvg className="footer-logo" />
           </div>
           <div className="media-links">
-            <FbSvg
-              className="media-icon fb-icon"
-              variants={iconHoverVariant}
-              initial="rest"
-              whileHover="hover"
-            />
-            <GithubSvg
-              className="media-icon github-icon"
-              variants={iconHoverVariant}
-              initial="rest"
-              whileHover="hover"
-            />
-            <LinkedinSvg
-              className="media-icon linkedin-icon"
-              variants={iconHoverVariant}
-              initial="rest"
-              whileHover="hover"
-            />
+            {socialMedia.map((media) => (
+              <a
+                target="_blank"
+                href={media.url}
+                rel="noopener noreferrer"
+                key={media.id}
+              >
+                <media.component
+                  className={`media-icon ${media.name}-icon`}
+                  variants={iconHoverVariant}
+                  initial="rest"
+                  whileHover="hover"
+                />
+              </a>
+            ))}
           </div>
         </div>
         <div className="footer-col footer-links">

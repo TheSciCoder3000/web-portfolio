@@ -136,6 +136,7 @@
   align-items: flex-end;
   overflow: hidden;
   border-radius: 10px;
+  opacity: 0;
 }
 .home-cont .project-cont .project-items-cont .project-item img {
   position: absolute;
@@ -177,7 +178,7 @@
 }
 .home-cont .project-cont .project-items-cont .project-item .proj-details .redirect-link {
   color: #3aff8f;
-  font-size: 0.85em;
+  font-size: 0.75em;
 }
 .home-cont .project-cont .project-items-cont .project-item .proj-details .redirect-link .redirect-link-cont {
   position: relative;
@@ -188,6 +189,6 @@
   bottom: -0.5rem;
   left: 0;
   width: 0;
-  height: 2px;
+  height: 1.5px;
   background-color: #3aff8f;
 }/*# sourceMappingURL=Home.css.map */
