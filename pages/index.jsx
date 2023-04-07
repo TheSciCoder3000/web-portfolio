@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import TypingComponent from "@components/TypingComponent";
 import Navbar from "@components/Navbar";
 import Footer from "@components/Footer";
+import { useWindowDimensions } from "@utils/hooks";
 import TagCloud from "TagCloud";
 import Projects from "@components/Projects";
 import { motion } from "framer-motion";
@@ -76,6 +77,7 @@ export default function Home() {
   ];
 
   const IsTagCloudLoaded = useRef(false);
+  const { width } = useWindowDimensions();
 
   useEffect(() => {
     document.title = "John Juvi | Web Developer";
@@ -90,7 +92,7 @@ export default function Home() {
     });
 
     IsTagCloudLoaded.current = true;
-  }, []);
+  }, [width]);
 
   return (
     <div className="home-cont">

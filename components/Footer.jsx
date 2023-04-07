@@ -38,27 +38,25 @@ function Footer({ navLinks }) {
   return (
     <div className="footer-cont">
       <div className="footer-content">
-        <div className="footer-col footer-media">
-          <div className="logo-cont">
-            <LogoSvg className="footer-logo" />
-          </div>
-          <div className="media-links">
-            {socialMedia.map((media) => (
-              <a
-                target="_blank"
-                href={media.url}
-                rel="noopener noreferrer"
-                key={media.id}
-              >
-                <media.component
-                  className={`media-icon ${media.name}-icon`}
-                  variants={iconHoverVariant}
-                  initial="rest"
-                  whileHover="hover"
-                />
-              </a>
-            ))}
-          </div>
+        <div className="logo-cont">
+          <LogoSvg className="footer-logo" />
+        </div>
+        <div className="media-links">
+          {socialMedia.map((media) => (
+            <a
+              target="_blank"
+              href={media.url}
+              rel="noopener noreferrer"
+              key={media.id}
+            >
+              <media.component
+                className={`media-icon ${media.name}-icon`}
+                variants={iconHoverVariant}
+                initial="rest"
+                whileHover="hover"
+              />
+            </a>
+          ))}
         </div>
         <div className="footer-col footer-links">
           {navLinks.map((nav, indx) => (

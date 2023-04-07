@@ -5,6 +5,7 @@ import KalikasanImg from "@styles/img/aaka.jpg";
 import SchoolImg from "@styles/img/ningguang.jpg";
 import { motion, stagger, useAnimate, useInView } from "framer-motion";
 import Link from "next/link";
+import { useWindowDimensions } from "@utils/hooks";
 
 const projectCollection = [
   {
@@ -64,8 +65,10 @@ function Projects() {
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope, {
     once: false,
-    amount: 0.3,
+    amount: 0.25,
   });
+
+  const { width } = useWindowDimensions();
 
   useEffect(() => {
     console.log("is in view effect");
@@ -93,7 +96,7 @@ function Projects() {
             <img className="project-img" src={proj.img.src} />
             <motion.div
               className="proj-details"
-              variants={cardItemHoverVariant}
+              variants={width > 768 ? cardItemHoverVariant : undefined}
               transition={{ type: "tween", ease: "easeInOut", delay: 0.05 }}
             >
               <motion.h3
