@@ -110,7 +110,7 @@ export default function Home() {
           />
         </h1>
         <p className="hero-desc">
-          I provide clients and small businesses who are looking for
+          I provide clients and small businesses who are looking for a
           budget-friendly, responsive and reliable websites and web applications
         </p>
         <motion.button
