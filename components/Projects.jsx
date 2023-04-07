@@ -42,6 +42,14 @@ const cardItemHoverVariant = {
     y: 0,
   },
 };
+const cardItemMobileHoverVariant = {
+  rest: {
+    y: "16.5rem",
+  },
+  hover: {
+    y: "16.5rem",
+  },
+};
 
 const cardItemHeaderVariant = {
   rest: {
@@ -70,6 +78,8 @@ function Projects() {
 
   const { width } = useWindowDimensions();
 
+  console.log(width > 768 ? cardItemHoverVariant : undefined);
+
   useEffect(() => {
     console.log("is in view effect");
     if (isInView) {
@@ -94,33 +104,37 @@ function Projects() {
             whileHover="hover"
           >
             <img className="project-img" src={proj.img.src} />
-            <motion.div
-              className="proj-details"
-              variants={width > 768 ? cardItemHoverVariant : undefined}
-              transition={{ type: "tween", ease: "easeInOut", delay: 0.05 }}
-            >
-              <motion.h3
-                className="item-title"
-                variants={cardItemHeaderVariant}
+            {width && (
+              <motion.div
+                className="proj-details"
+                variants={
+                  width > 768 ? cardItemHoverVariant : cardItemHeaderVariant
+                }
+                transition={{ type: "tween", ease: "easeInOut", delay: 0.05 }}
               >
-                {proj.name}
-              </motion.h3>
-              <hr />
-              <p className="item-desc">{proj.desc}</p>
-              <Link className="redirect-link" href="">
-                <motion.div
-                  className="redirect-link-cont"
-                  initial="rest"
-                  whileHover="hover"
+                <motion.h3
+                  className="item-title"
+                  variants={cardItemHeaderVariant}
                 >
-                  Learn More
-                  <motion.span
-                    className="underline"
-                    variants={cardItemLinkVariant}
-                  ></motion.span>
-                </motion.div>
-              </Link>
-            </motion.div>
+                  {proj.name}
+                </motion.h3>
+                <hr />
+                <p className="item-desc">{proj.desc}</p>
+                <Link className="redirect-link" href="">
+                  <motion.div
+                    className="redirect-link-cont"
+                    initial="rest"
+                    whileHover="hover"
+                  >
+                    Learn More
+                    <motion.span
+                      className="underline"
+                      variants={cardItemLinkVariant}
+                    ></motion.span>
+                  </motion.div>
+                </Link>
+              </motion.div>
+            )}
           </motion.div>
         ))}
       </div>

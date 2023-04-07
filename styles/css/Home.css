@@ -249,6 +249,7 @@
   margin: 0;
   width: 100%;
   margin-bottom: 1rem;
+  font-size: 1.25em;
 }
 .home-cont .project-cont .project-items-cont .project-item .proj-details hr {
   color: rgb(209, 209, 209);
