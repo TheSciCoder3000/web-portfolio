@@ -1,13 +1,20 @@
+import Link from "next/link";
 import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import TagCloud from "TagCloud";
 import TypingComponent from "@components/TypingComponent";
 import Navbar from "@components/Navbar";
 import Footer from "@components/Footer";
-import { useWindowDimensions } from "@utils/hooks";
-import TagCloud from "TagCloud";
 import Projects from "@components/Projects";
-import { motion } from "framer-motion";
-import Link from "next/link";
 import HeroImg from "@styles/img/heroImg.png";
+import { useWindowDimensions } from "@utils/hooks";
+import { navLinks } from "@utils/content";
+import {
+  callToActionBkgVariant,
+  callToActionTextVariant,
+  redirectLinkArrowVariant,
+  redirectLinkUnderlineVariant,
+} from "@utils/animationVariants";
 
 const Tags = [
   "JavaScript",
@@ -32,50 +39,7 @@ const Tags = [
   "Godot",
 ];
 
-const callToActionBkgVariant = {
-  visible: {
-    width: "125%",
-  },
-  hidden: {
-    width: "0px",
-  },
-};
-
-const callToActionTextVariant = {
-  visible: {
-    color: "#000000",
-  },
-  hidden: {
-    color: "#3aff8f",
-  },
-};
-
-const redirectLinkArrowVariant = {
-  rest: {
-    x: 0,
-  },
-  hover: {
-    x: "0.4rem",
-  },
-};
-
-const redirectLinkUnderlineVariant = {
-  rest: {
-    width: 0,
-  },
-  hover: {
-    width: "105%",
-  },
-};
-
 export default function Home() {
-  const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Skills", path: "/skills" },
-    { name: "Projects", path: "/projects" },
-  ];
-
   const IsTagCloudLoaded = useRef(false);
   const { width } = useWindowDimensions();
 
