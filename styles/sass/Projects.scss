@@ -1,0 +1,163 @@
+@import "./variables.scss";
+@import "./breakpoints.scss";
+
+.project-cont {
+  padding: 7rem $content-padding;
+  background-color: rgb(37, 37, 37);
+  position: relative;
+  padding-bottom: 15rem;
+
+  .project-header {
+    font-weight: 1000;
+    font-size: 14em;
+    opacity: 7%;
+    position: absolute;
+    top: -3rem;
+    left: calc($content-padding - 6rem);
+
+    @include media("<=phone") {
+      opacity: 20%;
+      font-size: 3.5em;
+      position: static;
+      margin: 0;
+      text-align: center;
+    }
+  }
+
+  $grid-gap: 2.5rem;
+  .project-items-cont {
+    margin-top: 11.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: $grid-gap;
+    row-gap: $grid-gap;
+
+    .project-item {
+      filter: drop-shadow(-8px 7px 7px rgba(0, 0, 0, 0.4));
+      position: relative;
+      background-color: #294031;
+      height: 22rem;
+      max-width: 20rem;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      border-radius: 10px;
+      opacity: 0;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        z-index: 1;
+      }
+
+      .proj-details {
+        background-color: rgba(27, 27, 27, 0.65);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+
+        .item-title {
+          margin: 0;
+          width: 100%;
+          margin-bottom: 1rem;
+          font-size: 1.25em;
+        }
+
+        hr {
+          color: rgb(209, 209, 209);
+          width: 100%;
+          margin: 0;
+        }
+
+        .item-desc {
+          margin-top: 1.5rem;
+          font-size: 0.8em;
+          height: 5rem;
+          overflow: hidden;
+          margin-bottom: 3rem;
+        }
+
+        .redirect-link {
+          color: $primary-color;
+          font-size: 0.75em;
+
+          .redirect-link-cont {
+            position: relative;
+            display: inline;
+
+            .underline {
+              position: absolute;
+              bottom: -0.5rem;
+              left: 0;
+              width: 0;
+              height: 1.5px;
+              background-color: $primary-color;
+            }
+          }
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    @include media("<=phone") {
+      grid-template-columns: 1fr;
+      margin-top: 5rem;
+    }
+  }
+
+  @include media("<=phone") {
+    padding: 7rem $ph-content-pd;
+  }
+}
+
+.project-detail-modal {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 2.5rem 4rem;
+  z-index: 999;
+
+  .modal-bkg {
+    background-color: rgba(255, 255, 255, 0.03);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  $border-radius: 10px;
+  .modal-cont {
+    background-color: white;
+    height: 100%;
+    border-radius: $border-radius;
+    display: flex;
+    background-color: rgb(27, 27, 27);
+    filter: drop-shadow(-8px 7px 15px rgba(0, 0, 0, 0.7));
+
+    .project-preview {
+      flex: 3;
+    }
+    .project-info {
+      background-color: rgb(40, 40, 40);
+      flex: 1.5;
+      border-radius: $border-radius;
+    }
+  }
+}
