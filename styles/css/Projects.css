@@ -4,13 +4,21 @@
   background-color: rgb(37, 37, 37);
   position: relative;
   padding-bottom: 15rem;
+  z-index: 0;
+}
+.project-cont .outline-cont {
+  height: 20rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 .project-cont .project-header {
   font-weight: 1000;
   font-size: 14em;
-  opacity: 7%;
+  opacity: 20%;
   position: absolute;
-  top: -3rem;
+  top: -5rem;
   left: 9rem;
 }
 @media (max-width: 480px) {
@@ -20,6 +28,40 @@
     position: static;
     margin: 0;
     text-align: center;
+  }
+}
+.project-cont .project-outline-header {
+  font-weight: 1000;
+  font-size: 14em;
+  opacity: 10%;
+  position: absolute;
+  top: -5rem;
+  left: 9rem;
+  z-index: -5;
+  color: rgb(37, 37, 37);
+  background-color: rgb(37, 37, 37);
+  text-shadow: -3px -3px 0 #fff, 3px -3px 0 #fff, -3px 3px 0 #fff, 3px 3px 0 #fff;
+}
+@media (max-width: 480px) {
+  .project-cont .project-outline-header {
+    display: none;
+  }
+}
+.project-cont .project-outline-header-1 {
+  font-weight: 1000;
+  font-size: 14em;
+  opacity: 5%;
+  position: absolute;
+  top: -5rem;
+  left: 9rem;
+  z-index: -5;
+  color: rgb(37, 37, 37);
+  background-color: rgb(37, 37, 37);
+  text-shadow: -3px -3px 0 #fff, 3px -3px 0 #fff, -3px 3px 0 #fff, 3px 3px 0 #fff;
+}
+@media (max-width: 480px) {
+  .project-cont .project-outline-header-1 {
+    display: none;
   }
 }
 .project-cont .project-items-cont {
@@ -96,13 +138,19 @@
   height: 1.5px;
   background-color: #3aff8f;
 }
-.project-cont .project-items-cont .project-item .proj-details .redirect-link:hover {
+.project-cont .project-items-cont .project-item .proj-details .redirect-link .redirect-link-cont:hover {
   cursor: pointer;
+}
+@media (max-width: 480px) {
+  .project-cont .project-items-cont .project-item {
+    width: 20rem;
+  }
 }
 @media (max-width: 480px) {
   .project-cont .project-items-cont {
     grid-template-columns: 1fr;
     margin-top: 5rem;
+    justify-items: center;
   }
 }
 @media (max-width: 480px) {
@@ -112,7 +160,7 @@
 }
 
 .project-detail-modal {
-  display: block;
+  display: none;
   position: absolute;
   top: 0;
   left: 0;

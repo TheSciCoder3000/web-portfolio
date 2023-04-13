@@ -1,18 +1,28 @@
 @import "./variables.scss";
 @import "./breakpoints.scss";
 
+$bkg-color: rgb(37, 37, 37);
 .project-cont {
   padding: 7rem $content-padding;
-  background-color: rgb(37, 37, 37);
+  background-color: $bkg-color;
   position: relative;
   padding-bottom: 15rem;
+  z-index: 0;
+
+  .outline-cont {
+    height: 20rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
 
   .project-header {
     font-weight: 1000;
     font-size: 14em;
-    opacity: 7%;
+    opacity: 20%;
     position: absolute;
-    top: -3rem;
+    top: -5rem;
     left: calc($content-padding - 6rem);
 
     @include media("<=phone") {
@@ -21,6 +31,50 @@
       position: static;
       margin: 0;
       text-align: center;
+    }
+  }
+
+  .project-outline-header {
+    font-weight: 1000;
+    font-size: 14em;
+    opacity: 10%;
+    position: absolute;
+    top: -5rem;
+    left: calc($content-padding - 6rem);
+    z-index: -5;
+
+    $outline-thickness: 3px;
+    color: $bkg-color;
+    background-color: $bkg-color;
+    text-shadow: (-$outline-thickness) (-$outline-thickness) 0 #fff,
+      $outline-thickness (-$outline-thickness) 0 #fff,
+      (-$outline-thickness) $outline-thickness 0 #fff,
+      $outline-thickness $outline-thickness 0 #fff;
+
+    @include media("<=phone") {
+      display: none;
+    }
+  }
+
+  .project-outline-header-1 {
+    font-weight: 1000;
+    font-size: 14em;
+    opacity: 5%;
+    position: absolute;
+    top: -5rem;
+    left: calc($content-padding - 6rem);
+    z-index: -5;
+
+    $outline-thickness: 3px;
+    color: $bkg-color;
+    background-color: $bkg-color;
+    text-shadow: (-$outline-thickness) (-$outline-thickness) 0 #fff,
+      $outline-thickness (-$outline-thickness) 0 #fff,
+      (-$outline-thickness) $outline-thickness 0 #fff,
+      $outline-thickness $outline-thickness 0 #fff;
+
+    @include media("<=phone") {
+      display: none;
     }
   }
 
@@ -103,18 +157,23 @@
               height: 1.5px;
               background-color: $primary-color;
             }
-          }
 
-          &:hover {
-            cursor: pointer;
+            &:hover {
+              cursor: pointer;
+            }
           }
         }
+      }
+
+      @include media("<=phone") {
+        width: 20rem;
       }
     }
 
     @include media("<=phone") {
       grid-template-columns: 1fr;
       margin-top: 5rem;
+      justify-items: center;
     }
   }
 
@@ -124,7 +183,7 @@
 }
 
 .project-detail-modal {
-  display: block;
+  display: none;
   position: absolute;
   top: 0;
   left: 0;

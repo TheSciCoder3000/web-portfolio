@@ -106,9 +106,8 @@ export default function Home() {
               Hello, my name is John Juvi De Villa, you can call me Juvi. I am
               an undergraduate student taking up BS Computer Engineering in the
               Philippines. I am a passionate programmer and have always enjoyed
-              coding since I was young. This lead me to learn how to code at a
-              young age and have garnered a significant amount of experience
-              along the way.
+              coding since I was young. This lead me to learn and garnered a
+              significant amount of experience along the way.
             </p>
             <Link className="redirect-link about-me-link" href="/about">
               <motion.div
@@ -139,7 +138,7 @@ export default function Home() {
             <h2 className="section-header">Skills</h2>
             <p className="skills-content">
               My experiences covers a wide range of fields from basic game
-              development to app development but the field in which I
+              development to app development and the field in which I
               specialized the most is web development with Reactjs as my main
               frontend library. You can learn more about my experiences and
               journey as a software developer by clicking on the link below.

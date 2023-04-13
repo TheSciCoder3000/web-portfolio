@@ -11,22 +11,61 @@ import {
 
 function Projects() {
   const [scope, animate] = useAnimate();
+  const [scopeOutline, animateOutline] = useAnimate();
   const [toggleMode, setToggleMode] = useState(false);
-  const isInView = useInView(scope, {
+  const isProjectInView = useInView(scope, {
     once: false,
     amount: 0.25,
+  });
+  const isHeaderInView = useInView(scopeOutline, {
+    once: false,
+    amount: 0.3,
+    // margin: "20px 0px 50px 0px",
   });
 
   const { width } = useWindowDimensions();
 
   useEffect(() => {
-    console.log("is in view effect");
-    if (isInView) {
+    if (isProjectInView) {
       animate(".project-item", { opacity: 1, y: 0 }, { delay: stagger(0.15) });
     } else {
       animate(".project-item", { opacity: 0, y: 50 });
     }
-  }, [isInView]);
+  }, [isProjectInView]);
+
+  useEffect(() => {
+    console.log("header outline in view");
+    if (isHeaderInView) {
+      animateOutline(
+        ".project-header",
+        {
+          y: "2rem",
+          opacity: "20%",
+        },
+        { type: "linear" }
+      );
+      animateOutline(
+        ".project-outline-header",
+        {
+          y: "15rem",
+          opacity: "10%",
+        },
+        { type: "linear" }
+      );
+      animateOutline(
+        ".project-outline-header-1",
+        {
+          y: "27rem",
+          opacity: "5%",
+        },
+        { type: "linear" }
+      );
+    } else {
+      animateOutline(".project-header", { y: 0, opacity: "0%" });
+      animateOutline(".project-outline-header", { y: 0, opacity: "0%" });
+      animateOutline(".project-outline-header-1", { y: 0, opacity: "0%" });
+    }
+  }, [isHeaderInView]);
 
   useEffect(() => {
     if (toggleMode) {
@@ -46,9 +85,19 @@ function Projects() {
 
   return (
     <>
-      <div className="project-cont">
+      <div className="project-cont" ref={scopeOutline}>
         {/* Project Header */}
-        <h1 className="section-header project-header">PROJECTS</h1>
+        <div className="outline-cont">
+          <motion.h1 className="section-header project-header">
+            PROJECTS
+          </motion.h1>
+          <motion.h1 className="section-header project-outline-header">
+            PROJECTS
+          </motion.h1>
+          <motion.h1 className="section-header project-outline-header-1">
+            PROJECTS
+          </motion.h1>
+        </div>
 
         {/* Project Item Container */}
         <div className="project-items-cont" ref={scope}>
@@ -76,14 +125,12 @@ function Projects() {
                   </motion.h3>
                   <hr />
                   <p className="item-desc">{proj.desc}</p>
-                  <div
-                    className="redirect-link"
-                    onClick={() => setToggleMode(!toggleMode)}
-                  >
+                  <div className="redirect-link">
                     <motion.div
                       className="redirect-link-cont"
                       initial="rest"
                       whileHover="hover"
+                      onClick={() => setToggleMode(!toggleMode)}
                     >
                       Learn More
                       <motion.span
