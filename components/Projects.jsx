@@ -1,74 +1,27 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { projectCollection } from "@utils/content";
-import { useWindowDimensions } from "@utils/hooks";
-import { motion, stagger, useAnimate, useInView } from "framer-motion";
-import Link from "next/link";
+import {
+  useHeaderInView,
+  useProjectInView,
+  useWindowDimensions,
+} from "@utils/hooks";
+import { motion } from "framer-motion";
 import {
   cardItemHoverVariant,
   cardItemHeaderVariant,
   cardItemLinkVariant,
 } from "@utils/animationVariants";
+import CloseSvg from "@svg/CloseSvg";
 
 function Projects() {
-  const [scope, animate] = useAnimate();
-  const [scopeOutline, animateOutline] = useAnimate();
-  const [toggleMode, setToggleMode] = useState(false);
-  const isProjectInView = useInView(scope, {
-    once: false,
-    amount: 0.25,
-  });
-  const isHeaderInView = useInView(scopeOutline, {
-    once: false,
-    amount: 0.3,
-    // margin: "20px 0px 50px 0px",
-  });
-
+  const [scope] = useProjectInView();
+  const [scopeOutline] = useHeaderInView();
   const { width } = useWindowDimensions();
 
-  useEffect(() => {
-    if (isProjectInView) {
-      animate(".project-item", { opacity: 1, y: 0 }, { delay: stagger(0.15) });
-    } else {
-      animate(".project-item", { opacity: 0, y: 50 });
-    }
-  }, [isProjectInView]);
+  const [toggleModal, setToggleModal] = useState(null);
 
   useEffect(() => {
-    console.log("header outline in view");
-    if (isHeaderInView) {
-      animateOutline(
-        ".project-header",
-        {
-          y: "2rem",
-          opacity: "20%",
-        },
-        { type: "linear" }
-      );
-      animateOutline(
-        ".project-outline-header",
-        {
-          y: "15rem",
-          opacity: "10%",
-        },
-        { type: "linear" }
-      );
-      animateOutline(
-        ".project-outline-header-1",
-        {
-          y: "27rem",
-          opacity: "5%",
-        },
-        { type: "linear" }
-      );
-    } else {
-      animateOutline(".project-header", { y: 0, opacity: "0%" });
-      animateOutline(".project-outline-header", { y: 0, opacity: "0%" });
-      animateOutline(".project-outline-header-1", { y: 0, opacity: "0%" });
-    }
-  }, [isHeaderInView]);
-
-  useEffect(() => {
-    if (toggleMode) {
+    if (toggleModal) {
       console.log("modal on");
       // When the modal is shown, we want a fixed body
       document.body.style.top = `-${window.scrollY}px`;
@@ -81,7 +34,7 @@ function Projects() {
       document.body.style.top = "";
       window.scrollTo(0, parseInt(scrollY || "0") * -1);
     }
-  }, [toggleMode]);
+  }, [toggleModal]);
 
   return (
     <>
@@ -130,7 +83,14 @@ function Projects() {
                       className="redirect-link-cont"
                       initial="rest"
                       whileHover="hover"
-                      onClick={() => setToggleMode(!toggleMode)}
+                      onClick={() =>
+                        setToggleModal((state) => {
+                          if (!state) {
+                            return proj;
+                          }
+                          return null;
+                        })
+                      }
                     >
                       Learn More
                       <motion.span
@@ -145,13 +105,23 @@ function Projects() {
           ))}
         </div>
       </div>
-      <div className="project-detail-modal">
-        <div className="modal-bkg"></div>
-        <div className="modal-cont">
-          <div className="project-preview"></div>
-          <div className="project-info"></div>
+
+      {toggleModal && (
+        <div className="project-detail-modal">
+          <div className="modal-bkg"></div>
+          <div className="modal-cont">
+            <div className="project-preview">
+              <button
+                className="close-modal"
+                onClick={() => setToggleModal(null)}
+              >
+                <CloseSvg />
+              </button>
+            </div>
+            <div className="project-info"></div>
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 }
