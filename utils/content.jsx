@@ -9,24 +9,21 @@ export const projectCollection = [
     name: "Store App",
     desc: "An online shop website built during the pandemic in an effort to information and data regarding our small-time business accessible to our subdivision.",
     img: StoreImg,
+    tags: ["HTML", "CSS", "BOOTSTRAP", "DJANGO", "JAVASCRIPT"],
+    summary:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget justo pellentesque, accumsan dui ac, laoreet purus. Donec et nisi quam. In hac habitasse platea dictumst. Curabitur auctor consequat ex vel auctor. Sed aliquam ipsum at nunc condimentum, vel imperdiet lacus aliquam. Proin pharetra imperdiet nibh. Vivamus sodales, dui et pharetra fringilla, justo odio mattis ex, eget efficitur lorem mauris. ",
+    live: "http://thescicoder3000.pythonanywhere.com/",
+    github: "https://github.com/TheSciCoder3000/Store-App",
   },
   {
     id: 1,
-    name: "Landing page",
-    desc: "Lorem ipsum dolors sit amet, consectetur adipiscing elit. Sed at risus quis enim venenatis maximus nec eget tortor. Sed sed dui sit amet risus semper luctus. Aliquam dictum elementum imperdiet. Fusce vel metus ut leo commodo pulvinar nec ut leo. Nullam iaculis, arcu ut bibendum fringilla, libero metus molestie lectus, ac malesuada mauris turpis vel eros. Quisque interdum enim risus. Mauris dignissim vel ipsum vitae hendrerit. Aliquam nec vulputate magna. Praesent ullamcorper tempus dolor suscipit pretium. Etiam hendrerit lacinia ex, id euismod dolor congue at. Etiam accumsan elit et justo semper, sed semper tortor rhoncus. Nam sagittis sodales risus sit. ",
-    img: LandingImg,
-  },
-  {
-    id: 2,
     name: "Kalikasan",
     desc: "Website blog application built for our NSTP Advocacy Campaign project during our 1st year in college. Project contains a landing page for visitors and a dedictaed web application to host activites and upload lessons and modules.",
     img: KalikasanImg,
-  },
-  {
-    id: 3,
-    name: "Online School Tools",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at risus quis enim venenatis maximus nec eget tortor. Sed sed dui sit amet risus semper luctus. Aliquam dictum elementum imperdiet. Fusce vel metus ut leo commodo pulvinar nec ut leo. Nullam iaculis, arcu ut bibendum fringilla, libero metus molestie lectus, ac malesuada mauris turpis vel eros. Quisque interdum enim risus. Mauris dignissim vel ipsum vitae hendrerit. Aliquam nec vulputate magna. Praesent ullamcorper tempus dolor suscipit pretium. Etiam hendrerit lacinia ex, id euismod dolor congue at. Etiam accumsan elit et justo semper, sed semper tortor rhoncus. Nam sagittis sodales risus sit. ",
-    img: SchoolImg,
+    tags: ["HTML", "CSS", "JAVASCRIPT", "REACTJS", "FIREBASE"],
+    summary: "Lorem ipsum",
+    live: "https://kalikasan-blog.firebaseapp.com/",
+    github: "https://github.com/TheSciCoder3000/kalikasan-blog/",
   },
 ];
 

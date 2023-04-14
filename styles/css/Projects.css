@@ -210,6 +210,58 @@
 }
 .project-detail-modal .modal-cont .project-info {
   background-color: rgb(40, 40, 40);
-  flex: 1.5;
+  width: 28rem;
   border-radius: 10px;
+  box-sizing: border-box;
+  padding: 2rem;
+}
+.project-detail-modal .modal-cont .project-info .project-title {
+  margin: 0;
+  margin-bottom: 1rem;
+}
+.project-detail-modal .modal-cont .project-info .project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.7em;
+  user-select: none;
+}
+.project-detail-modal .modal-cont .project-info .project-tags .project-tag-item {
+  padding: 0.55rem 1.1rem;
+  margin-right: 0.7rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid rgb(120, 120, 120);
+  border-radius: 15px;
+}
+.project-detail-modal .modal-cont .project-info .project-description {
+  display: flex;
+  flex-direction: column;
+}
+.project-detail-modal .modal-cont .project-info .project-description .project-summary-content {
+  font-size: 0.85em;
+  margin-bottom: 2rem;
+}
+.project-detail-modal .modal-cont .project-info .project-description .links-cont {
+  display: flex;
+  flex-direction: column;
+}
+.project-detail-modal .modal-cont .project-info .project-description .links-cont .link-btn {
+  display: inline-flex;
+  width: 7.5rem;
+  text-align: left;
+  padding: 0.65rem 0.8rem;
+  margin-bottom: 1.5rem;
+  background-color: transparent;
+  border: 1px solid #3aff8f;
+  color: #3aff8f;
+  font-size: 0.75em;
+  border-radius: 5px;
+  align-items: center;
+}
+.project-detail-modal .modal-cont .project-info .project-description .links-cont .link-btn .link-icon {
+  fill: #3aff8f;
+  margin-right: 0.5rem;
+  height: 1rem;
+}
+.project-detail-modal .modal-cont .project-info .project-description .links-cont .link-btn:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=Projects.css.map */

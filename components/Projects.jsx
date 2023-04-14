@@ -12,6 +12,8 @@ import {
   cardItemLinkVariant,
 } from "@utils/animationVariants";
 import CloseSvg from "@svg/CloseSvg";
+import GithubSvg from "@svg/GithubSvg";
+import ServerSvg from "@svg/ServerSvg";
 
 function Projects() {
   const [scope] = useProjectInView();
@@ -118,7 +120,37 @@ function Projects() {
                 <CloseSvg />
               </button>
             </div>
-            <div className="project-info"></div>
+            <div className="project-info">
+              <h2 className="project-title">{toggleModal.name}</h2>
+              <div className="project-tags">
+                {toggleModal.tags.map((tag) => (
+                  <div className="project-tag-item">{tag}</div>
+                ))}
+              </div>
+              <div className="project-description">
+                <p className="project-summary-content">{toggleModal.summary}</p>
+                <div className="links-cont">
+                  <a
+                    target="_blank"
+                    href={toggleModal.live}
+                    rel="noopener noreferrer"
+                    className="link-btn live-btn"
+                  >
+                    <ServerSvg className="link-icon server-icon" />
+                    Live Website
+                  </a>
+                  <a
+                    target="_blank"
+                    href={toggleModal.github}
+                    rel="noopener noreferrer"
+                    className="link-btn github-btn"
+                  >
+                    <GithubSvg className="link-icon github-icon" />
+                    Github Repo
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       )}

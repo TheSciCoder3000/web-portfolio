@@ -238,8 +238,70 @@ $bkg-color: rgb(37, 37, 37);
     }
     .project-info {
       background-color: rgb(40, 40, 40);
-      flex: 1.5;
+      width: 28rem;
       border-radius: $border-radius;
+      box-sizing: border-box;
+      padding: 2rem;
+
+      .project-title {
+        margin: 0;
+        margin-bottom: 1rem;
+      }
+
+      .project-tags {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 0.7em;
+        user-select: none;
+
+        .project-tag-item {
+          padding: 0.55rem 1.1rem;
+          margin-right: 0.7rem;
+          margin-bottom: 0.75rem;
+          border: 1px solid rgb(120, 120, 120);
+          border-radius: 15px;
+        }
+      }
+
+      .project-description {
+        display: flex;
+        flex-direction: column;
+
+        .project-summary-content {
+          font-size: 0.85em;
+          margin-bottom: 2rem;
+        }
+
+        .links-cont {
+          display: flex;
+          flex-direction: column;
+
+          .link-btn {
+            display: inline-flex;
+            width: 7.5rem;
+            // width: auto;
+            text-align: left;
+            padding: 0.65rem 0.8rem;
+            margin-bottom: 1.5rem;
+            background-color: transparent;
+            border: 1px solid $primary-color;
+            color: $primary-color;
+            font-size: 0.75em;
+            border-radius: 5px;
+            align-items: center;
+
+            .link-icon {
+              fill: $primary-color;
+              margin-right: 0.5rem;
+              height: 1rem;
+            }
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+      }
     }
   }
 }
