@@ -143,7 +143,7 @@ export default function Home() {
               frontend library. You can learn more about my experiences and
               journey as a software developer by clicking on the link below.
             </p>
-            <Link className="redirect-link learn-more" href="/about">
+            {/* <Link className="redirect-link learn-more" href="/about">
               <motion.div
                 className="link-cont"
                 initial="rest"
@@ -161,7 +161,7 @@ export default function Home() {
                   variants={redirectLinkUnderlineVariant}
                 ></motion.span>
               </motion.div>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
