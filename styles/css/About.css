@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+.about-cont {
+  background-color: rgb(28, 28, 28);
+}
+.about-cont .about-above-the-fold {
+  padding: 8rem 0;
+  text-align: center;
+  background-color: rgb(17, 17, 17);
+}
+.about-cont .about-above-the-fold .page-title {
+  color: white;
+  font-size: 3em;
+  margin: 0;
+}/*# sourceMappingURL=About.css.map */

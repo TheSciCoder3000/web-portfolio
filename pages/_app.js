@@ -3,6 +3,7 @@ import "../styles/css/Home.css";
 import "../styles/css/Footer.css";
 import "../styles/css/Navbar.css";
 import "../styles/css/Projects.css";
+import "../styles/css/About.css";
 import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {

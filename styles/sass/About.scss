@@ -1,0 +1,18 @@
+@import "./variables.scss";
+@import "./breakpoints.scss";
+
+.about-cont {
+  background-color: rgb(28, 28, 28);
+
+  .about-above-the-fold {
+    padding: 8rem 0;
+    text-align: center;
+    background-color: rgb(17, 17, 17);
+
+    .page-title {
+      color: white;
+      font-size: 3em;
+      margin: 0;
+    }
+  }
+}
