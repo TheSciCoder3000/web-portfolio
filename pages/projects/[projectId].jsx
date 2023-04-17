@@ -9,6 +9,7 @@ const ProjectDetails = () => {
   return (
     <div className="project-details-cont">
       <Navbar navLinks={navLinks} />
+      Project Detail Page: {projectId}
     </div>
   );
 };

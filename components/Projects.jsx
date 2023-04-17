@@ -14,6 +14,8 @@ import {
 import CloseSvg from "@svg/CloseSvg";
 import GithubSvg from "@svg/GithubSvg";
 import ServerSvg from "@svg/ServerSvg";
+import BookSvg from "@svg/BookSvg";
+import Link from "next/link";
 
 function Projects() {
   const [scope] = useProjectInView();
@@ -36,6 +38,17 @@ function Projects() {
       document.body.style.top = "";
       window.scrollTo(0, parseInt(scrollY || "0") * -1);
     }
+
+    // Turn off modal if webpage is redirected
+    return () => {
+      if (toggleModal) {
+        console.log("removing use effect, modal is turning off");
+        const scrollY = document.body.style.top;
+        document.body.style.position = "";
+        document.body.style.top = "";
+        window.scrollTo(0, parseInt(scrollY || "0") * -1);
+      }
+    };
   }, [toggleModal]);
 
   return (
@@ -148,6 +161,13 @@ function Projects() {
                     <GithubSvg className="link-icon github-icon" />
                     Github Repo
                   </a>
+                  <Link
+                    href={`/projects/${toggleModal.id}`}
+                    className="link-btn book-btn"
+                  >
+                    <BookSvg className="link-icon book-icon" />
+                    Project Review
+                  </Link>
                 </div>
               </div>
             </div>

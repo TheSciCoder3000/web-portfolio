@@ -274,21 +274,23 @@ $bkg-color: rgb(37, 37, 37);
 
         .links-cont {
           display: flex;
-          flex-direction: column;
+          // flex-direction: column;
 
           .link-btn {
             display: inline-flex;
-            width: 7.5rem;
+            align-items: center;
+            // width: 7.5rem;
             // width: auto;
             text-align: left;
-            padding: 0.65rem 0.8rem;
+            font-size: 0.65em;
+            padding: 0.65rem 0.55rem;
             margin-bottom: 1.5rem;
-            background-color: transparent;
+            margin-right: 1rem;
             border: 1px solid $primary-color;
+            border-radius: 3px;
+            background-color: transparent;
             color: $primary-color;
-            font-size: 0.75em;
-            border-radius: 5px;
-            align-items: center;
+            flex: 1;
 
             .link-icon {
               fill: $primary-color;
