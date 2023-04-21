@@ -25,25 +25,18 @@ function Projects() {
   const [toggleModal, setToggleModal] = useState(null);
 
   useEffect(() => {
+    console.log(toggleModal ? "Toggle mode is on" : "Toggle mode is off");
     if (toggleModal) {
-      console.log("modal on");
       // When the modal is shown, we want a fixed body
       document.body.style.top = `-${window.scrollY}px`;
       document.body.style.position = "fixed";
-    } else {
-      console.log("modal off");
-      // When the modal is hidden...
-      const scrollY = document.body.style.top;
-      document.body.style.position = "";
-      document.body.style.top = "";
-      window.scrollTo(0, parseInt(scrollY || "0") * -1);
     }
 
     // Turn off modal if webpage is redirected
     return () => {
       if (toggleModal) {
-        console.log("removing use effect, modal is turning off");
         const scrollY = document.body.style.top;
+        console.log(`scroll to ${scrollY}`);
         document.body.style.position = "";
         document.body.style.top = "";
         window.scrollTo(0, parseInt(scrollY || "0") * -1);
