@@ -30,13 +30,9 @@ const about = () => {
             <h2 className="user-name">John Juvi Q.</h2>
             <h2 className="user-lastname">De Villa</h2>
             <p className="about-text-content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget
-              nibh non ante blandit ullamcorper ut in ex. Vivamus nec pulvinar
-              nunc. Suspendisse at pharetra nunc, nec dapibus nunc. Nulla cursus
-              justo sit amet posuere venenatis. In hac habitasse platea
-              dictumst. Pellentesque ultrices turpis sem, sed efficitur sem
-              ultrices id. In feugiat elementum massa convallis fringilla.
-              Aliquam ac vulputate ante.
+              I have always found programming as an enjoyable hobby for me. 
+              This lead me to learn how to code at a young age starting with 
+              game development using Godot as my game engine.
             </p>
           </div>
         </div>
