@@ -30,9 +30,13 @@ const about = () => {
             <h2 className="user-name">John Juvi Q.</h2>
             <h2 className="user-lastname">De Villa</h2>
             <p className="about-text-content">
-              I have always found programming as an enjoyable hobby for me. 
-              This lead me to learn how to code at a young age starting with 
-              game development using Godot as my game engine.
+              Greetings, once again my name is John Juvi Q. De Villa. I am a
+              college undergraduate, currently taking BS Computer Engineering
+              in De La Salle Dasmarinas. I have a lot of experiences in programming
+              in the past now. My first project was building a computer game
+              using Godot as the game engine. During the pandemic, I also 
+              learned web development using Python as my programming language
+              and Django for my backend framework.
             </p>
           </div>
         </div>
