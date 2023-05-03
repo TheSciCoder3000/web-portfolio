@@ -119,6 +119,7 @@ function Projects() {
           <div className="modal-bkg"></div>
           <div className="modal-cont">
             <div className="project-preview">
+              <img className="modal-cover" src={toggleModal.full ? toggleModal.full.src : null} alt="" />
               <button
                 className="close-modal"
                 onClick={() => setToggleModal(null)}

@@ -68,7 +68,8 @@
   margin-top: 11.5rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 2.5rem;
+  -moz-column-gap: 2.5rem;
+       column-gap: 2.5rem;
   row-gap: 2.5rem;
 }
 .project-cont .project-items-cont .project-item {
@@ -89,7 +90,8 @@
   left: 0;
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   z-index: 1;
 }
 .project-cont .project-items-cont .project-item .proj-details {
@@ -189,6 +191,12 @@
   flex: 3;
   position: relative;
 }
+.project-detail-modal .modal-cont .project-preview .modal-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
 .project-detail-modal .modal-cont .project-preview .close-modal {
   height: 3rem;
   width: 3rem;
@@ -223,7 +231,9 @@
   display: flex;
   flex-wrap: wrap;
   font-size: 0.7em;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .project-detail-modal .modal-cont .project-info .project-tags .project-tag-item {
   padding: 0.55rem 1.1rem;
