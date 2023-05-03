@@ -2,6 +2,7 @@ import Footer from "@components/Footer";
 import Navbar from "@components/Navbar";
 import { navLinks } from "@utils/content";
 import React from "react";
+import Profile1 from "@styles/img/about_1.jpg"
 
 const about = () => {
   return (
@@ -25,7 +26,7 @@ const about = () => {
       {/* About Content Section */}
       <div className="content-section">
         <div className="section-cont">
-          <div className="img-cont img-1"></div>
+          <div className="img-cont img-1"><img src={Profile1.src} alt="" className="profile-1" /></div>
           <div className="text-cont">
             <h2 className="user-name">John Juvi Q.</h2>
             <h2 className="user-lastname">De Villa</h2>
