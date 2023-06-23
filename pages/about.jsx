@@ -4,7 +4,7 @@ import { navLinks } from "@utils/content";
 import React from "react";
 import Profile1 from "@styles/img/about_1.jpg"
 
-const about = () => {
+const About = () => {
   return (
     <div className="about-cont">
       {/* Navigation Bar */}
@@ -61,4 +61,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default About;
