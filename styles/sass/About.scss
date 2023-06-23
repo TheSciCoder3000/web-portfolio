@@ -40,11 +40,14 @@ $image-cont-bkg: rgb(28, 28, 28);
       font-size: 4em;
       font-weight: 400;
 
-      &.user-name {
+      &.greeting {
         margin-top: 1rem;
+        font-size: 1.75em;
+        font-weight: 100;
       }
-      &.user-lastname {
+      &.user-name {
         margin-bottom: 5rem;
+        font-weight: 500;
       }
     }
 

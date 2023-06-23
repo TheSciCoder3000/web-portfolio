@@ -30,11 +30,14 @@
   font-size: 4em;
   font-weight: 400;
 }
-.about-cont .content-section h2.user-name {
+.about-cont .content-section h2.greeting {
   margin-top: 1rem;
+  font-size: 1.75em;
+  font-weight: 100;
 }
-.about-cont .content-section h2.user-lastname {
+.about-cont .content-section h2.user-name {
   margin-bottom: 5rem;
+  font-weight: 500;
 }
 .about-cont .content-section p {
   font-weight: 300;

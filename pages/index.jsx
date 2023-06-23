@@ -6,7 +6,7 @@ import TypingComponent from "@components/TypingComponent";
 import Navbar from "@components/Navbar";
 import Footer from "@components/Footer";
 import Projects from "@components/Projects";
-import HeroImg from "@styles/img/heroImg.png";
+import HeroImg from "@styles/img/heroImg.jpg";
 import { useWindowDimensions } from "@utils/hooks";
 import { navLinks } from "@utils/content";
 import {
@@ -65,6 +65,8 @@ export default function Home() {
 
       {/* Hero Section */}
       <div className="hero-cont">
+        <img className="hero-img" src={HeroImg.src} alt="" />
+
         <h1 className="hero-title">Hi, I'm John Juvi</h1>
         <h1 className="hero-title">
           A{" "}
@@ -94,7 +96,6 @@ export default function Home() {
           ></motion.div>
         </motion.button>
 
-        <img className="hero-img" src={HeroImg.src} alt="" />
       </div>
 
       {/* About Me Section */}
