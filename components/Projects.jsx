@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { projectCollection } from "@utils/content";
+import { ProjectCollection } from "@utils/content";
 import {
   useHeaderInView,
   useProjectInView,
@@ -62,7 +62,7 @@ function Projects() {
 
         {/* Project Item Container */}
         <div className="project-items-cont" ref={scope}>
-          {projectCollection.map((proj, indx) => (
+          {ProjectCollection.map((proj, indx) => (
             <motion.div
               className="project-item"
               key={indx}
