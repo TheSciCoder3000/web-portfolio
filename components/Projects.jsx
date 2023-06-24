@@ -155,13 +155,13 @@ function Projects() {
                     <GithubSvg className="link-icon github-icon" />
                     Github Repo
                   </a>
-                  <Link
+                  {/* <Link
                     href={`/projects/${toggleModal.id}`}
                     className="link-btn book-btn"
                   >
                     <BookSvg className="link-icon book-icon" />
                     Project Review
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>
