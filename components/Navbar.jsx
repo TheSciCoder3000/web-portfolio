@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
-import Link from "next/link";
 import LogoSvg from "@svg/LogoSvg";
+import ScrollLink from "@utils/ScrollLink";
 
 function Navbar({ navLinks }) {
   const { pathname } = useRouter();
@@ -8,13 +8,13 @@ function Navbar({ navLinks }) {
     <div className="nav-cont">
       <LogoSvg className="nav-logo" />
       {navLinks.map((nav, indx) => (
-        <Link
+        <ScrollLink
           key={indx}
           className={`nav-link ${pathname == nav.path ? "disabled" : ""}`}
           href={nav.path}
         >
           {nav.name}
-        </Link>
+        </ScrollLink>
       ))}
     </div>
   );

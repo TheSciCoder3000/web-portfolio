@@ -51,7 +51,30 @@ export const ProjectCollection = [
 
 export const navLinks = [
   { name: "Home", path: "/" },
-  { name: "About", path: "/about" },
+  { name: "About", path: "#about" },
   // { name: "Skills", path: "/skills" },
-  { name: "Projects", path: "/projects" },
+  { name: "Projects", path: "#projects" },
+];
+
+export const Tags = [
+  "JavaScript",
+  "CSS",
+  "HTML",
+  "Vscode",
+  "React",
+  "Python",
+  "Linux",
+  "git",
+  "Firebase",
+  "SASS",
+  "JSON",
+  "Figma",
+  "Typescript",
+  "Java",
+  "Django",
+  "REST Framework",
+  "API",
+  "Arduino",
+  "C++",
+  "Godot",
 ];

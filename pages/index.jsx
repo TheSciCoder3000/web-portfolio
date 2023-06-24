@@ -1,14 +1,21 @@
+// framer motion
+import { motion } from "framer-motion";
+
+// next js and react
 import Link from "next/link";
 import { useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+
+// Other Imports
 import TagCloud from "TagCloud";
+
+// Local Imports
 import TypingComponent from "@components/TypingComponent";
 import Navbar from "@components/Navbar";
 import Footer from "@components/Footer";
 import Projects from "@components/Projects";
 import HeroImg from "@styles/img/heroImg.jpg";
 import { useWindowDimensions } from "@utils/hooks";
-import { navLinks } from "@utils/content";
+import { navLinks, Tags } from "@utils/content";
 import {
   callToActionBkgVariant,
   callToActionTextVariant,
@@ -16,28 +23,6 @@ import {
   redirectLinkUnderlineVariant,
 } from "@utils/animationVariants";
 
-const Tags = [
-  "JavaScript",
-  "CSS",
-  "HTML",
-  "Vscode",
-  "React",
-  "Python",
-  "Linux",
-  "git",
-  "Firebase",
-  "SASS",
-  "JSON",
-  "Figma",
-  "Typescript",
-  "Java",
-  "Django",
-  "REST Framework",
-  "API",
-  "Arduino",
-  "C++",
-  "Godot",
-];
 
 export default function Home() {
   const IsTagCloudLoaded = useRef(false);
@@ -99,7 +84,7 @@ export default function Home() {
       </div>
 
       {/* About Me Section */}
-      <div className="desc-section about-cont">
+      <div id="about" className="desc-section about-cont">
         <div className="section-row">
           <div className="section-content section-about">
             <h2 className="section-header">About Me</h2>

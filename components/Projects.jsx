@@ -46,7 +46,7 @@ function Projects() {
 
   return (
     <>
-      <div className="project-cont" ref={scopeOutline}>
+      <div id="projects" className="project-cont" ref={scopeOutline}>
         {/* Project Header */}
         <div className="outline-cont">
           <motion.h1 className="section-header project-header">
