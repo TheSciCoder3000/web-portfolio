@@ -52,7 +52,7 @@ export default function Home() {
       <div className="hero-cont">
         <img className="hero-img" src={HeroImg.src} alt="" />
 
-        <h1 className="hero-title">Hi, I'm John Juvi</h1>
+        <h1 className="hero-title">Hi, I&apos;m John Juvi</h1>
         <h1 className="hero-title">
           A{" "}
           <TypingComponent

@@ -130,8 +130,8 @@ function Projects() {
             <div className="project-info">
               <h2 className="project-title">{toggleModal.name}</h2>
               <div className="project-tags">
-                {toggleModal.tags.map((tag) => (
-                  <div className="project-tag-item">{tag}</div>
+                {toggleModal.tags.map((tag, indx) => (
+                  <div key={indx} className="project-tag-item">{tag}</div>
                 ))}
               </div>
               <div className="project-description">

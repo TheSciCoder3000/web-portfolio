@@ -60,7 +60,7 @@ function Footer({ navLinks }) {
         </div>
         <div className="footer-col footer-links">
           {navLinks.map((nav, indx) => (
-            <Link indx={indx} href={nav.path} className="footer-link">
+            <Link key={indx} indx={indx} href={nav.path} className="footer-link">
               {nav.name}
             </Link>
           ))}

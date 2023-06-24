@@ -19,7 +19,7 @@ const About = () => {
       <div className="value-proposition">
         <h1 className="value-text">
           “Every website should be reliable with good quality, effectively
-          delivering the customer’s goals and vision”
+          delivering the customer&apos;s goals and vision”
         </h1>
       </div>
 
@@ -46,7 +46,7 @@ const About = () => {
               One of my main driving force that motivates me to learn programming
               is the desired to improve and inovate. To be able to build a program
               that not only functions as the user wishes but to also be capable
-              of creating an environment and atmosphere that's tailored to the user
+              of creating an environment and atmosphere thats&apos; tailored to the user
               or client. With the right designs and vision, anything can be 
               possible with the right engineer.
             </p>
