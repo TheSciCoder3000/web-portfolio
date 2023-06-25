@@ -25,6 +25,7 @@ $bkg-color: rgb(37, 37, 37);
     top: -5rem;
     left: calc($content-padding - 6rem);
 
+
     @include media("<=phone") {
       opacity: 20%;
       font-size: 3.5em;
@@ -165,21 +166,34 @@ $bkg-color: rgb(37, 37, 37);
         }
       }
 
-      @include media("<=phone") {
+      @include media("<=1300px") {
+        max-width: 2000px;
+    }
+
+      @include media("<=800px") {
         width: 20rem;
       }
     }
 
-    @include media("<=phone") {
+    @include media("<=1300px") {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include media("<=800px") {
       grid-template-columns: 1fr;
       margin-top: 5rem;
       justify-items: center;
     }
   }
+  
+  @include media("<=1400px") {
+    padding: 7rem $tablet-content-pd;
+  }
 
-  @include media("<=phone") {
+  @include media("<=800px") {
     padding: 7rem $ph-content-pd;
   }
+
 }
 
 .project-detail-modal {

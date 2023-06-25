@@ -143,19 +143,34 @@
 .project-cont .project-items-cont .project-item .proj-details .redirect-link .redirect-link-cont:hover {
   cursor: pointer;
 }
-@media (max-width: 480px) {
+@media (max-width: 1300px) {
+  .project-cont .project-items-cont .project-item {
+    max-width: 2000px;
+  }
+}
+@media (max-width: 800px) {
   .project-cont .project-items-cont .project-item {
     width: 20rem;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 1300px) {
+  .project-cont .project-items-cont {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 800px) {
   .project-cont .project-items-cont {
     grid-template-columns: 1fr;
     margin-top: 5rem;
     justify-items: center;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 1400px) {
+  .project-cont {
+    padding: 7rem 7rem;
+  }
+}
+@media (max-width: 800px) {
   .project-cont {
     padding: 7rem 2rem;
   }

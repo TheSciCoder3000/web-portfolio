@@ -25,7 +25,6 @@ function Projects() {
   const [toggleModal, setToggleModal] = useState(null);
 
   useEffect(() => {
-    console.log(toggleModal ? "Toggle mode is on" : "Toggle mode is off");
     if (toggleModal) {
       // When the modal is shown, we want a fixed body
       document.body.style.top = `-${window.scrollY}px`;
@@ -74,7 +73,7 @@ function Projects() {
                 <motion.div
                   className="proj-details"
                   variants={
-                    width > 768 ? cardItemHoverVariant : cardItemHeaderVariant
+                    width > 1300 ? cardItemHoverVariant : cardItemHeaderVariant
                   }
                   transition={{ type: "tween", ease: "easeInOut", delay: 0.05 }}
                 >
