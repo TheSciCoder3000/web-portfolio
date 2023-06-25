@@ -98,6 +98,12 @@
       }
     }
 
+    @include media("<=1000px") {
+      padding-top: 17rem;
+      padding-left: $tablet-content-pd;
+      padding-right: $tablet-content-pd;
+    }
+
     @include media("<=phone") {
       padding-left: $ph-content-pd;
       padding-right: $ph-content-pd;
@@ -106,6 +112,7 @@
       flex-direction: column;
       justify-content: flex-end;
     }
+
   }
 
   .desc-section {
@@ -169,7 +176,7 @@
       #tagCloud {
         color: $light-primary;
 
-        @include media("<=phone") {
+        @include media("<=1000px") {
           width: 100%;
           min-height: $tagcloud-height;
 
@@ -193,14 +200,18 @@
       .section-media {
         flex: 1;
 
-        @include media("<=phone") {
+        @include media("<=1000px") {
           max-width: 90vw;
         }
       }
 
-      @include media("<=phone") {
+      @include media("<=1000px") {
         flex-direction: column;
       }
+    }
+
+    @include media("<=1300px") {
+      padding: 10rem $tablet-content-pd 5rem;
     }
 
     @include media("<=phone") {
