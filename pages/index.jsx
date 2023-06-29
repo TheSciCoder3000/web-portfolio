@@ -73,7 +73,7 @@ export default function Home() {
             className="call-to-action-text"
             variants={callToActionTextVariant}
           >
-            Get in Touch{" "}
+            Download My Resume{" "}
           </motion.span>
           <motion.div
             className="hover-bkg"

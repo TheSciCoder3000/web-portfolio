@@ -22,9 +22,35 @@
   font-weight: 50;
   line-height: 2.25em;
 }
+@media (max-width: 1300px) {
+  .about-cont .value-proposition {
+    padding: 7rem 10rem;
+  }
+}
+@media (max-width: 800px) {
+  .about-cont .value-proposition {
+    padding: 5rem 3rem;
+    font-size: 0.8em;
+  }
+}
 .about-cont .content-section {
   padding: 5rem 15rem;
   background-color: rgb(37, 37, 37);
+}
+@media (max-width: 1300px) {
+  .about-cont .content-section {
+    padding: 5rem 8rem;
+  }
+}
+@media (max-width: 1000px) {
+  .about-cont .content-section {
+    padding: 5rem 4rem;
+  }
+}
+@media (max-width: 700px) {
+  .about-cont .content-section {
+    padding: 5rem 2rem;
+  }
 }
 .about-cont .content-section h2 {
   font-size: 4em;
@@ -39,6 +65,12 @@
   margin-bottom: 5rem;
   font-weight: 500;
 }
+@media (max-width: 700px) {
+  .about-cont .content-section h2.user-name {
+    font-size: 2.5em;
+    margin-bottom: 0.5rem;
+  }
+}
 .about-cont .content-section p {
   font-weight: 300;
 }
@@ -48,6 +80,13 @@
 .about-cont .content-section .section-cont {
   display: flex;
   margin: 10rem 0;
+}
+@media (max-width: 1000px) {
+  .about-cont .content-section .section-cont {
+    display: block;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
 }
 .about-cont .content-section .section-cont .img-cont {
   background-color: rgb(28, 28, 28);
@@ -61,14 +100,35 @@
      object-fit: cover;
   border-radius: 13px;
 }
+@media (max-width: 1000px) {
+  .about-cont .content-section .section-cont .img-cont {
+    height: 500px;
+  }
+}
 .about-cont .content-section .section-cont .img-1 {
   flex: 0.75;
   margin-right: 4rem;
+}
+@media (max-width: 1000px) {
+  .about-cont .content-section .section-cont .img-1 {
+    margin: 0;
+    margin-bottom: 7rem;
+  }
 }
 .about-cont .content-section .section-cont .img-2 {
   flex: 1;
   margin-left: 2rem;
 }
+@media (max-width: 1000px) {
+  .about-cont .content-section .section-cont .img-2 {
+    margin: 0;
+  }
+}
 .about-cont .content-section .section-cont .text-cont {
   flex: 1;
-}/*# sourceMappingURL=About.css.map */
+}
+@media (max-width: 1000px) {
+  .about-cont .content-section .section-cont .text-cont {
+    font-size: 1em;
+  }
+}
