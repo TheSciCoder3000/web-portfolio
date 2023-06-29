@@ -50,10 +50,10 @@ export const ProjectCollection = [
 ];
 
 export const navLinks = [
-  { name: "Home", path: "/" },
-  { name: "About", path: "#about" },
+  { name: "Home", scroll: "/", path: "/" },
+  { name: "About", scroll: "#about", path: "/#about" },
   // { name: "Skills", path: "/skills" },
-  { name: "Projects", path: "#projects" },
+  { name: "Projects", scroll: "#projects", path: "/#projects" },
 ];
 
 export const Tags = [

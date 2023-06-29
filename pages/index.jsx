@@ -61,8 +61,9 @@ export default function Home() {
           />
         </h1>
         <p className="hero-desc">
-          I provide clients and small businesses who are looking for a
-          budget-friendly, responsive and reliable websites and web applications
+          A passionate programmer who enjoys learning and thinkering with new 
+          technologies. Actively in search of projects I can offer my services 
+          as a coder with the drive to innovate and develop.
         </p>
         <motion.button
           className="call-to-action"
@@ -92,8 +93,8 @@ export default function Home() {
               Hello, my name is John Juvi De Villa, you can call me Juvi. I am
               an undergraduate student taking up BS Computer Engineering in the
               Philippines. I am a passionate programmer and have always enjoyed
-              coding since I was young. This lead me to learn and garnered a
-              significant amount of experience along the way.
+              coding since I was young. This drove me to learn different 
+              languages for different technologies.
             </p>
             <Link className="redirect-link about-me-link" href="/about">
               <motion.div
@@ -126,8 +127,8 @@ export default function Home() {
               My experiences covers a wide range of fields from basic game
               development to app development and the field in which I
               specialized the most is web development with Reactjs as my main
-              frontend library. You can learn more about my experiences and
-              journey as a software developer by clicking on the link below.
+              frontend library. You can learn more about my experiences and 
+              capabilities as a software engineer through my personal projects below.
             </p>
             {/* <Link className="redirect-link learn-more" href="/about">
               <motion.div
