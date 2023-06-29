@@ -243,16 +243,21 @@ $bkg-color: rgb(37, 37, 37);
         position: absolute;
         top: 1.2rem;
         left: 1.2rem;
-        background-color: transparent;
+        background-color: rgba(0, 0, 0, 0.5);
 
         svg {
           width: 100%;
           height: 100%;
-          fill: rgba(255, 255, 255, 0.45);
+          fill: rgba(255, 255, 255, 0.75);
         }
 
         &:hover {
           cursor: pointer;
+
+          svg {
+            fill: rgba(255, 255, 255, 0.55);
+
+          }
         }
       }
     }

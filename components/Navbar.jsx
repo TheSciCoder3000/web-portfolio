@@ -9,7 +9,7 @@ function Navbar({ navLinks }) {
     <div className="nav-cont">
       <LogoSvg className="nav-logo" />
       {navLinks.map((nav, indx) => {
-        if (nav.name == "Home") {
+        if ((pathname == "/" && nav.name == "Home") || pathname != "/") {
           return (
             <Link
               key={indx}
@@ -24,7 +24,7 @@ function Navbar({ navLinks }) {
             <ScrollLink
               key={indx}
               className={`nav-link ${pathname == nav.path ? "disabled" : ""}`}
-              href={nav.path}
+              href={nav.scroll}
             >
               {nav.name}
             </ScrollLink>

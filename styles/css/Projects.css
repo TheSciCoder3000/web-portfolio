@@ -221,15 +221,18 @@
   position: absolute;
   top: 1.2rem;
   left: 1.2rem;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .project-detail-modal .modal-cont .project-preview .close-modal svg {
   width: 100%;
   height: 100%;
-  fill: rgba(255, 255, 255, 0.45);
+  fill: rgba(255, 255, 255, 0.75);
 }
 .project-detail-modal .modal-cont .project-preview .close-modal:hover {
   cursor: pointer;
+}
+.project-detail-modal .modal-cont .project-preview .close-modal:hover svg {
+  fill: rgba(255, 255, 255, 0.55);
 }
 .project-detail-modal .modal-cont .project-info {
   background-color: rgb(40, 40, 40);
