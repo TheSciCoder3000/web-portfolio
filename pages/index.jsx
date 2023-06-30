@@ -27,9 +27,9 @@ import {
 export default function Home() {
   const IsTagCloudLoaded = useRef(false);
   const { width } = useWindowDimensions();
+  document.title = "John Juvi | Web Developer";
 
   useEffect(() => {
-    document.title = "John Juvi | Web Developer";
     if (IsTagCloudLoaded.current) return;
 
     TagCloud("#tagCloud", Tags, {
