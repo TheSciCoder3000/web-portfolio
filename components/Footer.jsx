@@ -1,8 +1,7 @@
 import Link from "next/link";
 import LogoSvg from "@svg/LogoSvg";
-import FbSvg from "@svg/FbSvg";
-import GithubSvg from "@svg/GithubSvg";
-import LinkedinSvg from "@svg/LinkedinSvg";
+import { socialMedia } from "@utils/content";
+import { useRouter } from "next/router";
 
 const iconHoverVariant = {
   rest: {
@@ -14,27 +13,7 @@ const iconHoverVariant = {
 };
 
 function Footer({ navLinks }) {
-  const socialMedia = [
-    {
-      id: 0,
-      name: "fb",
-      url: "https://web.facebook.com/johnjuvi.devilla.9",
-      component: FbSvg,
-    },
-    {
-      id: 1,
-      name: "github",
-      url: "https://github.com/TheSciCoder3000",
-      component: GithubSvg,
-    },
-    {
-      id: 3,
-      name: "linkedin",
-      url: "https://www.linkedin.com/in/john-juvi-de-villa/",
-      component: LinkedinSvg,
-    },
-  ];
-
+  const { pathname } = useRouter();
   return (
     <div className="footer-cont">
       <div className="footer-content">
@@ -60,7 +39,7 @@ function Footer({ navLinks }) {
         </div>
         <div className="footer-col footer-links">
           {navLinks.map((nav, indx) => (
-            <Link key={indx} indx={indx} href={nav.path} className="footer-link">
+            <Link key={indx} indx={indx} href={nav.path} className={`footer-link${pathname == "/" && nav.name == "Home" ? " disabled" : ""}`}>
               {nav.name}
             </Link>
           ))}

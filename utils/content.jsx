@@ -4,6 +4,9 @@ import fullStore from "@styles/img/store_full.jpg"
 import fullKalikasan from "@styles/img/kalikasan_full.jpg"
 import GradeImg from "@styles/img/calcu.jpg";
 import fullGrade from "@styles/img/calcu_full.jpg";
+import FbSvg from "@svg/FbSvg";
+import GithubSvg from "@svg/GithubSvg";
+import LinkedinSvg from "@svg/LinkedinSvg";
 
 export const ProjectCollection = [
   {
@@ -100,4 +103,25 @@ export const Tags = [
   "Arduino",
   "C++",
   "Godot",
+];
+
+export const socialMedia = [
+  {
+    id: 0,
+    name: "fb",
+    url: "https://web.facebook.com/johnjuvi.devilla.9",
+    component: FbSvg,
+  },
+  {
+    id: 1,
+    name: "github",
+    url: "https://github.com/TheSciCoder3000",
+    component: GithubSvg,
+  },
+  {
+    id: 3,
+    name: "linkedin",
+    url: "https://www.linkedin.com/in/john-juvi-de-villa/",
+    component: LinkedinSvg,
+  },
 ];

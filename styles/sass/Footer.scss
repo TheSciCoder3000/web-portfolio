@@ -70,6 +70,15 @@
         margin-bottom: 1.25rem;
         font-size: 0.9em;
 
+        &.disabled {
+          cursor: default;
+          color: $primary-color;
+        }
+
+        &:not(.disabled):hover {
+          color: #cdcdcd;
+        }
+
         @include media("<=800px") {
           text-align: center;
         }
