@@ -2,6 +2,8 @@ import StoreImg from "@styles/img/Store_App_img.jpg";
 import KalikasanImg from "@styles/img/kalikasan_img.jpg";
 import fullStore from "@styles/img/store_full.jpg"
 import fullKalikasan from "@styles/img/kalikasan_full.jpg"
+import GradeImg from "@styles/img/calcu.jpg";
+import fullGrade from "@styles/img/calcu_full.jpg";
 
 export const ProjectCollection = [
   {
@@ -46,6 +48,27 @@ export const ProjectCollection = [
               progress of the campaign.`,
     live: "https://kalikasan-blog.firebaseapp.com/",
     github: "https://github.com/TheSciCoder3000/kalikasan-blog/",
+  },
+  {
+    id: 2,
+    name: "Grade Calculator",
+    desc: `A web application designed to display and track the student's overall progress 
+           during the semester. In preparation for the upcoming face-to-face classes in 
+           the school year 2022-2023, the web app was made to provide the user's a detailed 
+           summary of their progress in each subject.`,
+    img: GradeImg,
+    full: fullGrade,
+    tags: ["HTML", "CSS", "JAVASCRIPT", "TYPESCRIPT", "REACTJS", "FIREBASE"],
+    summary: `During the 2022 summer vacation, I started working on a Grade calculator to manage my 
+              grades and assessments for the next school year. Sadly I was unable to finish the 
+              project due to the lack of vision as to what the final product should be. Nonetheless, 
+              it was my first web app built using typescript, an evolved version of javascript where 
+              it is sensitive and stricter to the types the variable that will be used. This in theory 
+              makes it less prone to encountering bugs that would normally present itself during the 
+              operation of the program. Since this was a more sophisticated project than I anticipated, 
+              it helped me consider my method of approach when building a personal project from scratch.`,
+    live: "https://grade-calculator-3000.firebaseapp.com",
+    github: "https://github.com/TheSciCoder3000/grade-calculator/",
   },
 ];
 

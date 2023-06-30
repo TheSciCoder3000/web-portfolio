@@ -1,10 +1,14 @@
 import Footer from "@components/Footer";
 import Navbar from "@components/Navbar";
 import { navLinks } from "@utils/content";
-import React from "react";
+import React, { useEffect } from "react";
 import Profile1 from "@styles/img/about_1.jpg"
 
 const About = () => {
+  useEffect(() => {
+    document.title = "About Me - John Juvi"
+  }, [])
+
   return (
     <div className="about-cont">
       {/* Navigation Bar */}
