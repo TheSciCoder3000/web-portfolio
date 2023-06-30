@@ -3,6 +3,7 @@ import Navbar from "@components/Navbar";
 import { navLinks } from "@utils/content";
 import React, { useEffect } from "react";
 import Profile1 from "@styles/img/about_1.jpg"
+import Profile2 from "@styles/img/poster.jpg"
 
 const About = () => {
   useEffect(() => {
@@ -55,7 +56,7 @@ const About = () => {
               possible with the right engineer.
             </p>
           </div>
-          <div className="img-cont img-2"></div>
+          <div className="img-cont img-2"><img src={Profile2.src} alt="" className="profile-1" /></div>
         </div>
       </div>
 
