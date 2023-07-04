@@ -23,9 +23,9 @@ const About = () => {
       {/* Value Proposition */}
       <div className="value-proposition">
         <h1 className="value-text">
-          “Every website should be reliable with good quality, effectively
-          delivering the customer&apos;s goals and vision”
+          “Make it work, make it right, make it fast”
         </h1>
+        <p className="quote-author">-Kent Beck</p>
       </div>
 
       {/* About Content Section */}
@@ -48,12 +48,11 @@ const About = () => {
         <div className="section-cont">
           <div className="text-cont">
             <p className="about-text-content">
-              One of my main driving force that motivates me to learn programming
-              is the desired to improve and inovate. To be able to build a program
-              that not only functions as the user wishes but to also be capable
-              of creating an environment and atmosphere thats&apos; tailored to the user
-              or client. With the right designs and vision, anything can be 
-              possible with the right engineer.
+              As the years pass by, I enrolled in competition at our school to test my competency 
+              in programming and technology. There I learned of my great interest and desire for 
+              innovation and technological development. This passion lead me to dabble into other 
+              sectors such as computer hardware. 6 years have passed since then and I still work 
+              web development technologies while learning computer hardware and embedded systems.
             </p>
           </div>
           <div className="img-cont img-2"><img src={Profile2.src} alt="" className="profile-1" /></div>

@@ -22,6 +22,10 @@
   font-weight: 50;
   line-height: 2.25em;
 }
+.about-cont .value-proposition .quote-author {
+  font-weight: 300;
+  font-size: 1.2em;
+}
 @media (max-width: 1300px) {
   .about-cont .value-proposition {
     padding: 7rem 10rem;

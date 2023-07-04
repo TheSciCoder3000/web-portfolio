@@ -32,6 +32,11 @@ $image-cont-bkg: rgb(28, 28, 28);
       line-height: 2.25em;
     }
 
+    .quote-author {
+      font-weight: 300;
+      font-size: 1.2em;
+    }
+
     @include media("<=1300px") {
       padding: 7rem 10rem;
     }
