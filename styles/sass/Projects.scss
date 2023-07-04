@@ -206,6 +206,10 @@ $bkg-color: rgb(37, 37, 37);
   padding: 2.5rem 4rem;
   z-index: 999;
 
+  @include media("<=600px") {
+    padding: 0;
+  }
+
   .modal-bkg {
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
@@ -291,6 +295,8 @@ $bkg-color: rgb(37, 37, 37);
       .project-description {
         display: flex;
         flex-direction: column;
+        max-height: 70%;
+        overflow-y: auto;
 
         .project-summary-content {
           font-size: 0.85em;
