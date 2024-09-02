@@ -116,17 +116,22 @@
   }
 
   .desc-section {
-    padding: 10rem $content-padding 5rem;
+    padding: 7rem $content-padding 5rem;
     background-color: rgb(30, 30, 30);
 
     p {
       max-width: 34rem;
       font-size: 0.9em;
-      margin-bottom: 2.75rem;
+      margin-bottom: 1rem;
 
       @include media("<=phone") {
         font-size: 0.8em;
       }
+    }
+
+    .skill-list {
+      line-height: 1.75em;
+      color: #c9c9c9;
     }
 
     .redirect-link {
@@ -163,7 +168,7 @@
     }
 
     .section-row {
-      margin-bottom: 10rem;
+      margin-bottom: 7rem;
       display: flex;
 
       h2 {
