@@ -12,6 +12,11 @@
   align-items: center;
   z-index: 99;
 }
+@media (max-width: 800px) {
+  .nav-cont {
+    padding: 2rem 4rem;
+  }
+}
 .nav-cont .nav-logo {
   margin-right: auto;
   width: 5rem;
@@ -28,3 +33,7 @@
 .nav-cont .nav-link:not(.disabled):hover {
   color: #cdcdcd;
 }
+.nav-cont .nav-menu {
+  fill: #00e061;
+  width: 2rem;
+}/*# sourceMappingURL=Navbar.css.map */

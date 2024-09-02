@@ -110,18 +110,22 @@
   }
 }
 .home-cont .desc-section {
-  padding: 10rem 15rem 5rem;
+  padding: 7rem 15rem 5rem;
   background-color: rgb(30, 30, 30);
 }
 .home-cont .desc-section p {
   max-width: 34rem;
   font-size: 0.9em;
-  margin-bottom: 2.75rem;
+  margin-bottom: 1rem;
 }
 @media (max-width: 480px) {
   .home-cont .desc-section p {
     font-size: 0.8em;
   }
+}
+.home-cont .desc-section .skill-list {
+  line-height: 1.75em;
+  color: #c9c9c9;
 }
 .home-cont .desc-section .redirect-link {
   color: #00e061;
@@ -155,7 +159,7 @@
   width: 0;
 }
 .home-cont .desc-section .section-row {
-  margin-bottom: 10rem;
+  margin-bottom: 7rem;
   display: flex;
 }
 @media (max-width: 480px) {
@@ -207,4 +211,4 @@
   .home-cont .desc-section {
     padding: 10rem 2rem 5rem;
   }
-}
+}/*# sourceMappingURL=Home.css.map */
