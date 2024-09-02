@@ -128,11 +128,20 @@ export default function Home() {
             <h2 className="section-header">Skills</h2>
             <p className="skills-content">
               My experiences covers a wide range of fields from basic game
-              development to app development and the field in which I
-              specialized the most is web development with Reactjs as my main
-              frontend library. You can learn more about my experiences and 
-              capabilities as a software engineer through my personal projects below.
+              development to app development but mainly specializing in Web 
+              Development Technologies such as:
             </p>
+            <ul className="skill-list">
+              <li>React JS</li>
+              <li>Node JS</li>
+              <li>Redux</li>
+              <li>Next JS</li>
+              <li>Typescript</li>
+              <li>Django</li>
+              <li>Firebase</li>
+              <li>REST Framework</li>
+              <li>Tailwind</li>
+            </ul>
             {/* <Link className="redirect-link learn-more" href="/about">
               <motion.div
                 className="link-cont"
