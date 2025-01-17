@@ -64,8 +64,8 @@ export default function Home() {
           />
         </h1>
         <p className="hero-desc">
-          A passionate programmer who enjoys learning and thinkering with new 
-          technologies. Actively in search of projects I can offer my services 
+          A passionate programmer who enjoys learning and thinkering with new
+          technologies. Actively in search of projects I can offer my services
           as a coder with the drive to innovate and develop.
         </p>
         <motion.button
@@ -73,12 +73,14 @@ export default function Home() {
           initial="hidden"
           whileHover="visible"
         >
-          <motion.span
+          <motion.a
             className="call-to-action-text"
             variants={callToActionTextVariant}
+            href="/resume.pdf"
+            download="John Juvi De Villa - Resume"
           >
             Download My Resume{" "}
-          </motion.span>
+          </motion.a>
           <motion.div
             className="hover-bkg"
             variants={callToActionBkgVariant}
@@ -96,7 +98,7 @@ export default function Home() {
               Hello, my name is John Juvi De Villa, you can call me Juvi. I am
               an undergraduate student taking up BS Computer Engineering in the
               Philippines. I am a passionate programmer and have always enjoyed
-              coding since I was young. This drove me to learn different 
+              coding since I was young. This drove me to learn different
               languages for different technologies.
             </p>
             <Link className="redirect-link about-me-link" href="/about">
@@ -128,7 +130,7 @@ export default function Home() {
             <h2 className="section-header">Skills</h2>
             <p className="skills-content">
               My experiences covers a wide range of fields from basic game
-              development to app development but mainly specializing in Web 
+              development to app development but mainly specializing in Web
               Development Technologies such as:
             </p>
             <ul className="skill-list">
