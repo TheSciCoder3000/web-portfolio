@@ -4,6 +4,7 @@ import "../styles/css/Footer.css";
 import "../styles/css/Navbar.css";
 import "../styles/css/Projects.css";
 import "../styles/css/About.css";
+import "../styles/Tara.css";
 import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
