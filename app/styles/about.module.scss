@@ -3,18 +3,29 @@
   height: 100vh;
   padding: 0 7rem;
   margin: -5rem 0;
+  z-index: 5;
 }
 
-.aboutBox {
+.aboutInnerCard {
+  transform-style: preserve-3d;
   position: relative;
-  z-index: 15;
-  background-color: #2b3043;
-  border-radius: 20px;
-  padding: 6.5rem 8rem;
-
+  padding: 4.5rem 5rem;
   display: flex;
   justify-content: space-between;
   gap: 7rem;
+  background-color: #383f59;
+  border-radius: 20px;
+  transform: translateZ(75px);
+}
+
+.aboutBox {
+  z-index: 15;
+  position: relative;
+  background-color: #2b3043;
+  border-radius: 20px;
+  padding: 3rem 3rem;
+
+  transform-style: preserve-3d;
 }
 
 .aboutContent {
