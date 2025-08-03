@@ -1,0 +1,46 @@
+.home-page {
+  background-color: #242734;
+}
+
+.heroSection {
+  padding: 15rem 7rem;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.heroName {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 10;
+  gap: 1rem;
+}
+
+.headerBar {
+  background-color: #e4ac2c;
+  border: none;
+  width: 16rem;
+  height: 0.7rem;
+}
+
+.hero-box {
+  background-color: #e4ac2c;
+  width: 33rem;
+  position: absolute;
+  z-index: 1;
+
+  top: 0rem;
+  bottom: 0;
+  right: 2rem;
+  transform: skew(-35deg);
+}
+
+.heroImg {
+  position: absolute;
+  right: 10rem;
+  bottom: 0rem;
+  z-index: 5;
+  height: 96vh;
+  object-fit: cover;
+}

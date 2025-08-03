@@ -1,0 +1,39 @@
+.aboutSection {
+  background-color: #242734;
+  height: 100vh;
+  padding: 0 7rem;
+  margin: -5rem 0;
+}
+
+.aboutBox {
+  position: relative;
+  z-index: 15;
+  background-color: #2b3043;
+  border-radius: 20px;
+  padding: 6.5rem 8rem;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 7rem;
+}
+
+.aboutContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.aboutImg {
+  width: 28rem;
+  object-fit: cover;
+}
+
+.aboutHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.aboutLink {
+  margin-top: 2rem;
+}
