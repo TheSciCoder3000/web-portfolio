@@ -2,6 +2,7 @@ import styles from "./styles/global.module.scss";
 import projectStyles from "./styles/project.module.scss";
 import AboutSection from "./components/AboutSection";
 import HeroSection from "./components/HeroSection";
+import ProjectSection from "./components/ProjectSection";
 
 export default function Home() {
   return (
@@ -13,9 +14,7 @@ export default function Home() {
       <AboutSection />
 
       {/* Projects */}
-      <div className={projectStyles["project-section"]}>
-        <h1 className={projectStyles["project-header"]}>FEATURED WORKS</h1>
-      </div>
+      <ProjectSection />
     </div>
   );
 }

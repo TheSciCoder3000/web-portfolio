@@ -12,3 +12,59 @@
   letter-spacing: 0.1em;
   margin-bottom: 5rem;
 }
+
+.projectEntries {
+}
+
+.projectItem {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 10rem;
+}
+
+.itemContent {
+  flex: 1;
+  position: sticky;
+  top: 5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.itemImages {
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding-bottom: 10rem;
+
+  img {
+    border-radius: 10px;
+  }
+}
+
+.projLinks {
+  display: flex;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.btnLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid #e4ac2c;
+  color: #e4ac2c;
+  border-radius: 8px;
+  padding: 0.5rem 2rem;
+  gap: 0.8rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.9em;
+
+  svg {
+    width: 1.3rem;
+  }
+}
