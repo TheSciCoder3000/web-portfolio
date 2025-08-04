@@ -1,7 +1,3 @@
-.home-page {
-  background-color: #242734;
-}
-
 .heroSection {
   padding: 15rem 7rem;
   position: relative;
@@ -30,10 +26,13 @@
   position: absolute;
   z-index: 1;
 
-  top: 0rem;
+  top: -2rem;
   bottom: 0;
-  right: 2rem;
+  right: -15rem;
+  transform: rotate(-35deg);
+  border-radius: 20px;
   transform: skew(-35deg);
+  transform-origin: top;
 }
 
 .heroImg {
@@ -42,5 +41,6 @@
   bottom: 0rem;
   z-index: 5;
   height: 96vh;
+  width: auto;
   object-fit: cover;
 }
