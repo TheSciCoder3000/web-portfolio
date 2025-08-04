@@ -1,20 +1,42 @@
-import React from "react";
+"use client";
+
 import { IProject } from "../data";
 import projStyles from "@/app/styles/project.module.scss";
 import styles from "@/app/styles/global.module.scss";
 import Image from "next/image";
 import Button from "./Button";
+import { motion } from "motion/react";
 
 const ProjectEntry: React.FC<{ project: IProject }> = ({ project }) => {
   return (
     <div className={projStyles.projectItem}>
       <div className={projStyles.itemContent}>
         <h2 className={styles.h2}>{project.title}</h2>
-        <p className={styles.p}>{project.description}</p>
+        <div className={projStyles.pCont}>
+          <div className={projStyles.pBarCont}>
+            <motion.p
+              initial={{ backgroundSize: "100% 100%" }}
+              transition={{ duration: 0.9, delay: 0.2 }}
+              whileInView={{ backgroundSize: "0% 100%" }}
+              viewport={{ amount: "all" }}
+              className={`${styles.p} ${projStyles.pbar}`}
+            >
+              {project.description}
+            </motion.p>
+          </div>
+          <p className={styles.p}>{project.description}</p>
+        </div>
 
         <div className={projStyles.projLinks}>
           <Button link={project.github}>Source Code</Button>
           <Button link={project.live}>Live Preview</Button>
+          <motion.div
+            viewport={{ amount: "all" }}
+            initial={{ backgroundSize: "100% 100%" }}
+            transition={{ duration: 0.4, delay: 0.2 }}
+            whileInView={{ backgroundSize: "0% 100%" }}
+            className="link-bar"
+          />
         </div>
       </div>
 

@@ -1,5 +1,6 @@
 .project-section {
   padding: 10rem 7rem;
+  position: relative;
 }
 
 .project-header {
@@ -13,13 +14,16 @@
   margin-bottom: 5rem;
 }
 
-.projectEntries {
+.subHeader {
+  position: sticky;
+  top: 3rem;
+  margin-bottom: 1rem;
 }
 
 .projectItem {
   display: flex;
-  gap: 3rem;
-  margin-bottom: 10rem;
+  gap: 4.2rem;
+  margin-bottom: 20rem;
 }
 
 .itemContent {
@@ -27,17 +31,24 @@
   position: sticky;
   top: 5rem;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  // display: flex;
+  // flex-direction: column;
+  // gap: 1.5rem;
+
+  h2 {
+    margin-bottom: 2.5rem;
+  }
+
+  div:nth-child(2) {
+    margin-bottom: 3.5rem;
+  }
 }
 
 .itemImages {
-  flex: 0.8;
+  flex: 1.2;
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
-  padding-bottom: 10rem;
 
   img {
     border-radius: 10px;
@@ -45,9 +56,26 @@
 }
 
 .projLinks {
-  display: flex;
+  display: inline-flex;
   gap: 2rem;
   margin-top: 4rem;
+  position: relative;
+
+  div {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+
+    color: transparent;
+    background-position: left;
+    background-size: 100% 100%;
+    background-image: linear-gradient(#e4ac2c, #e4ac2c);
+    display: inline;
+    background-repeat: no-repeat;
+    pointer-events: none;
+  }
 }
 
 .btnLink {
@@ -67,4 +95,26 @@
   svg {
     width: 1.3rem;
   }
+}
+
+.pCont {
+  position: relative;
+}
+
+.pBarCont {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.pbar {
+  color: transparent;
+  background-position: left;
+  background-size: 100% 100%;
+  background-image: linear-gradient(#343b54, #343b54);
+  display: inline;
+  background-repeat: no-repeat;
+  pointer-events: none;
 }
