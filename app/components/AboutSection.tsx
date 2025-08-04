@@ -6,6 +6,7 @@ import aboutStyles from "@/app/styles/about.module.scss";
 import React from "react";
 import { motion } from "motion/react";
 import { useTiltCard } from "../hooks/useTIltCard";
+import Image from "next/image";
 
 function AboutSection() {
   const [ref, transform, handleMouseMove, handleMouseLeave] = useTiltCard();
@@ -35,7 +36,14 @@ function AboutSection() {
             </a>
           </div>
 
-          <img className={aboutStyles.aboutImg} src="/grad.jpg" />
+          <Image
+            height={0}
+            width={0}
+            sizes="100vw"
+            alt="grad-pic"
+            className={aboutStyles.aboutImg}
+            src="/grad.jpg"
+          />
         </div>
       </motion.div>
     </div>
