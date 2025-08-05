@@ -14,6 +14,9 @@ export default function Home() {
 
       {/* Projects */}
       <ProjectSection />
+
+      {/* Call to Action */}
+      <div style={{ height: "100rem" }}></div>
     </div>
   );
 }

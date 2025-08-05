@@ -28,7 +28,7 @@ const Entry: React.FC<{ project: IProject }> = ({ project }) => {
     <motion.div
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ margin: "1000px 0px 0px 0px", amount: 0.3 }}
+      viewport={{ margin: "200px 0px 180px 0px", amount: 0.2 }}
       className={projStyles.projectItem}
     >
       <motion.div
