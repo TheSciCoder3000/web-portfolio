@@ -1,8 +1,7 @@
 import styles from "./styles/global.module.scss";
-import projectStyles from "./styles/project.module.scss";
-import AboutSection from "./components/AboutSection";
-import HeroSection from "./components/HeroSection";
-import ProjectSection from "./components/ProjectSection";
+import AboutSection from "@components/AboutSection";
+import HeroSection from "@components/HeroSection";
+import ProjectSection from "@components/ProjectSection";
 
 export default function Home() {
   return (

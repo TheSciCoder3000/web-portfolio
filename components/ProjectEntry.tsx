@@ -1,6 +1,6 @@
 "use client";
 
-import { IProject } from "../data";
+import { IProject } from "../app/data";
 import projStyles from "@/app/styles/project.module.scss";
 import styles from "@/app/styles/global.module.scss";
 import Image from "next/image";
@@ -12,6 +12,7 @@ const ProjectEntry: React.FC<{ project: IProject }> = ({ project }) => {
     <div className={projStyles.projectItem}>
       <div className={projStyles.itemContent}>
         <h2 className={styles.h2}>{project.title}</h2>
+
         <div className={projStyles.pCont}>
           <div className={projStyles.pBarCont}>
             <motion.p
@@ -24,6 +25,7 @@ const ProjectEntry: React.FC<{ project: IProject }> = ({ project }) => {
               {project.description}
             </motion.p>
           </div>
+
           <p className={styles.p}>{project.description}</p>
         </div>
 

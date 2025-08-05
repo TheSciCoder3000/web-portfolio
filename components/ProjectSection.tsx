@@ -1,7 +1,7 @@
 import React from "react";
 import projectStyles from "@/app/styles/project.module.scss";
 import styles from "@/app/styles/global.module.scss";
-import { projects } from "../data";
+import { projects } from "../app/data";
 import ProjectEntry from "./ProjectEntry";
 
 function ProjectSection() {

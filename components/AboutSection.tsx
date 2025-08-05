@@ -5,7 +5,7 @@ import aboutStyles from "@/app/styles/about.module.scss";
 
 import React from "react";
 import { motion } from "motion/react";
-import { useTiltCard } from "../hooks/useTIltCard";
+import { useTiltCard } from "./hooks/useTIltCard";
 import Image from "next/image";
 
 function AboutSection() {
