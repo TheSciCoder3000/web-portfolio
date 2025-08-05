@@ -4,6 +4,7 @@ export interface IProject {
   ss: string[];
   github: string;
   live: string;
+  bkg: string;
 }
 
 export const projects: IProject[] = [
@@ -14,6 +15,7 @@ export const projects: IProject[] = [
     ss: ["/kalikasan/1.png", "/kalikasan/2.png", "/kalikasan/3.png"],
     github: "https://github.com/TheSciCoder3000/kalikasan-blog",
     live: "https://kalikasan-blog.firebaseapp.com",
+    bkg: "red",
   },
   {
     title: "CID Architecture",
@@ -22,6 +24,7 @@ export const projects: IProject[] = [
     ss: ["/archi/1.jpg", "/archi/2.jpg", "/archi/3.jpg"],
     github: "https://github.com/TheSciCoder3000/archi_vite",
     live: "https://cid-archi.web.app/",
+    bkg: "black",
   },
   {
     title: "The Villa Store",
@@ -30,5 +33,6 @@ export const projects: IProject[] = [
     ss: ["/store/1.jpg", "/store/2.jpg", "/store/3.jpg", "/store/4.jpg"],
     github: "https://github.com/TheSciCoder3000/Store-App",
     live: "https://thescicoder3000.pythonanywhere.com",
+    bkg: "blue",
   },
 ];
