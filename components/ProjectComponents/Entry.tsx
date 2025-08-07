@@ -14,28 +14,22 @@ const backgroundVariant: Variants = {
     opacity: 1,
   },
 };
-const contentVariant: Variants = {
-  hidden: {
-    opacity: 0,
-  },
-  view: {
-    opacity: 1,
-  },
-};
 
 const Entry: React.FC<{ project: IProject }> = ({ project }) => {
   return (
     <motion.div
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ margin: "200px 0px 180px 0px", amount: 0.2 }}
+      viewport={{ margin: "-100px 0px 180px 0px", amount: 0.2 }}
+      variants={backgroundVariant}
+      transition={{ duration: 0.8, delay: 0.1 }}
       className={projStyles.projectItem}
     >
       <motion.div
         initial="hidden"
         whileInView="view"
         viewport={{ margin: "0px 0px 0px 0px", amount: "all" }}
-        variants={contentVariant}
+        // variants={contentVariant}
         className={projStyles.itemContent}
       >
         <h2 className={styles.h2}>{project.title}</h2>
