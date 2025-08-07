@@ -3,8 +3,9 @@
 import React from "react";
 import heroStyles from "@/app/styles/hero.module.scss";
 import styles from "@/app/styles/global.module.scss";
-import { motion, useAnimate } from "motion/react";
+import { motion, useAnimate, Variants } from "motion/react";
 import Image from "next/image";
+import useMediaQuery from "./hooks/useMediaQuery";
 
 const nameBarVariant = {
   initial: {
@@ -16,8 +17,21 @@ const nameBarVariant = {
   },
 };
 
+const containerVariant: Variants = {
+  initial: {
+    margin: "0 5rem",
+    borderRadius: "0 0 50px 50px",
+  },
+
+  onscreen: {
+    margin: 0,
+    borderRadius: 0,
+  },
+};
+
 function HeroSection() {
   const [scope, animate] = useAnimate();
+  const mediaMatch = useMediaQuery({ minWidth: 500 });
 
   const handleHeaderAnimationComplete = () => {
     animate(
@@ -29,7 +43,13 @@ function HeroSection() {
     );
   };
   return (
-    <div className={heroStyles.heroSection}>
+    <motion.div
+      variants={containerVariant}
+      whileInView="onscreen"
+      initial={mediaMatch ? "initial" : "onscreen"}
+      viewport={{ amount: 0.55 }}
+      className={heroStyles.heroSection}
+    >
       {/* Hero Name */}
       <div className={heroStyles.heroName}>
         <h1 className={styles.h1}>JOHN JUVI DE VILLA</h1>
@@ -56,7 +76,7 @@ function HeroSection() {
         initial={{ transform: "skew(-35deg) scaleY(0)" }}
         className={heroStyles["hero-box"]}
       ></motion.div>
-    </div>
+    </motion.div>
   );
 }
 
