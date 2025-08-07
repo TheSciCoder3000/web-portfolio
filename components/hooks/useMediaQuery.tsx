@@ -30,6 +30,8 @@ export default function useMediaQuery(mediaQuery: IMedia) {
       setMediaMatch(handleMediaState);
     }
 
+    handleResize();
+
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);

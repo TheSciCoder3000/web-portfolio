@@ -1,6 +1,10 @@
 .project-section {
   padding: 10rem 7rem 0 7rem;
   position: relative;
+
+  @media screen and (max-width: 500px) {
+    padding: 10rem 1.5rem 0 1.5rem;
+  }
 }
 
 .project-header {
@@ -21,6 +25,10 @@
   top: 3rem;
   margin-bottom: 1rem;
   z-index: 10;
+
+  @media screen and (max-width: 500px) {
+    position: static;
+  }
 }
 
 .projectItem {
@@ -30,6 +38,11 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @media screen and (max-width: 500px) {
+    flex-direction: column-reverse;
+    margin-bottom: 10rem;
   }
 }
 
@@ -42,6 +55,10 @@
 
   h2 {
     margin-bottom: 2.5rem;
+  }
+
+  @media screen and (max-width: 500px) {
+    position: static;
   }
 }
 
@@ -56,12 +73,23 @@
   img {
     border-radius: 10px;
   }
+
+  @media screen and (max-width: 500px) {
+    margin-top: 2rem;
+    flex-direction: row;
+    overflow-x: auto;
+  }
 }
 
 .projLinks {
-  // display: inline;
   margin-top: 4rem;
   position: relative;
+
+  @media screen and (max-width: 500px) {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
 }
 
 .btnLink {
