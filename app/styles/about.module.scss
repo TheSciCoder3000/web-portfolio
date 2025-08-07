@@ -1,29 +1,38 @@
 .aboutSection {
-  background-color: #242734;
+  background-color: transparent;
   min-height: 100vh;
   padding: 0 7rem;
-  margin: -5rem 0 0 0;
+  margin-top: 10rem;
   z-index: 5;
+
+  @media screen and (max-width: 500px) {
+    padding: 0;
+    margin-top: 5rem;
+  }
 }
 
 .aboutInnerCard {
   transform-style: preserve-3d;
   position: relative;
-  padding: 4.5rem 5rem;
+  padding: 4.5rem 1.5rem;
   display: flex;
   justify-content: space-between;
   gap: 7rem;
-  background-color: #383f59;
   border-radius: 20px;
   transform: translateZ(75px);
+
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+  }
 }
 
 .aboutBox {
   z-index: 15;
   position: relative;
-  background-color: #2b3043;
+  background-color: #1e212f;
   border-radius: 20px;
-  padding: 3rem 3rem;
+  padding: 1rem;
+  height: 100%;
 
   transform-style: preserve-3d;
 }
@@ -36,8 +45,16 @@
 
 .aboutImg {
   width: 28rem;
+  transform-style: preserve-3d;
+  transform: translateZ(25px);
+  position: relative;
   height: auto;
   object-fit: cover;
+  border-radius: 10px;
+
+  @media screen and (max-width: 500px) {
+    width: 100%;
+  }
 }
 
 .aboutHeader {

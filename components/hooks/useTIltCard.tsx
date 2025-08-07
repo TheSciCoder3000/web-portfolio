@@ -6,7 +6,7 @@ import {
   useSpring,
 } from "motion/react";
 
-const ROTATION_RANGE = 12;
+const ROTATION_RANGE = 24;
 const HALF_ROTATION_RANGE = ROTATION_RANGE / 2;
 
 export function useTiltCard(): [

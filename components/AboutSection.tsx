@@ -18,24 +18,24 @@ function AboutSection() {
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
-      <motion.div className={aboutStyles.aboutBox} style={{ transform }}>
-        <div className={aboutStyles.aboutInnerCard}>
-          <div className={aboutStyles.aboutContent}>
-            <div className={aboutStyles.aboutHeader}>
-              <h3 className={styles.h3}>ABOUT ME</h3>
-              <h2 className={styles.h2}>Fresh and New</h2>
-            </div>
-            <p className={styles.p}>
-              i am a Computer Engineer graduate specializing in Software
-              Development. Experienced in frontend web development using React
-              and Typescript with solid foundation in backend development using
-              Nodejs and Django.
-            </p>
-            <a className={`${styles.a} ${aboutStyles.aboutLink}`}>
-              Download My Resume
-            </a>
+      <div className={aboutStyles.aboutInnerCard}>
+        <div className={aboutStyles.aboutContent}>
+          <div className={aboutStyles.aboutHeader}>
+            <h3 className={styles.h3}>ABOUT ME</h3>
+            <h2 className={styles.h2}>Fresh and New</h2>
           </div>
+          <p className={styles.p}>
+            i am a Computer Engineer graduate specializing in Software
+            Development. Experienced in frontend web development using React and
+            Typescript with solid foundation in backend development using Nodejs
+            and Django.
+          </p>
+          <a className={`${styles.a} ${aboutStyles.aboutLink}`}>
+            Download My Resume
+          </a>
+        </div>
 
+        <motion.div className={aboutStyles.aboutBox} style={{ transform }}>
           <Image
             height={0}
             width={0}
@@ -44,8 +44,8 @@ function AboutSection() {
             className={aboutStyles.aboutImg}
             src="/grad.jpg"
           />
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </div>
   );
 }
