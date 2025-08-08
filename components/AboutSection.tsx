@@ -14,7 +14,6 @@ function AboutSection() {
   return (
     <div
       className={aboutStyles.aboutSection}
-      ref={ref}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
@@ -35,7 +34,11 @@ function AboutSection() {
           </a>
         </div>
 
-        <motion.div className={aboutStyles.aboutBox} style={{ transform }}>
+        <motion.div
+          className={aboutStyles.aboutBox}
+          ref={ref}
+          style={{ transform }}
+        >
           <Image
             height={0}
             width={0}
