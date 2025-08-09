@@ -5,6 +5,10 @@
   height: 100vh;
   background-color: #242734;
   margin-bottom: 10rem;
+
+  @media screen and (max-width: 768px) {
+    padding: 2.5rem 5rem;
+  }
 }
 
 .heroName {
@@ -20,6 +24,23 @@
   border: none;
   width: 16rem;
   height: 0.7rem;
+}
+
+.socials {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2.5rem;
+
+  a {
+    background-color: transparent;
+    border: none;
+    width: 2rem;
+    cursor: pointer;
+
+    svg {
+      fill: #5261a5;
+    }
+  }
 }
 
 .hero-box {
