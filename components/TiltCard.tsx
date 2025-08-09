@@ -21,7 +21,7 @@ const TiltCard = () => {
         sizes="100vw"
         alt="grad-pic"
         className={aboutStyles.aboutImg}
-        src="/grad.jpg"
+        src="/grad.webp"
       />
     </motion.div>
   );
