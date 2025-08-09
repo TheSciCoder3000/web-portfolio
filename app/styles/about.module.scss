@@ -3,6 +3,7 @@
   min-height: 100vh;
   padding: 0 7rem;
   margin-top: 10rem;
+  margin-bottom: 12rem;
   z-index: 30;
   position: relative;
 
@@ -22,7 +23,7 @@
   border-radius: 20px;
   transform: translateZ(75px);
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 768px) {
     flex-direction: column;
   }
 }
@@ -53,7 +54,7 @@
   object-fit: cover;
   border-radius: 10px;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 768px) {
     width: 100%;
   }
 }
@@ -66,4 +67,39 @@
 
 .aboutLink {
   margin-top: 2.3rem;
+}
+
+.aboutExp {
+  display: flex;
+  margin-top: 10rem;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.expContent {
+  flex: 0.6;
+  width: 100%;
+  max-width: 60rem;
+  margin-bottom: 5rem;
+  padding: 1.5rem;
+  overflow: auto;
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+
+  a {
+    display: block;
+    margin-top: 4rem;
+  }
+}
+
+.contributionList {
+  margin-top: 2.5rem;
+  padding: 0 1.5rem;
+  overflow-x: auto;
+  flex: 1;
+  width: 100%;
 }

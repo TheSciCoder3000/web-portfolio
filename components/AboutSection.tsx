@@ -4,19 +4,19 @@ import styles from "@/app/styles/global.module.scss";
 import aboutStyles from "@/app/styles/about.module.scss";
 
 import React from "react";
-import { motion } from "motion/react";
-import { useTiltCard } from "./hooks/useTIltCard";
-import Image from "next/image";
+import Contributions from "./Contributions";
+import TiltCard from "./TiltCard";
+
+import contrib20 from "@/app/contrib-data/2020.json";
+import contrib21 from "@/app/contrib-data/2021.json";
+import contrib22 from "@/app/contrib-data/2022.json";
+import contrib23 from "@/app/contrib-data/2023.json";
+import contrib24 from "@/app/contrib-data/2024.json";
+import Link from "next/link";
 
 function AboutSection() {
-  const [ref, transform, handleMouseMove, handleMouseLeave] = useTiltCard();
-
   return (
-    <div
-      className={aboutStyles.aboutSection}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-    >
+    <div className={aboutStyles.aboutSection}>
       <div className={aboutStyles.aboutInnerCard}>
         <div className={aboutStyles.aboutContent}>
           <div className={aboutStyles.aboutHeader}>
@@ -34,20 +34,36 @@ function AboutSection() {
           </a>
         </div>
 
-        <motion.div
-          className={aboutStyles.aboutBox}
-          ref={ref}
-          style={{ transform }}
-        >
-          <Image
-            height={0}
-            width={0}
-            sizes="100vw"
-            alt="grad-pic"
-            className={aboutStyles.aboutImg}
-            src="/grad.jpg"
-          />
-        </motion.div>
+        <TiltCard />
+      </div>
+
+      <div className={aboutStyles.aboutExp}>
+        <div className={aboutStyles.contributionList}>
+          <Contributions year="2020" data={contrib20.weeks} />
+          <Contributions year="2021" data={contrib21.weeks} />
+          <Contributions year="2022" data={contrib22.weeks} />
+          <Contributions year="2023" data={contrib23.weeks} />
+          <Contributions year="2024" data={contrib24.weeks} />
+          <Contributions year="2025" />
+        </div>
+
+        <div className={aboutStyles.expContent}>
+          <h2 className={styles.h2}>Experienced and Passionate</h2>
+          <p className={styles.p}>
+            Programming since late 2020 with multiple projects covering frontend
+            web development. Programming languages include Java, Javascript,
+            Typescript Python, C++, C# and Dart. Check my history in my Github
+            account below.
+          </p>
+          <Link
+            href="https://github.com/TheSciCoder3000?tab=overview&from=2024-12-01&to=2024-12-31"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${styles.a} ${aboutStyles.aboutLink}`}
+          >
+            Github Account
+          </Link>
+        </div>
       </div>
     </div>
   );
