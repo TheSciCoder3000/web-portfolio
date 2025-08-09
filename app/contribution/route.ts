@@ -27,9 +27,6 @@ export async function GET(request: Request) {
     }
   `;
 
-  console.log("testing");
-  console.log(process.env.GITHUB_TOKEN);
-
   try {
     const response = await fetch("https://api.github.com/graphql", {
       method: "POST",
