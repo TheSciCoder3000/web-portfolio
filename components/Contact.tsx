@@ -1,10 +1,9 @@
 "use client";
 
 import React from "react";
-import { useForm, ValidationError } from "@formspree/react";
+import { useForm } from "@formspree/react";
 import contactStyles from "@/app/styles/contact.module.scss";
 import styles from "@/app/styles/global.module.scss";
-import Image from "next/image";
 import {
   AdvancedMarker,
   APIProvider,
