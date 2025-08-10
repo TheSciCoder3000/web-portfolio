@@ -1,3 +1,4 @@
+import Contact from "@/components/Contact";
 import styles from "./styles/global.module.scss";
 import AboutSection from "@components/AboutSection";
 import HeroSection from "@components/HeroSection";
@@ -16,7 +17,7 @@ export default function Home() {
       <ProjectSection />
 
       {/* Call to Action */}
-      <div style={{ height: "100rem" }}></div>
+      <Contact />
     </div>
   );
 }
