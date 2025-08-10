@@ -29,7 +29,12 @@ function AboutSection() {
             Typescript with solid foundation in backend development using Nodejs
             and Django.
           </p>
-          <a className={`${styles.a} ${aboutStyles.aboutLink}`}>
+          <a
+            href="/RESUME - JOHN JUVI QUIMADA DE VILLA.pdf"
+            download="RESUME - JOHN JUVI DE VILLA"
+            target="_blank"
+            className={`${styles.a} ${aboutStyles.aboutLink}`}
+          >
             Download My Resume
           </a>
         </div>
