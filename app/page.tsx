@@ -1,7 +1,9 @@
+import Contact from "@/components/Contact";
 import styles from "./styles/global.module.scss";
 import AboutSection from "@components/AboutSection";
 import HeroSection from "@components/HeroSection";
 import ProjectSection from "@components/ProjectSection";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -16,7 +18,9 @@ export default function Home() {
       <ProjectSection />
 
       {/* Call to Action */}
-      <div style={{ height: "100rem" }}></div>
+      <Contact />
+
+      <Footer />
     </div>
   );
 }
