@@ -106,7 +106,7 @@ function HeroSection() {
             </motion.svg>
           </motion.a>
           <motion.a
-            href="https://github.com/TheSciCoder3000?tab=overview&from=2024-12-01&to=2024-12-31"
+            href="https://github.com/TheSciCoder3000"
             target="_blank"
             rel="noopener noreferrer"
             initial="initial"

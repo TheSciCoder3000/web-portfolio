@@ -1,6 +1,7 @@
 import React from "react";
 import footerStyles from "@/app/styles/footer.module.scss";
 import styles from "@/app/styles/global.module.scss";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -13,8 +14,22 @@ const Footer = () => {
         </div>
         <div className={footerStyles.socials}>
           <h3 className={styles.h3}>SOCIALS</h3>
-          <p className={styles.p}>GITHUB</p>
-          <p className={styles.p}>LINKEDIN</p>
+          <Link
+            href="https://github.com/TheSciCoder3000"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.p}
+          >
+            GITHUB
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/john-juvi-de-villa"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.p}
+          >
+            LINKEDIN
+          </Link>
         </div>
         <div className={footerStyles.location}>
           <h3 className={styles.h3}>LOCATION</h3>
