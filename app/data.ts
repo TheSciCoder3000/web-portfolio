@@ -30,6 +30,27 @@ export const projects: IProject[] = [
     bkg: "red",
   },
   {
+    title: "Money Management System",
+    description: `
+      The project is built upon NextJS for the frontend and 
+      backend while Supabase for authentication and database. 
+      Chart.js library for data visualization and Shadcn for 
+      reusable components. You can manage income and expenses 
+      of accounts added through this web application.
+    `,
+    ss: [
+      "/money/dashboard.png",
+      "/money/account.png",
+      "/money/transaction.png",
+      "/money/budget.png",
+      "/money/login.png",
+      "/money/signin.png",
+    ],
+    github: "https://github.com/TheSciCoder3000/money-management-ai",
+    live: "https://money.neurocoder.work",
+    bkg: "red",
+  },
+  {
     title: "Kalikasan Advocacy",
     description: `
       The kalikasan Advocacy is a website designed to promote awareness 
