@@ -13,9 +13,7 @@ const AnimatedHeroBkg = () => {
         <div className="pointer-events-none absolute top-0 left-0 z-5 h-full w-full backdrop-blur-[20px]" />
       )}
       <LiquidEther
-        colors={
-          IsDark ? ["#5227FF", "#FF9FFC", "#B19EEF"] : ["#57ffd2", "#7ae0ff"]
-        }
+        colors={["#5227FF", "#FF9FFC", "#B19EEF"]}
         mouseForce={11}
         cursorSize={IsDark ? 100 : 50}
         isViscous={false}
