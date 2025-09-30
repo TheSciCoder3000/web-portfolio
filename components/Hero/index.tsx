@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "./Image";
+import Image from "../Image";
 import AnimatedHeroBkg from "./AnimatedHeroBkg";
 import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";

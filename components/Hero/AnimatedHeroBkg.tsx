@@ -2,7 +2,7 @@
 
 import React from "react";
 import LiquidEther from "./LiquidEther";
-import useIsDark from "./hooks/useIsDark";
+import useIsDark from "../hooks/useIsDark";
 
 const AnimatedHeroBkg = () => {
   const IsDark = useIsDark();
