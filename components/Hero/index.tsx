@@ -27,7 +27,7 @@ function HeroSection() {
         <div className="my-20 flex flex-col items-center text-center md:items-start">
           <div className="mb-15 flex flex-col items-center space-y-4 text-gray-500 md:items-start dark:text-white">
             <h1 className="w-fit rounded-lg bg-gray-300 px-3 py-0.5 text-sm font-bold text-black uppercase">
-              Hello
+              Hi There,
             </h1>
             <h1 className="text-3xl font-semibold md:text-6xl">
               I&apos;m {"<"}

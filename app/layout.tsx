@@ -20,7 +20,7 @@ export default function RootLayout({
           content="width=device-width, initial-scale=1.0"
         ></meta>
       </head>
-      <body>{children}</body>
+      <body className="w-screen overflow-x-hidden">{children}</body>
       <GoogleAnalytics gaId="G-9QD800C3XD" />
     </html>
   );
