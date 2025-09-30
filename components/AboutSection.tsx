@@ -1,8 +1,5 @@
 "use client";
 
-import styles from "@/app/styles/global.module.scss";
-import aboutStyles from "@/app/styles/about.module.scss";
-
 import React from "react";
 import Contributions from "./Contributions";
 import TiltCard from "./TiltCard";
@@ -16,14 +13,14 @@ import Link from "next/link";
 
 function AboutSection() {
   return (
-    <div className={aboutStyles.aboutSection}>
-      <div className={aboutStyles.aboutInnerCard}>
-        <div className={aboutStyles.aboutContent}>
-          <div className={aboutStyles.aboutHeader}>
-            <h3 className={styles.h3}>ABOUT ME</h3>
-            <h2 className={styles.h2}>Fresh and New</h2>
+    <div>
+      <div>
+        <div>
+          <div>
+            <h3>ABOUT ME</h3>
+            <h2>Fresh and New</h2>
           </div>
-          <p className={styles.p}>
+          <p>
             i am a Computer Engineer graduate specializing in Software
             Development. Experienced in frontend web development using React and
             Typescript with solid foundation in backend development using Nodejs
@@ -33,7 +30,6 @@ function AboutSection() {
             href="/RESUME - JOHN JUVI QUIMADA DE VILLA.pdf"
             download="RESUME - JOHN JUVI DE VILLA"
             target="_blank"
-            className={`${styles.a} ${aboutStyles.aboutLink}`}
           >
             Download My Resume
           </a>
@@ -42,8 +38,8 @@ function AboutSection() {
         <TiltCard />
       </div>
 
-      <div className={aboutStyles.aboutExp}>
-        <div className={aboutStyles.contributionList}>
+      <div>
+        <div>
           <Contributions year="2020" data={contrib20.weeks} />
           <Contributions year="2021" data={contrib21.weeks} />
           <Contributions year="2022" data={contrib22.weeks} />
@@ -52,9 +48,9 @@ function AboutSection() {
           <Contributions year="2025" />
         </div>
 
-        <div className={aboutStyles.expContent}>
-          <h2 className={styles.h2}>Experienced and Passionate</h2>
-          <p className={styles.p}>
+        <div>
+          <h2>Experienced and Passionate</h2>
+          <p>
             Programming since late 2020 with multiple projects covering frontend
             web development. Programming languages include Java, Javascript,
             Typescript Python, C++, C# and Dart. Check my history in my Github
@@ -64,7 +60,6 @@ function AboutSection() {
             href="https://github.com/TheSciCoder3000?tab=overview&from=2024-12-01&to=2024-12-31"
             target="_blank"
             rel="noopener noreferrer"
-            className={`${styles.a} ${aboutStyles.aboutLink}`}
           >
             Github Account
           </Link>

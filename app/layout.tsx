@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import "./global.scss";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import "./global.css";
 
 export const metadata: Metadata = {
   title: "John Juvi | Web Developer",
@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         <meta
           name="viewport"
