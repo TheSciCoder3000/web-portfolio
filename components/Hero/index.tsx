@@ -16,7 +16,7 @@ function HeroSection() {
       <div
         className={clsx(
           "absolute top-0 left-[50%] flex h-full w-full max-w-[80rem] flex-col items-center justify-start py-20",
-          "md:flex-row-reverse md:justify-between md:py-0",
+          "lg:flex-row-reverse lg:justify-between lg:py-0",
           "pointer-events-none z-20 -translate-x-[50%] px-4",
         )}
       >
@@ -26,14 +26,14 @@ function HeroSection() {
           src="/DEVILLA_SQUARE.JPG"
           alt="hero-image"
         />
-        <div className="my-20 flex flex-col items-center text-center md:items-start">
-          <div className="mb-15 flex flex-col items-center space-y-4 text-gray-500 md:items-start dark:text-white">
+        <div className="my-20 flex w-full flex-col items-start text-center md:items-start">
+          <div className="mb-15 flex flex-col items-start space-y-4 text-gray-500 lg:items-start dark:text-white">
             <SectionHeader>Hi There,</SectionHeader>
-            <h1 className="text-3xl font-semibold md:text-6xl">
+            <h1 className="text-2xl font-semibold md:text-5xl">
               I&apos;m {"<"}
               <span className="text-[#4daefd]">John_Juvi</span> {"/>"}
             </h1>
-            <h1 className="text-3xl font-semibold md:text-6xl">
+            <h1 className="text-2xl font-semibold md:text-5xl">
               A {"<"}
               <TextType
                 className="text-[#2cff7d]"
@@ -47,7 +47,7 @@ function HeroSection() {
                 pauseDuration={1500}
                 showCursor={true}
                 cursorCharacter="|"
-              />{" "}
+              />
               {"/>"}
             </h1>
           </div>
