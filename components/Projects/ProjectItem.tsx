@@ -7,6 +7,7 @@ import { BiDesktop } from "react-icons/bi";
 import Link from "next/link";
 import { Route } from "next";
 import SectionHeader from "../SectionHeader";
+import { TypingAnimation } from "../ui/typing-animation";
 
 interface ItemProps {
   item: IProject;
@@ -38,7 +39,15 @@ const ItemInfo: React.FC<ItemInfoProps> = ({ item }) => {
       <div>
         <SectionHeader className="mb-4">PROJECTS</SectionHeader>
         <h1 className="mb-8 text-4xl font-semibold">{item.title}</h1>
-        <p className="mb-6 text-gray-400">{item.description}</p>
+        <p className="font-fira mb-6 text-gray-400">
+          <TypingAnimation
+            duration={1.5}
+            startOnView
+            className="text-base/[1.8em]"
+          >
+            {item.description}
+          </TypingAnimation>
+        </p>
         <div className="flex gap-2 md:gap-12">
           <Button className="flex-1" asChild>
             <Link
