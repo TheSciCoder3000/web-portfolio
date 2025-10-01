@@ -6,6 +6,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import TextType from "./TextType";
 import InfiniteMarquee from "./InfiniteMarquee";
 import clsx from "clsx";
+import SectionHeader from "../SectionHeader";
 
 function HeroSection() {
   return (
@@ -14,21 +15,20 @@ function HeroSection() {
 
       <div
         className={clsx(
-          "absolute top-0 left-[50%] flex h-full w-full max-w-[75rem] flex-col items-center justify-start py-20",
+          "absolute top-0 left-[50%] flex h-full w-full max-w-[80rem] flex-col items-center justify-start py-20",
           "md:flex-row-reverse md:justify-between md:py-0",
           "pointer-events-none z-20 -translate-x-[50%] px-4",
         )}
       >
         <Image
+          priority={true}
           className="aspect-square h-50 w-auto rounded-full border-5 border-gray-400 md:h-80 dark:border-white"
           src="/DEVILLA_SQUARE.JPG"
           alt="hero-image"
         />
         <div className="my-20 flex flex-col items-center text-center md:items-start">
           <div className="mb-15 flex flex-col items-center space-y-4 text-gray-500 md:items-start dark:text-white">
-            <h1 className="w-fit rounded-lg bg-gray-300 px-3 py-0.5 text-sm font-bold text-black uppercase">
-              Hi There,
-            </h1>
+            <SectionHeader>Hi There,</SectionHeader>
             <h1 className="text-3xl font-semibold md:text-6xl">
               I&apos;m {"<"}
               <span className="text-[#4daefd]">John_Juvi</span> {"/>"}
