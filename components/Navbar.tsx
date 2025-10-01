@@ -6,7 +6,9 @@ const Navbar = () => {
     <div className="fixed top-0 left-0 z-50 h-fit w-full px-4 py-4">
       <div className="mx-auto flex max-w-[80rem] justify-between">
         <h2 className="font-semibold">
-          {"<"}neurocoder{"/>"}
+          {"<"}
+          <span className="text-[#4daefd]">neurocoder</span>
+          {"/>"}
         </h2>
         <AnimatedThemeToggler />
       </div>
