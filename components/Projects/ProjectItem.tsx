@@ -36,7 +36,7 @@ const ItemInfo: React.FC<ItemInfoProps> = ({ item }) => {
       <div>
         <SectionHeader className="mb-4">PROJECTS</SectionHeader>
         <h1 className="mb-4 text-4xl font-semibold">{item.title}</h1>
-        <div className="mb-5 flex gap-2">
+        <div className="mb-5 flex flex-wrap gap-2">
           {item.tags.map((tag, indx) => (
             <Tag {...tag} key={indx} />
           ))}
