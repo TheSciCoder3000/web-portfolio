@@ -3,6 +3,8 @@ import TerminalComponent from "./Terminal";
 import { Button } from "../ui/button";
 import SectionHeader from "../SectionHeader";
 import { TypingAnimation } from "../ui/typing-animation";
+import Link from "next/link";
+import { Route } from "next";
 
 const About = () => {
   return (
@@ -24,8 +26,14 @@ const About = () => {
             things and solve challenging problems.
           </TypingAnimation>
         </div>
-        <Button variant="dark" size="lg" className="cursor-pointer">
-          Download Resume
+        <Button variant="dark" size="lg" asChild className="cursor-pointer">
+          <Link
+            href={"/RESUME - JOHN JUVI QUIMADA DE VILLA.pdf" as Route}
+            download="RESUME - JOHN JUVI DE VILLA"
+            target="_blank"
+          >
+            Download Resume
+          </Link>
         </Button>
       </div>
     </div>
