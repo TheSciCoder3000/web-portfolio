@@ -18,7 +18,10 @@ function TerminalComponent() {
       </AnimatedSpan>
 
       <AnimatedSpan className="text-green-500">
-        ✔ Experience with ReactJS and NextJS development
+        ✔ Experience with ReactJS development
+      </AnimatedSpan>
+      <AnimatedSpan className="text-green-500">
+        ✔ Experience with NextJS development
       </AnimatedSpan>
 
       <AnimatedSpan className="text-green-500">

@@ -8,7 +8,7 @@ import Link from "next/link";
 import { Route } from "next";
 import { BiDesktop } from "react-icons/bi";
 import { IProject } from "@/app/data";
-import { AnimatePresence, motion, stagger, Variants } from "motion/react";
+import { motion, stagger, Variants } from "motion/react";
 
 const buttonVariants: Variants = {
   initial: { opacity: 0, x: 50 },
@@ -20,9 +20,11 @@ interface ProjectTextProps {
   children: string;
 }
 const ProjectText: React.FC<ProjectTextProps> = ({ item, children }) => {
-  const [animationFinished, setAnimationFinished] = useState(false);
+  const [containerAnimation, setContainerAnimation] = useState<
+    "initial" | "view"
+  >("initial");
 
-  const handleAnimationComplete = () => setAnimationFinished(true);
+  const handleAnimationComplete = () => setContainerAnimation("view");
 
   return (
     <>
@@ -34,47 +36,43 @@ const ProjectText: React.FC<ProjectTextProps> = ({ item, children }) => {
           {children}
         </TypingAnimation>
       </div>
-      <AnimatePresence>
-        {animationFinished && (
-          <motion.div
-            initial="initial"
-            animate="view"
-            transition={{ delayChildren: stagger(0.1) }}
-            className="flex gap-2 md:gap-12"
-          >
-            <motion.div
-              key="github-btn"
-              className="w-full flex-1"
-              variants={buttonVariants}
+      <motion.div
+        initial="initial"
+        animate={containerAnimation}
+        transition={{ delayChildren: stagger(0.1) }}
+        className="flex gap-2 md:gap-12"
+      >
+        <motion.div
+          key="github-btn"
+          className="w-full flex-1"
+          variants={buttonVariants}
+        >
+          <Button variant="dark" className="w-full flex-1" asChild>
+            <Link
+              href={item.github as Route}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <Button variant="dark" className="w-full flex-1" asChild>
-                <Link
-                  href={item.github as Route}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaGithub /> Source Code
-                </Link>
-              </Button>
-            </motion.div>
-            <motion.div
-              key="preview-btn"
-              className="w-full flex-1"
-              variants={buttonVariants}
+              <FaGithub /> Source Code
+            </Link>
+          </Button>
+        </motion.div>
+        <motion.div
+          key="preview-btn"
+          className="w-full flex-1"
+          variants={buttonVariants}
+        >
+          <Button variant="dark" className="w-full flex-1" asChild>
+            <Link
+              href={item.live as Route}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <Button variant="dark" className="w-full flex-1" asChild>
-                <Link
-                  href={item.live as Route}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <BiDesktop /> Preview
-                </Link>
-              </Button>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+              <BiDesktop /> Preview
+            </Link>
+          </Button>
+        </motion.div>
+      </motion.div>
     </>
   );
 };

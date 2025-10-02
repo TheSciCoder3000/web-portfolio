@@ -3,6 +3,7 @@ import React from "react";
 import Image from "../Image";
 import SectionHeader from "../SectionHeader";
 import ProjectText from "./ProjectText";
+import StickyContianer from "./StickyContianer";
 
 interface ItemProps {
   item: IProject;
@@ -30,13 +31,13 @@ interface ItemInfoProps {
 }
 const ItemInfo: React.FC<ItemInfoProps> = ({ item }) => {
   return (
-    <div className="top-20 left-0 h-fit flex-1 lg:sticky">
+    <StickyContianer className="top-20 left-0 h-fit flex-1 lg:sticky">
       <div>
         <SectionHeader className="mb-4">PROJECTS</SectionHeader>
         <h1 className="mb-8 text-4xl font-semibold">{item.title}</h1>
         <ProjectText item={item}>{item.description}</ProjectText>
       </div>
-    </div>
+    </StickyContianer>
   );
 };
 export default ProjectItem;
