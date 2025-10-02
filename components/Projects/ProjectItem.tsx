@@ -4,6 +4,7 @@ import Image from "../Image";
 import SectionHeader from "../SectionHeader";
 import ProjectText from "./ProjectText";
 import StickyContianer from "./StickyContianer";
+import Tag from "./Tag";
 
 interface ItemProps {
   item: IProject;
@@ -34,7 +35,12 @@ const ItemInfo: React.FC<ItemInfoProps> = ({ item }) => {
     <StickyContianer className="top-20 left-0 h-fit flex-1 lg:sticky">
       <div>
         <SectionHeader className="mb-4">PROJECTS</SectionHeader>
-        <h1 className="mb-8 text-4xl font-semibold">{item.title}</h1>
+        <h1 className="mb-4 text-4xl font-semibold">{item.title}</h1>
+        <div className="mb-5 flex gap-2">
+          {item.tags.map((tag, indx) => (
+            <Tag {...tag} key={indx} />
+          ))}
+        </div>
         <ProjectText item={item}>{item.description}</ProjectText>
       </div>
     </StickyContianer>

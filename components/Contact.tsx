@@ -50,10 +50,9 @@ const Contact = () => {
             <h1 className="font-fira mb-8 text-5xl lg:mb-15">
               Let&apos;s Work Together
             </h1>
-            <p className="text-sm text-gray-400">drjjdevilla2002@gmail.com</p>
           </div>
 
-          <div>
+          <div className="flex justify-between">
             <div className="space-y-4">
               <h2 className="text-lg font-bold">Find Me</h2>
               <div className="flex gap-4">
@@ -79,6 +78,15 @@ const Contact = () => {
                     size={20}
                   />
                 </Link>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <h2 className="text-lg font-bold">Contact Me</h2>
+              <div className="flex gap-4">
+                <p className="text-sm text-gray-400">
+                  drjjdevilla2002@gmail.com
+                </p>
               </div>
             </div>
           </div>
