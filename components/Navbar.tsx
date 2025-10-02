@@ -12,7 +12,6 @@ const Navbar = () => {
     let scrollY = window.scrollY;
 
     const handleScroll = () => {
-      console.log({ scrollY, window: window.scrollY });
       setScrollY(window.scrollY);
       setIsDown(window.scrollY > scrollY);
       scrollY = window.scrollY;

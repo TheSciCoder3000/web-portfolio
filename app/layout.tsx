@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./global.css";
+import { JetBrains_Mono } from "next/font/google";
+
+const jetbrains = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-jetbrains",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "John Juvi | Web Developer",
@@ -36,7 +44,9 @@ export default function RootLayout({
           content="width=device-width, initial-scale=1.0"
         ></meta>
       </head>
-      <body className="font-jet w-screen overflow-x-hidden">{children}</body>
+      <body className={`${jetbrains.variable} w-screen overflow-x-hidden`}>
+        {children}
+      </body>
       <GoogleAnalytics gaId="G-9QD800C3XD" />
     </html>
   );

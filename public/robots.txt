@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://neurocoder.work
+
+# Sitemaps
+Sitemap: https://neurocoder.work/sitemap.xml
