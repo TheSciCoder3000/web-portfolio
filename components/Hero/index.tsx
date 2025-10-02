@@ -27,13 +27,13 @@ function HeroSection() {
           alt="hero-image"
         />
         <div className="my-20 flex w-full flex-col items-start text-center md:items-start">
-          <div className="mb-15 flex flex-col items-start space-y-4 text-gray-500 lg:items-start dark:text-white">
+          <div className="mb-6 flex flex-col items-start space-y-4 text-gray-500 sm:mb-15 lg:items-start dark:text-white">
             <SectionHeader>Hi There,</SectionHeader>
-            <h1 className="text-2xl font-semibold md:text-5xl">
-              I&apos;m {"<"}
-              <span className="text-[#4daefd]">John_Juvi</span> {"/>"}
+            <h1 className="text-xl font-semibold sm:text-2xl md:text-5xl">
+              I&apos;m{" "}
+              <span className="text-[#4daefd]">John Juvi De Villa</span>
             </h1>
-            <h1 className="text-2xl font-semibold md:text-5xl">
+            <h1 className="text-xl font-semibold sm:text-2xl md:text-5xl">
               A {"<"}
               <TextType
                 className="text-[#2cff7d]"

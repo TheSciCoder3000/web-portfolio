@@ -116,8 +116,8 @@ const Contact = () => {
               />
             </div>
             <Button
-              size="sm"
-              className="cursor-pointer rounded-sm bg-[#007acc] text-sm text-white hover:bg-[#005a9e]"
+              size="lg"
+              className="w-full cursor-pointer rounded-sm bg-[#007acc] text-sm text-white hover:bg-[#005a9e] sm:w-fit"
               type="submit"
               disabled={state.submitting}
             >
