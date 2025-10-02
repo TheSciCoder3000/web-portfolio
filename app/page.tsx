@@ -1,26 +1,16 @@
-import Contact from "@/components/Contact";
-import styles from "./styles/global.module.scss";
-import AboutSection from "@components/AboutSection";
-import HeroSection from "@components/HeroSection";
-import ProjectSection from "@components/ProjectSection";
-import Footer from "@/components/Footer";
+import About from "@/components/About";
+import HeroSection from "@/components/Hero";
+import Navbar from "@/components/Navbar";
+import Project from "@/components/Projects";
 
 export default function Home() {
   return (
-    <div className={styles["home-page"]}>
-      {/* Hero Section */}
+    // <div className="w-full dark:bg-[#24292E]">
+    <div className="w-full dark:bg-gray-900">
+      <Navbar />
       <HeroSection />
-
-      {/* About Section */}
-      <AboutSection />
-
-      {/* Projects */}
-      <ProjectSection />
-
-      {/* Call to Action */}
-      <Contact />
-
-      <Footer />
+      <About />
+      <Project />
     </div>
   );
 }

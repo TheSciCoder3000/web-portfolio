@@ -30,12 +30,13 @@ export const projects: IProject[] = [
     bkg: "red",
   },
   {
-    title: "Money Management System",
+    title: "Intelligent Money Management System",
     description: `
       The project is built upon NextJS for the frontend and 
       backend while Supabase for authentication and database. 
       Chart.js library for data visualization and Shadcn for 
-      reusable components. You can manage income and expenses 
+      reusable components. It has OPENAI integration for command 
+      completions. You can manage income and expenses 
       of accounts added through this web application.
     `,
     ss: [

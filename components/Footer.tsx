@@ -1,24 +1,21 @@
 import React from "react";
-import footerStyles from "@/app/styles/footer.module.scss";
-import styles from "@/app/styles/global.module.scss";
 import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className={footerStyles.footerContainer}>
-      <div className={footerStyles.links}>
-        <div className={footerStyles.emails}>
-          <h3 className={styles.h3}>GET IN TOUCH</h3>
-          <p className={styles.p}>drjjdevilla2002@gmail.com</p>
-          <p className={styles.p}>johnjuvi.work@gmail.com</p>
+    <footer>
+      <div>
+        <div>
+          <h3>GET IN TOUCH</h3>
+          <p>drjjdevilla2002@gmail.com</p>
+          <p>johnjuvi.work@gmail.com</p>
         </div>
-        <div className={footerStyles.socials}>
-          <h3 className={styles.h3}>SOCIALS</h3>
+        <div>
+          <h3>SOCIALS</h3>
           <Link
             href="https://github.com/TheSciCoder3000"
             target="_blank"
             rel="noopener noreferrer"
-            className={styles.p}
           >
             GITHUB
           </Link>
@@ -26,21 +23,21 @@ const Footer = () => {
             href="https://www.linkedin.com/in/john-juvi-de-villa"
             target="_blank"
             rel="noopener noreferrer"
-            className={styles.p}
           >
             LINKEDIN
           </Link>
         </div>
-        <div className={footerStyles.location}>
-          <h3 className={styles.h3}>LOCATION</h3>
-          <p className={styles.p}>Calatagan, Batangas</p>
-          <p className={styles.p}>Philippines</p>
+        <div>
+          <h3>LOCATION</h3>
+          <p>Calatagan, Batangas</p>
+          <p>Philippines</p>
         </div>
       </div>
 
-      <div className={footerStyles.controls}>
-        <h3 className={styles.h3}>
-          © {new Date().getFullYear()} JOHN JUVI DE VILLA. All Rights Reserved.{" "}
+      <div>
+        <h3>
+          © {new Date().getFullYear()} JOHN JUVI DE VILLA. All Rights
+          Reserved.{" "}
         </h3>
       </div>
     </footer>
