@@ -6,13 +6,16 @@ import { TypingAnimation } from "../ui/typing-animation";
 
 const About = () => {
   return (
-    <div className="mx-auto flex max-w-[70rem] flex-col-reverse gap-20 px-4 py-35 lg:flex-row">
+    <div
+      id="about"
+      className="mx-auto flex max-w-[70rem] flex-col-reverse gap-20 px-4 py-35 lg:flex-row"
+    >
       <TerminalComponent />
       <div className="flex-1">
         <SectionHeader className="mb-4">About Me</SectionHeader>
         <h1 className="mb-8 text-4xl font-semibold">Curious Problem-Solver</h1>
         <div className="mb-10 text-gray-400">
-          <TypingAnimation className="font-fira mb-10 text-sm/[1.9em] text-gray-400">
+          <TypingAnimation className="font-fira mb-10 text-sm/[1.9em] font-light text-gray-400">
             Hi! I’m John Juvi De Villa, a full stack web developer who enjoys
             bringing ideas to life through code. I work across the entire web
             stack — developing responsive user interfaces, building robust APIs,

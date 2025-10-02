@@ -31,7 +31,7 @@ const ProjectText: React.FC<ProjectTextProps> = ({ item, children }) => {
       <div className="font-fira mb-6 text-gray-400">
         <TypingAnimation
           onAnimationComplete={handleAnimationComplete}
-          className="text-base/[1.8em]"
+          className="text-base/[1.8em] font-light"
         >
           {children}
         </TypingAnimation>

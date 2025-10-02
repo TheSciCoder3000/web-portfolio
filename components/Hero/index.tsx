@@ -10,7 +10,7 @@ import SectionHeader from "../SectionHeader";
 
 function HeroSection() {
   return (
-    <div className="relative h-screen w-screen">
+    <div id="home" className="relative h-screen w-screen">
       <AnimatedHeroBkg />
 
       <div
@@ -61,7 +61,7 @@ function HeroSection() {
               >
                 <FaGithub
                   className="text-gray-400 transition-transform duration-250 group-hover:scale-120 group-hover:text-black dark:text-gray-400 dark:group-hover:text-white"
-                  size={30}
+                  size={25}
                 />
               </Link>
               <Link
@@ -72,7 +72,7 @@ function HeroSection() {
               >
                 <FaLinkedin
                   className="text-gray-400 transition-transform duration-250 group-hover:scale-120 group-hover:text-black dark:text-gray-400 dark:group-hover:text-white"
-                  size={30}
+                  size={25}
                 />
               </Link>
             </div>

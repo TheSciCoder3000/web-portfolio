@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { AnimatedThemeToggler } from "./ui/animated-theme-toggler";
+// import { AnimatedThemeToggler } from "./ui/animated-theme-toggler";
 import clsx from "clsx";
 
 const Navbar = () => {
@@ -25,7 +25,7 @@ const Navbar = () => {
   return (
     <div
       className={clsx(
-        "fixed top-0 left-0 z-50 h-fit w-full px-4 py-4 transition-transform duration-300",
+        "navbar fixed top-0 left-0 z-50 h-fit w-full px-4 py-4 transition-transform duration-300",
         scrollY > 200 ? "bg-gray-900 shadow-md" : "bg-transparent",
         isDown ? "-translate-y-full" : "translate-y-0",
       )}
@@ -36,7 +36,7 @@ const Navbar = () => {
           <span className="text-[#4daefd]">neurocoder</span>
           {"/>"}
         </h2>
-        <AnimatedThemeToggler />
+        {/* <AnimatedThemeToggler /> */}
       </div>
     </div>
   );

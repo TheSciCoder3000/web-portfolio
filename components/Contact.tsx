@@ -1,82 +1,132 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import { useForm } from "@formspree/react";
-import contactStyles from "@/app/styles/contact.module.scss";
-import styles from "@/app/styles/global.module.scss";
-import {
-  AdvancedMarker,
-  APIProvider,
-  ColorScheme,
-  Map,
-} from "@vis.gl/react-google-maps";
+// import {
+//   AdvancedMarker,
+//   APIProvider,
+//   ColorScheme,
+//   Map,
+// } from "@vis.gl/react-google-maps";
+import { Input } from "./ui/input";
+import { Textarea } from "./ui/textarea";
+import Link from "next/link";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { Button } from "./ui/button";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Contact = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
   const [state, handleSubmit] = useForm("xgvzrzjw");
 
-  const position = {
-    lat: 13.887,
-    lng: 120.6569,
-  };
+  // const position = {
+  //   lat: 13.887,
+  //   lng: 120.6569,
+  // };
+
+  useGSAP(() => {
+    gsap.fromTo(
+      ".home-page",
+      {
+        backgroundColor: "#101828",
+      },
+      {
+        backgroundColor: "#0d1117",
+        scrollTrigger: {
+          toggleActions: "play none none reverse",
+          trigger: containerRef.current,
+          start: "top 40%",
+        },
+      },
+    );
+  });
 
   return (
-    <APIProvider apiKey={process.env.NEXT_PUBLIC_MAPS_KEY as string}>
-      <div className={contactStyles.contactContainer}>
-        <div className={contactStyles.contactBox}>
-          <div className={contactStyles.info}>
-            <Map
-              disableDefaultUI
-              gestureHandling="none"
-              colorScheme={ColorScheme.DARK}
-              zoom={12}
-              center={position}
-              mapId={process.env.NEXT_PUBLIC_MAPS_ID}
-            >
-              <AdvancedMarker
-                title="location"
-                position={position}
-              ></AdvancedMarker>
-            </Map>
+    <div ref={containerRef} className="h-screen py-30">
+      <div className="mx-auto grid max-w-[80rem] grid-cols-2 gap-20 px-4">
+        <div className="flex flex-col justify-between">
+          <div>
+            <h1 className="font-fira mb-15 text-5xl">
+              Let&apos;s Work Together
+            </h1>
+            <p className="text-sm text-gray-400">drjjdevilla2002@gmail.com</p>
           </div>
-          <div className={contactStyles.formContainer}>
-            <h2 className={styles.h2}>Get In Touch</h2>
-            <form className={contactStyles.contactForm} onSubmit={handleSubmit}>
-              <input
+
+          <div>
+            <div className="space-y-4">
+              <h2 className="text-lg font-bold">Find Me</h2>
+              <div className="flex gap-4">
+                <Link
+                  className="group"
+                  href="https://www.github.com/thescicoder3000"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaGithub
+                    className="text-gray-400 transition-transform duration-250 group-hover:scale-120 group-hover:text-black dark:text-gray-400 dark:group-hover:text-white"
+                    size={20}
+                  />
+                </Link>
+                <Link
+                  className="group"
+                  href="https://www.linkedin.com/in/john-juvi-de-villa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaLinkedin
+                    className="text-gray-400 transition-transform duration-250 group-hover:scale-120 group-hover:text-black dark:text-gray-400 dark:group-hover:text-white"
+                    size={20}
+                  />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="rounded-md p-8 py-8">
+          <h2 className="mb-8 text-2xl">Get In Touch</h2>
+          <form onSubmit={handleSubmit} className="space-y-15">
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+              <Input
+                variant="vscode"
+                className="rounded-none"
                 required
-                className={contactStyles.contactEmail}
                 type="text"
                 name="name"
                 id="name"
                 placeholder="Name"
               />
-              <input
+              <Input
+                variant="vscode"
+                className="rounded-none"
                 required
-                className={contactStyles.contactEmail}
                 type="email"
                 name="email"
                 id="email"
                 placeholder="Email"
               />
-              <textarea
+              <Textarea
+                variant="vscode"
+                className="col-span-2 min-h-50 resize-none rounded-none"
                 required
-                className={contactStyles.contactArea}
                 id="message"
                 name="message"
                 placeholder="message"
-                rows={7}
               />
-              <button
-                className={contactStyles.contactSubmit}
-                type="submit"
-                disabled={state.submitting}
-              >
-                Submit
-              </button>
-            </form>
-          </div>
+            </div>
+            <Button
+              size="sm"
+              className="cursor-pointer rounded-sm bg-[#007acc] text-sm text-white hover:bg-[#005a9e]"
+              type="submit"
+              disabled={state.submitting}
+            >
+              Submit
+            </Button>
+          </form>
         </div>
       </div>
-    </APIProvider>
+    </div>
   );
 };
 
