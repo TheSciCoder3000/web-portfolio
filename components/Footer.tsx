@@ -3,9 +3,9 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 pt-20 pb-5">
+    <footer className="bg-gray-900 px-4 pt-20 pb-5">
       <div className="mx-auto max-w-[80rem] space-y-20">
-        <div className="grid grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <h3 className="mb-2">GET IN TOUCH</h3>
             <div className="space-y-2 text-sm text-gray-400">

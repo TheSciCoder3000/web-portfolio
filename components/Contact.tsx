@@ -43,11 +43,11 @@ const Contact = () => {
   });
 
   return (
-    <div ref={containerRef} className="h-screen py-30">
-      <div className="mx-auto grid max-w-[80rem] grid-cols-2 gap-20 px-4">
-        <div className="flex flex-col justify-between">
+    <div ref={containerRef} className="min-h-screen py-30">
+      <div className="mx-auto grid max-w-[80rem] grid-cols-1 gap-20 px-4 lg:grid-cols-2">
+        <div className="flex flex-col justify-between gap-20">
           <div>
-            <h1 className="font-fira mb-15 text-5xl">
+            <h1 className="font-fira mb-8 text-5xl lg:mb-15">
               Let&apos;s Work Together
             </h1>
             <p className="text-sm text-gray-400">drjjdevilla2002@gmail.com</p>
@@ -84,7 +84,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="rounded-md p-8 py-8">
+        <div className="rounded-md py-8 lg:p-8">
           <h2 className="mb-8 text-2xl">Get In Touch</h2>
           <form onSubmit={handleSubmit} className="space-y-15">
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -108,7 +108,7 @@ const Contact = () => {
               />
               <Textarea
                 variant="vscode"
-                className="col-span-2 min-h-50 resize-none rounded-none"
+                className="min-h-50 resize-none rounded-none md:col-span-2"
                 required
                 id="message"
                 name="message"
