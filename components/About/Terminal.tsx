@@ -6,7 +6,7 @@ import {
 
 function TerminalComponent() {
   return (
-    <Terminal className="bg-black/25">
+    <Terminal className="shadow-md dark:bg-black/25 dark:shadow-none">
       <TypingAnimation>&gt; npm @john-juvi/background-check</TypingAnimation>
 
       <AnimatedSpan className="text-green-500">

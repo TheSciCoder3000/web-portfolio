@@ -1,6 +1,12 @@
+"use client";
+
 import React from "react";
 import NextImage from "next/image";
 import clsx from "clsx";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger);
 
 interface ImageProps {
   src: string;
@@ -18,6 +24,7 @@ const Image: React.FC<ImageProps> = ({ src, alt, className, priority }) => {
       height={0}
       sizes="100vw"
       className={clsx("", className)}
+      onLoad={() => ScrollTrigger.refresh()}
     />
   );
 };

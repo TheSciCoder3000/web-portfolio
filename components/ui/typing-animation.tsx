@@ -1,89 +1,61 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { motion, MotionProps, useInView } from "motion/react";
+import { useRef } from "react";
 
 import { cn } from "@/lib/utils";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger, SplitText } from "gsap/all";
 
-interface TypingAnimationProps extends MotionProps {
+gsap.registerPlugin(SplitText, useGSAP, ScrollTrigger);
+
+interface TypingAnimationProps {
   children: string;
   className?: string;
   duration?: number;
-  delay?: number;
-  as?: React.ElementType;
-  startOnView?: boolean;
   onAnimationComplete?: () => void;
 }
 
 export function TypingAnimation({
   children,
   className,
-  duration = 100,
-  delay = 0,
+  duration = 0.4,
   onAnimationComplete,
-  as: Component = "div",
-  startOnView = false,
-  ...props
 }: TypingAnimationProps) {
-  const MotionComponent = motion.create(Component, {
-    forwardMotionProps: true,
-  });
+  const containerRef = useRef<HTMLParagraphElement>(null);
 
-  const [displayedText, setDisplayedText] = useState<string>("");
-  const [started, setStarted] = useState(false);
-  const elementRef = useRef<HTMLElement | null>(null);
-  const isInView = useInView(elementRef as React.RefObject<Element>, {
-    amount: 0.3,
-    once: true,
-  });
+  useGSAP(
+    () => {
+      const split = new SplitText(containerRef.current);
 
-  useEffect(() => {
-    if (!startOnView) {
-      const startTimeout = setTimeout(() => {
-        setStarted(true);
-      }, delay);
-      return () => clearTimeout(startTimeout);
-    }
-
-    if (!isInView) return;
-
-    const startTimeout = setTimeout(() => {
-      setStarted(true);
-    }, delay);
-
-    return () => clearTimeout(startTimeout);
-  }, [delay, startOnView, isInView]);
-
-  useEffect(() => {
-    if (!started) return;
-
-    const graphemes = Array.from(children);
-    let i = 0;
-    const typingEffect = setInterval(() => {
-      if (i < graphemes.length) {
-        setDisplayedText(graphemes.slice(0, i + 1).join(""));
-        i++;
-      } else {
-        if (onAnimationComplete) onAnimationComplete();
-        clearInterval(typingEffect);
-      }
-    }, duration);
-
-    return () => {
-      clearInterval(typingEffect);
-    };
-  }, [children, duration, started]);
+      gsap.fromTo(
+        split.chars,
+        {
+          display: "none",
+        },
+        {
+          display: "inline",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top center",
+          },
+          stagger: duration / split.chars.length,
+          onComplete: onAnimationComplete,
+        },
+      );
+    },
+    { scope: containerRef },
+  );
 
   return (
-    <MotionComponent
-      ref={elementRef}
+    <p
+      ref={containerRef}
       className={cn(
         "text-4xl leading-[5rem] font-bold tracking-[-0.02em]",
         className,
       )}
-      {...props}
     >
-      {displayedText}
-    </MotionComponent>
+      {children}
+    </p>
   );
 }

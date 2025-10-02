@@ -12,11 +12,7 @@ const About = () => {
         <SectionHeader className="mb-4">About Me</SectionHeader>
         <h1 className="mb-8 text-4xl font-semibold">Curious Problem-Solver</h1>
         <div className="mb-10 text-gray-400">
-          <TypingAnimation
-            duration={5}
-            startOnView
-            className="font-fira mb-10 text-sm/[1.9em] text-gray-400"
-          >
+          <TypingAnimation className="font-fira mb-10 text-sm/[1.9em] text-gray-400">
             Hi! I’m John Juvi De Villa, a full stack web developer who enjoys
             bringing ideas to life through code. I work across the entire web
             stack — developing responsive user interfaces, building robust APIs,
@@ -25,7 +21,9 @@ const About = () => {
             things and solve challenging problems.
           </TypingAnimation>
         </div>
-        <Button className="cursor-pointer">Download Resume</Button>
+        <Button variant="dark" size="lg" className="cursor-pointer">
+          Download Resume
+        </Button>
       </div>
     </div>
   );
