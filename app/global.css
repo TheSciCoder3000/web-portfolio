@@ -134,3 +134,7 @@
   animation: none;
   mix-blend-mode: normal;
 }
+
+strong {
+  font-weight: 900;
+}
