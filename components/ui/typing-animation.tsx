@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { ReactNode, useRef } from "react";
 
 import { cn } from "@/lib/utils";
 import gsap from "gsap";
@@ -10,7 +10,7 @@ import { ScrollTrigger, SplitText } from "gsap/all";
 gsap.registerPlugin(SplitText, useGSAP, ScrollTrigger);
 
 interface TypingAnimationProps {
-  children: string;
+  children: ReactNode | ReactNode[];
   className?: string;
   duration?: number;
   onAnimationComplete?: () => void;
@@ -37,7 +37,7 @@ export function TypingAnimation({
           display: "inline",
           scrollTrigger: {
             trigger: containerRef.current,
-            start: "top center",
+            start: "top 70%",
           },
           stagger: duration / split.chars.length,
           onComplete: onAnimationComplete,
