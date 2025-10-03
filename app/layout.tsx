@@ -13,7 +13,12 @@ const jetbrains = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "John Juvi | Web Developer",
-  description: "Online Web Portfolio built by John Juvi De Villa",
+  description: `
+    A Full Stack Web Developer with over 4 years of experience. 
+    Proficient in ReactJS and NextJS framework. Experienced in 
+    building responsive websites and web applications the meets 
+    the users and client's needs.
+  `,
   keywords: [
     "Full Stack",
     "Software Developer",
