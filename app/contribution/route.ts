@@ -43,7 +43,7 @@ export async function GET(request: Request) {
       return Response.json({ error: data.errors }, { status: 500 });
     }
 
-    const colors = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"];
+    const colors = ["#1d2530", "#0e4429", "#006d32", "#26a641", "#39d353"];
 
     const weeks =
       data.data.user.contributionsCollection.contributionCalendar.weeks.map(
@@ -63,14 +63,14 @@ export async function GET(request: Request) {
               color: colors[level],
             };
           }),
-        })
+        }),
       );
 
     return Response.json({ weeks }, { status: 200 });
   } catch (err) {
     return Response.json(
       { error: "Failed to fetch contributions" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

@@ -1,6 +1,7 @@
+"use client";
+
+import clsx from "clsx";
 import { useEffect, useState } from "react";
-import contribStyles from "@/app/styles/contribution.module.scss";
-import styles from "@/app/styles/global.module.scss";
 
 type ContributionDay = {
   date: string;
@@ -15,9 +16,11 @@ type Week = {
 export default function Contributions({
   data,
   year,
+  className,
 }: {
   data?: Week[];
   year: string;
+  className?: string;
 }) {
   const [weeks, setWeeks] = useState<Week[]>(data || []);
   const [loading, setLoading] = useState(!data);
@@ -32,22 +35,25 @@ export default function Contributions({
       setLoading(false);
     }
     fetchData();
-  }, []);
+  }, [data]);
 
-  if (loading) return <p className={styles.p}>Loading latest contributions…</p>;
+  if (loading) return <p>Loading latest contributions…</p>;
 
   return (
-    <div className={contribStyles.contributionsContainer}>
-      <h3 className={styles.h3}>{year}</h3>
-      <div className={contribStyles.contributionBox}>
-        <div className={contribStyles.contributionsContent}>
-          <div className={contribStyles.weeks}>
+    <div className={clsx("mb-10", className)}>
+      <h3>{year}</h3>
+      <div className="bordr-1 w-full overflow-auto rounded-md border-[#3d444d]">
+        <div className="m-4">
+          <div className="flex gap-0.5">
             {weeks.map((week, wIndex) => (
-              <div key={wIndex} className={contribStyles.week}>
+              <div
+                key={wIndex}
+                className="flex flex-col gap-0.5 [&:first-child]:justify-end"
+              >
                 {week.contributionDays.map((day, dIndex) => (
                   <div
+                    className="aspect-square h-fit w-3 cursor-pointer rounded-xs hover:outline-1 hover:outline-[#0000004d]"
                     key={dIndex}
-                    className={contribStyles.day}
                     style={{ backgroundColor: day.color }}
                     title={`${day.contributionCount} contributions on ${day.date}`}
                   />

@@ -12,9 +12,16 @@ interface ImageProps {
   src: string;
   alt: string;
   priority?: boolean;
+  unoptimized?: boolean;
   className?: string;
 }
-const Image: React.FC<ImageProps> = ({ src, alt, className, priority }) => {
+const Image: React.FC<ImageProps> = ({
+  src,
+  alt,
+  className,
+  priority,
+  unoptimized,
+}) => {
   return (
     <NextImage
       src={src}
@@ -22,6 +29,7 @@ const Image: React.FC<ImageProps> = ({ src, alt, className, priority }) => {
       priority={priority}
       width={0}
       height={0}
+      unoptimized={unoptimized}
       sizes="100vw"
       className={clsx("", className)}
       onLoad={() => ScrollTrigger.refresh()}
