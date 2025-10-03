@@ -6,7 +6,10 @@ import {
 
 function TerminalComponent() {
   return (
-    <Terminal className="shadow-md dark:bg-black/25 dark:shadow-none">
+    <Terminal
+      aria-hidden
+      className="shadow-md dark:bg-black/25 dark:shadow-none"
+    >
       <TypingAnimation>&gt; npm @john-juvi/background-check</TypingAnimation>
 
       <AnimatedSpan className="text-green-500">
@@ -43,10 +46,6 @@ function TerminalComponent() {
 
       <TypingAnimation className="text-muted-foreground">
         Validation Successful!
-      </TypingAnimation>
-
-      <TypingAnimation className="text-muted-foreground">
-        You may now hire John Juvi De Villa
       </TypingAnimation>
     </Terminal>
   );
