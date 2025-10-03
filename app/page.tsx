@@ -7,7 +7,7 @@ import Project from "@/components/Projects";
 export default function Home() {
   return (
     // <div className="w-full dark:bg-[#24292E]">
-    <div className="home-page w-full dark:bg-gray-900">
+    <div className="home-page w-full transition-colors duration-500 dark:bg-gray-900">
       <Navbar />
       <HeroSection />
       <About />
