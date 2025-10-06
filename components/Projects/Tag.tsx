@@ -5,23 +5,31 @@ import {
   HoverCardTrigger,
 } from "../ui/hover-card";
 import { Badge } from "../ui/badge";
-import { ITag } from "@/app/data";
+import { Category } from "@/types/sanity";
 
-const Tag: React.FC<ITag> = ({ title, description, color, bkg }) => {
+const Tag: React.FC<Category> = ({
+  name,
+  description,
+  foregroundColor,
+  backgroundColor,
+}) => {
   return (
     <HoverCard>
       <HoverCardTrigger asChild>
         <Badge
           className="cursor-pointer select-none"
-          style={{ backgroundColor: bkg, color }}
+          style={{
+            backgroundColor: backgroundColor.hex,
+            color: foregroundColor.hex,
+          }}
         >
-          {title}
+          {name}
         </Badge>
       </HoverCardTrigger>
       <HoverCardContent className="w-80">
         <div className="flex justify-between gap-4">
           <div className="space-y-1">
-            <h4 className="text-sm font-semibold">{title}</h4>
+            <h4 className="text-sm font-semibold">{name}</h4>
             <p className="text-sm font-light text-gray-400">{description}</p>
           </div>
         </div>
