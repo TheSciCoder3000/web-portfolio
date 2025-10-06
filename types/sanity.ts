@@ -62,7 +62,7 @@ export interface Project {
   content: Array<
     | {
         _type: "block";
-        children: { text: string }[];
+        children: { text: string; marks: string[] }[];
         style?: string;
       }
     | {

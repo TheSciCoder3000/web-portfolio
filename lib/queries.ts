@@ -8,6 +8,15 @@ export async function getProjectBySlug(slug: string): Promise<Project | null> {
       _id,
       title,
       slug,
+      categories[]->{
+        _id,
+        name,
+        description,
+        backgroundColor,
+        foregroundColor
+      },
+      github,
+      preview,
       content[]{
         ...,
         _type == "image" => {

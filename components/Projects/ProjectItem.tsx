@@ -45,8 +45,9 @@ const ItemInfo: React.FC<ItemInfoProps> = ({ item }) => {
         </div>
         <ProjectText item={item}>
           {item.description}
+          <br />
           <Link
-            className="mt-4 block text-sm text-[#2cff7d] transition-colors duration-300 hover:text-[#4daefd]"
+            className="mt-4 text-sm text-[#2cff7d] transition-colors duration-300 hover:text-[#4daefd]"
             href={`/project/${item.slug.current}` as Route}
           >
             Learn More
