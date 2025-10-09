@@ -1,11 +1,9 @@
-import { Route } from "next";
 import React from "react";
 import SectionHeader from "../SectionHeader";
-import { Button } from "../ui/button";
-import Link from "next/link";
 import { TypingAnimation } from "../ui/typing-animation";
 import Contributions from "../Contributions";
 import Image from "../Image";
+import DownloadBtn from "../DownloadBtn";
 
 const slugs = [
   "typescript",
@@ -72,15 +70,7 @@ const Skills = () => {
               <strong>React hook form, Chart.js, Axios and Vite.</strong>
             </TypingAnimation>
           </div>
-          <Button variant="dark" size="lg" asChild className="cursor-pointer">
-            <Link
-              href={"/RESUME - JOHN JUVI QUIMADA DE VILLA.pdf" as Route}
-              download="RESUME - JOHN JUVI DE VILLA"
-              target="_blank"
-            >
-              Download Resume
-            </Link>
-          </Button>
+          <DownloadBtn />
         </div>
       </div>
 
