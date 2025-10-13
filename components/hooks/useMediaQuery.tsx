@@ -34,7 +34,7 @@ export default function useMediaQuery(mediaQuery: IMedia) {
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [mediaQuery.maxWidth]);
 
   return mediaMatch;
 }

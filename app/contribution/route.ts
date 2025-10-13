@@ -6,7 +6,7 @@ interface ContributionWeek {
   contributionDays: ContributionDay[];
 }
 
-export async function GET(request: Request) {
+export async function GET() {
   const username = "TheSciCoder3000";
   const year = 2025;
   const query = `
