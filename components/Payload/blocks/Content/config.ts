@@ -48,19 +48,19 @@ const columnFields: Field[] = [
     }),
     label: false,
   },
-  {
-    name: "enableLink",
-    type: "checkbox",
-  },
-  link({
-    overrides: {
-      admin: {
-        condition: (_data, siblingData) => {
-          return Boolean(siblingData?.enableLink);
-        },
-      },
-    },
-  }),
+  // {
+  //   name: "enableLink",
+  //   type: "checkbox",
+  // },
+  // link({
+  //   overrides: {
+  //     admin: {
+  //       condition: (_data, siblingData) => {
+  //         return Boolean(siblingData?.enableLink);
+  //       },
+  //     },
+  //   },
+  // }),
 ];
 
 export const Content: Block = {
