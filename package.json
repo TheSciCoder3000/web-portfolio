@@ -9,6 +9,8 @@
     "start": "next start",
     "lint": "next lint",
     "postbuild": "next-sitemap",
+    "payload": "cross-env NODE_OPTIONS=--no-deprecation payload",
+    "generate:types": "cross-env NODE_OPTIONS=--no-deprecation payload generate:types",
     "payload:types": "node -r ts-node/register -r tsconfig-paths/register ./node_modules/.bin/payload generate:types"
   },
   "dependencies": {
@@ -31,6 +33,7 @@
     "@vis.gl/react-google-maps": "^1.5.5",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "cross-env": "^10.1.0",
     "graphql": "^16.11.0",
     "gsap": "^3.13.0",
     "lucide-react": "^0.544.0",

@@ -3,7 +3,7 @@ import { cn } from "@//lib/utils";
 import Link from "next/link";
 import React from "react";
 
-import type { Page, Post } from "@//lib/payload/payload-types";
+import type { Page, Post } from "@/payload-types";
 import { Route } from "next";
 
 type CMSLinkType = {
