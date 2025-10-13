@@ -1,9 +1,32 @@
-import type { CollectionConfig } from "payload";
-import { CallToAction } from "@/components/Payload/blocks/CallToAction/config";
+import type {
+  CollectionConfig,
+  CollectionSlug,
+  DataFromCollectionSlug,
+} from "payload";
 import { Content } from "@/components/Payload/blocks/Content/config";
 import { MediaBlock } from "@/components/Payload/blocks/MediaBlock/config";
 import { SampleBlock } from "@/components/Payload/blocks/SampleBlock/config";
-import { generatePreviewPath } from "../utilities/generatePreviewPath";
+import { generatePreviewPath } from "@/lib/payload/utilities/generatePreviewPath";
+
+export const PROJECTS_SLUG: CollectionSlug = "projects" as CollectionSlug;
+
+export type MediaRef = {
+  id: string;
+  alt?: string;
+  filename?: string;
+  url?: string;
+};
+
+export type ProjectDoc = DataFromCollectionSlug<typeof PROJECTS_SLUG>;
+
+// A `select` shape describing the fields we want populated.
+// Use this with payload.find<Slug, Select>() to get correctly-typed docs.
+export type ProjectSelect = {
+  title: true;
+  description: true;
+  medias: true;
+  slug: true;
+};
 
 // Simple slugify helper - keeps it small and dependency-free
 const slugify = (input?: string) =>
