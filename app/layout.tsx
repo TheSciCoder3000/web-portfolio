@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./global.css";
 import { JetBrains_Mono } from "next/font/google";
-import Footer from "@/components/Footer";
 
 const jetbrains = JetBrains_Mono({
   subsets: ["latin"],
@@ -54,7 +53,6 @@ export default function RootLayout({
         className={`${jetbrains.variable} font-jet w-screen overflow-x-hidden`}
       >
         {children}
-        <Footer />
       </body>
       <GoogleAnalytics gaId="G-9QD800C3XD" />
     </html>

@@ -21,7 +21,8 @@
     "paths": {
       "@/*": ["./*"],
       "@components/*": ["./components/*"],
-      "@anime/*": ["./animations/*"]
+      "@anime/*": ["./animations/*"],
+      "@payload-config": ["./payload.config.ts"]
     }
   },
   "include": [

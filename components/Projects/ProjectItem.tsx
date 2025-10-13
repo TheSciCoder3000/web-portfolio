@@ -1,4 +1,4 @@
-import { IProject } from "@/app/data";
+import { IProject } from "@/lib/data";
 import React from "react";
 import Image from "../Image";
 import SectionHeader from "../SectionHeader";

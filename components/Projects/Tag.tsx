@@ -5,7 +5,7 @@ import {
   HoverCardTrigger,
 } from "../ui/hover-card";
 import { Badge } from "../ui/badge";
-import { ITag } from "@/app/data";
+import { ITag } from "@/lib/data";
 
 const Tag: React.FC<ITag> = ({ title, description, color, bkg }) => {
   return (

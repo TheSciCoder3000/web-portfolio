@@ -1,4 +1,4 @@
-import { projects } from "@/app/data";
+import { projects } from "@/lib/data";
 import React from "react";
 import ProjectItem from "./ProjectItem";
 
