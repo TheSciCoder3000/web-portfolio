@@ -1,8 +1,8 @@
 import type { CollectionConfig } from "payload";
 import { Content } from "@/blocks/Content/config";
 import { MediaBlock } from "@/blocks/MediaBlock/config";
-import { SampleBlock } from "@/blocks/SampleBlock/config";
 import { generatePreviewPath } from "@/utilities/generatePreviewPath";
+import { DetailsFields } from "./fields";
 
 // Simple slugify helper - keeps it small and dependency-free
 const slugify = (input?: string) =>
@@ -32,36 +32,7 @@ export const Projects: CollectionConfig = {
       tabs: [
         {
           label: "Project Details",
-          fields: [
-            {
-              name: "title",
-              type: "text",
-              required: true,
-            },
-            {
-              name: "description",
-              type: "textarea",
-              required: true,
-            },
-            {
-              name: "medias",
-              label: "Media",
-              type: "relationship",
-              relationTo: "media",
-              hasMany: true,
-              admin: {
-                description: "Attach images from the Media collection",
-              },
-            },
-            {
-              name: "slug",
-              type: "text",
-              required: true,
-              admin: {
-                description: "URL-friendly identifier for the project",
-              },
-            },
-          ],
+          fields: DetailsFields,
         },
         {
           label: "Page",
@@ -69,8 +40,8 @@ export const Projects: CollectionConfig = {
             {
               name: "layout",
               type: "blocks",
-              blocks: [SampleBlock, Content, MediaBlock],
-              // required: true,
+              blocks: [Content, MediaBlock],
+              required: true,
             },
           ],
         },

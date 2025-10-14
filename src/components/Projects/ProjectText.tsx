@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { ReactNode, useState } from "react";
 import { TypingAnimation } from "../ui/typing-animation";
 import { Button } from "../ui/button";
 import { FaGithub } from "react-icons/fa";
@@ -9,6 +9,7 @@ import { Route } from "next";
 import { BiDesktop } from "react-icons/bi";
 import { IProject } from "@//lib/data";
 import { motion, stagger, Variants } from "motion/react";
+import { Project } from "@/payload-types";
 
 const buttonVariants: Variants = {
   initial: { opacity: 0, x: 50 },
@@ -16,8 +17,8 @@ const buttonVariants: Variants = {
 };
 
 interface ProjectTextProps {
-  item: IProject;
-  children: string;
+  item: Project;
+  children: ReactNode;
 }
 const ProjectText: React.FC<ProjectTextProps> = ({ item, children }) => {
   const [containerAnimation, setContainerAnimation] = useState<
@@ -49,7 +50,7 @@ const ProjectText: React.FC<ProjectTextProps> = ({ item, children }) => {
         >
           <Button variant="dark" className="w-full flex-1" asChild>
             <Link
-              href={item.github as Route}
+              href={item.githubLink as Route}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -64,7 +65,7 @@ const ProjectText: React.FC<ProjectTextProps> = ({ item, children }) => {
         >
           <Button variant="dark" className="w-full flex-1" asChild>
             <Link
-              href={item.live as Route}
+              href={item.previewLink as Route}
               target="_blank"
               rel="noopener noreferrer"
             >
