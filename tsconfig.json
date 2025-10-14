@@ -30,7 +30,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "next-env.d.ts",
-    "next-sitemap.config.js",
+    "next-sitemap.config.cjs",
     "redirect.js"
   ],
   "exclude": ["node_modules"]

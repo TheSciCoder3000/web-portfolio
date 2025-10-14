@@ -14,8 +14,6 @@ import {
 import { CodeBlock, CodeBlockProps } from "@/blocks/Code/Component";
 
 import type { MediaBlock as MediaBlockProps } from "@/payload-types";
-import { BannerBlock } from "@/blocks/Banner/Component";
-import { CallToActionBlock } from "@/blocks/CallToAction/Component";
 import { cn } from "@/utilities/ui";
 
 type NodeTypes =
