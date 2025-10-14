@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Route } from "next";
 import { RenderBlocks } from "@/blocks/RenderBlocks";
 import Tag from "@/components/Projects/Tag";
+import { LivePreviewListener } from "@/components/LivePreviewListener";
 
 async function ProjectDetails({ params }: PageProps<"/projects/[slug]">) {
   const { slug } = await params;
@@ -17,12 +18,14 @@ async function ProjectDetails({ params }: PageProps<"/projects/[slug]">) {
       where: {
         slug: { equals: slug },
       },
+      draft: true,
     })
     .then((res) => res.docs[0]);
 
   return (
     <div>
-      <div className="mx-auto max-w-[60rem] space-y-8 py-20">
+      <LivePreviewListener />
+      <div className="mx-auto max-w-[60rem] space-y-8 px-4 py-20">
         <div>
           <h1 className="mb-4 text-3xl font-bold">{project.title}</h1>
           <p className="text-gray-300">{project.description}</p>

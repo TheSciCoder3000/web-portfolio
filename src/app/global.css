@@ -138,3 +138,26 @@
 strong {
   font-weight: 900;
 }
+
+.payload-richtext > h3,
+h4 {
+  @apply mb-2 font-semibold;
+}
+.payload-richtext > p,
+ul,
+ol {
+  @apply mb-6;
+}
+.payload-richtext > .list-bullet > li {
+  @apply ml-5 list-disc;
+}
+
+.payload-richtext > h2 {
+  @apply mb-8 text-5xl font-medium;
+}
+.payload-richtext > h3 {
+  @apply text-3xl;
+}
+.payload-richtext > h4 {
+  @apply text-2xl;
+}
