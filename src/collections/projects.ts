@@ -1,32 +1,8 @@
-import type {
-  CollectionConfig,
-  CollectionSlug,
-  DataFromCollectionSlug,
-} from "payload";
+import type { CollectionConfig } from "payload";
 import { Content } from "@/blocks/Content/config";
 import { MediaBlock } from "@/blocks/MediaBlock/config";
 import { SampleBlock } from "@/blocks/SampleBlock/config";
 import { generatePreviewPath } from "@/utilities/generatePreviewPath";
-
-export const PROJECTS_SLUG: CollectionSlug = "projects" as CollectionSlug;
-
-export type MediaRef = {
-  id: string;
-  alt?: string;
-  filename?: string;
-  url?: string;
-};
-
-export type ProjectDoc = DataFromCollectionSlug<typeof PROJECTS_SLUG>;
-
-// A `select` shape describing the fields we want populated.
-// Use this with payload.find<Slug, Select>() to get correctly-typed docs.
-export type ProjectSelect = {
-  title: true;
-  description: true;
-  medias: true;
-  slug: true;
-};
 
 // Simple slugify helper - keeps it small and dependency-free
 const slugify = (input?: string) =>
@@ -107,14 +83,14 @@ export const Projects: CollectionConfig = {
       url: ({ data, req }) =>
         generatePreviewPath({
           slug: data?.slug,
-          collection: "pages",
+          collection: "projects",
           req,
         }),
     },
     preview: (data, { req }) =>
       generatePreviewPath({
         slug: data?.slug as string,
-        collection: "pages",
+        collection: "projects",
         req,
       }),
     useAsTitle: "title",

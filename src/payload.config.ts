@@ -6,6 +6,7 @@ import { vercelBlobStorage } from "@payloadcms/storage-vercel-blob";
 import { fileURLToPath } from "url";
 import path from "path";
 import { Media } from "./collections/media";
+import { Projects } from "./collections/projects";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
@@ -16,7 +17,7 @@ export default buildConfig({
   db: mongooseAdapter({
     url: process.env.DATABASE_URI || "",
   }),
-  collections: [Media],
+  collections: [Media, Projects],
 
   plugins: [
     vercelBlobStorage({
