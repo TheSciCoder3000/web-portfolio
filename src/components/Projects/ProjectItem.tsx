@@ -55,6 +55,8 @@ const ItemInfo: React.FC<ItemInfoProps> = ({ item }) => {
           <Link
             className="text-[#2cff7d]"
             href={`/projects/${item.slug}` as Route}
+            target="_blank"
+            rel="noopener"
           >
             Learn More
           </Link>
