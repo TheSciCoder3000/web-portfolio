@@ -24,7 +24,7 @@ const ProjectItem: React.FC<ItemProps> = ({ item }) => {
               <Image
                 className="h-fit min-w-full snap-start rounded-lg object-cover object-top"
                 key={img.id}
-                src={`${process.env.NEXT_PUBLIC_SERVER_URL}${img.sizes?.medium?.url}`}
+                src={`${process.env.NEXT_PUBLIC_SERVER_URL}${img.sizes?.medium?.url || img.url}`}
                 alt={img.alt}
               />
             ),

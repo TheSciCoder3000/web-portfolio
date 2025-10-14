@@ -9,8 +9,8 @@ async function Project() {
   const projects = await payload
     .find({
       collection: "projects",
-      limit: 100,
-      sort: "-createdAt",
+      limit: 4,
+      sort: "createdAt",
     })
     .then((res) => res.docs);
 
