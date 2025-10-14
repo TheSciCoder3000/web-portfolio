@@ -2,10 +2,61 @@ import React from "react";
 import config from "@payload-config";
 import { getPayload } from "payload";
 import Link from "next/link";
-import { Route } from "next";
+import { Metadata, Route } from "next";
 import { RenderBlocks } from "@/blocks/RenderBlocks";
 import Tag from "@/components/Projects/Tag";
 import { LivePreviewListener } from "@/components/LivePreviewListener";
+import { Media } from "@/payload-types";
+
+export async function generateStaticParams() {
+  const payload = await getPayload({ config });
+  const projects = await payload.find({
+    collection: "projects",
+    select: {
+      slug: true,
+    },
+  });
+
+  const params = projects.docs.map(({ slug }) => {
+    return { slug };
+  });
+
+  return params;
+}
+
+export async function generateMetadata({
+  params,
+}: PageProps<"/projects/[slug]">): Promise<Metadata> {
+  const { slug } = await params;
+  const payload = await getPayload({ config });
+  const project = await payload
+    .find({
+      collection: "projects",
+      limit: 1,
+      where: {
+        slug: { equals: slug },
+      },
+    })
+    .then((res) => res.docs[0]);
+
+  const image = (project.images as Media[])[0];
+
+  return {
+    title: project.title,
+    description: project.description,
+    openGraph: {
+      title: project.title,
+      description: project.description,
+      url: `${process.env.NEXT_PUBLIC_SITE_URL}/projects/${slug}`,
+      images: image
+        ? {
+            url: image.url as string,
+            alt: image.alt as string,
+          }
+        : undefined,
+    },
+  };
+}
 
 async function ProjectDetails({ params }: PageProps<"/projects/[slug]">) {
   const { slug } = await params;
