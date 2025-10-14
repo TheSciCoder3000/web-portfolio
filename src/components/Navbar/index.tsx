@@ -1,12 +1,15 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-// import { AnimatedThemeToggler } from "./ui/animated-theme-toggler";
 import clsx from "clsx";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import LinkItem from "./LinkItem";
 
 const Navbar = () => {
   const [isDown, setIsDown] = useState(false);
   const [scrollY, setScrollY] = useState(0);
+  const pathname = usePathname();
 
   useEffect(() => {
     let scrollY = window.scrollY;
@@ -25,7 +28,7 @@ const Navbar = () => {
   return (
     <div
       className={clsx(
-        "navbar fixed top-0 left-0 z-50 h-fit w-full px-4 py-4 transition-transform duration-300",
+        "navbar fixed top-0 left-0 z-50 h-fit w-full px-4 py-6 transition-transform duration-300",
         scrollY > 200 ? "bg-gray-900 shadow-md" : "bg-transparent",
         isDown ? "-translate-y-full" : "translate-y-0",
       )}
@@ -36,7 +39,11 @@ const Navbar = () => {
           <span className="text-[#4daefd]">neurocoder</span>
           {"/>"}
         </h2>
-        {/* <AnimatedThemeToggler /> */}
+
+        <div className="flex gap-6 text-sm">
+          <LinkItem href="/">Home</LinkItem>
+          <LinkItem href="/projects">Projects</LinkItem>
+        </div>
       </div>
     </div>
   );
