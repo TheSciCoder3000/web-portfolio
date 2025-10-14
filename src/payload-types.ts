@@ -69,6 +69,7 @@ export interface Config {
   collections: {
     media: Media;
     projects: Project;
+    categories: Category;
     users: User;
     'payload-jobs': PayloadJob;
     'payload-locked-documents': PayloadLockedDocument;
@@ -79,6 +80,7 @@ export interface Config {
   collectionsSelect: {
     media: MediaSelect<false> | MediaSelect<true>;
     projects: ProjectsSelect<false> | ProjectsSelect<true>;
+    categories: CategoriesSelect<false> | CategoriesSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
     'payload-jobs': PayloadJobsSelect<false> | PayloadJobsSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
@@ -227,40 +229,34 @@ export interface Project {
   /**
    * Attach images from the Media collection
    */
-  medias?: (string | Media)[] | null;
+  images?: (string | Media)[] | null;
+  /**
+   * Choose applicable categories for the project
+   */
+  categories?: (string | Category)[] | null;
   /**
    * URL-friendly identifier for the project
    */
   slug: string;
-  layout?:
-    | (
-        | {
-            content?: {
-              root: {
-                type: string;
-                children: {
-                  type: any;
-                  version: number;
-                  [k: string]: unknown;
-                }[];
-                direction: ('ltr' | 'rtl') | null;
-                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-                indent: number;
-                version: number;
-              };
-              [k: string]: unknown;
-            } | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'sampleblock';
-          }
-        | ContentBlock
-        | MediaBlock
-      )[]
-    | null;
+  githubLink?: string | null;
+  previewLink?: string | null;
+  layout: (ContentBlock | MediaBlock)[];
   updatedAt: string;
   createdAt: string;
   _status?: ('draft' | 'published') | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "categories".
+ */
+export interface Category {
+  id: string;
+  name: string;
+  description: string;
+  bkgColor: string;
+  fontColor: string;
+  updatedAt: string;
+  createdAt: string;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -434,6 +430,10 @@ export interface PayloadLockedDocument {
         value: string | Project;
       } | null)
     | ({
+        relationTo: 'categories';
+        value: string | Category;
+      } | null)
+    | ({
         relationTo: 'users';
         value: string | User;
       } | null)
@@ -584,18 +584,14 @@ export interface MediaSelect<T extends boolean = true> {
 export interface ProjectsSelect<T extends boolean = true> {
   title?: T;
   description?: T;
-  medias?: T;
+  images?: T;
+  categories?: T;
   slug?: T;
+  githubLink?: T;
+  previewLink?: T;
   layout?:
     | T
     | {
-        sampleblock?:
-          | T
-          | {
-              content?: T;
-              id?: T;
-              blockName?: T;
-            };
         content?: T | ContentBlockSelect<T>;
         mediaBlock?: T | MediaBlockSelect<T>;
       };
@@ -626,6 +622,18 @@ export interface MediaBlockSelect<T extends boolean = true> {
   media?: T;
   id?: T;
   blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "categories_select".
+ */
+export interface CategoriesSelect<T extends boolean = true> {
+  name?: T;
+  description?: T;
+  bkgColor?: T;
+  fontColor?: T;
+  updatedAt?: T;
+  createdAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
