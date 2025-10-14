@@ -13,20 +13,14 @@ import {
 
 import { CodeBlock, CodeBlockProps } from "@/blocks/Code/Component";
 
-import type {
-  BannerBlock as BannerBlockProps,
-  CallToActionBlock as CTABlockProps,
-  MediaBlock as MediaBlockProps,
-} from "@/payload-types";
+import type { MediaBlock as MediaBlockProps } from "@/payload-types";
 import { BannerBlock } from "@/blocks/Banner/Component";
 import { CallToActionBlock } from "@/blocks/CallToAction/Component";
 import { cn } from "@/utilities/ui";
 
 type NodeTypes =
   | DefaultNodeTypes
-  | SerializedBlockNode<
-      CTABlockProps | MediaBlockProps | BannerBlockProps | CodeBlockProps
-    >;
+  | SerializedBlockNode<MediaBlockProps | CodeBlockProps>;
 
 const internalDocToHref = ({ linkNode }: { linkNode: SerializedLinkNode }) => {
   const { value, relationTo } = linkNode.fields.doc!;
@@ -43,9 +37,6 @@ const jsxConverters: JSXConvertersFunction<NodeTypes> = ({
   ...defaultConverters,
   ...LinkJSXConverter({ internalDocToHref }),
   blocks: {
-    banner: ({ node }) => (
-      <BannerBlock className="col-start-2 mb-4" {...node.fields} />
-    ),
     mediaBlock: ({ node }) => (
       <MediaBlock
         className="col-span-3 col-start-1"
@@ -57,7 +48,6 @@ const jsxConverters: JSXConvertersFunction<NodeTypes> = ({
       />
     ),
     code: ({ node }) => <CodeBlock className="col-start-2" {...node.fields} />,
-    cta: ({ node }) => <CallToActionBlock {...node.fields} />,
   },
 });
 
@@ -73,7 +63,7 @@ export default function RichText(props: Props) {
     <ConvertRichText
       converters={jsxConverters}
       className={cn(
-        "payload-richtext",
+        "payload-richtext [&>p]:mb-4",
         {
           container: enableGutter,
           "max-w-none": !enableGutter,
