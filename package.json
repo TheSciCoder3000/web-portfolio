@@ -23,6 +23,7 @@
   "dependencies": {
     "@formspree/react": "^3.0.0",
     "@gsap/react": "^2.1.2",
+    "@innovixx/payload-color-picker-field": "^2.0.2",
     "@next/third-parties": "15.5.4",
     "@payloadcms/db-mongodb": "^3.59.1",
     "@payloadcms/next": "^3.59.1",
