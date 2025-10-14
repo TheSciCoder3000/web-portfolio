@@ -1,4 +1,3 @@
-import { projects } from "@//lib/data";
 import React from "react";
 import ProjectItem from "./ProjectItem";
 import { getPayload } from "payload";

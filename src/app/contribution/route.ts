@@ -67,7 +67,7 @@ export async function GET() {
       );
 
     return Response.json({ weeks }, { status: 200 });
-  } catch (err) {
+  } catch {
     return Response.json(
       { error: "Failed to fetch contributions" },
       { status: 500 },

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { RefObject, useEffect, useRef, useState } from "react";
 
 const useObserver = (): [RefObject<HTMLDivElement | null>, boolean] => {

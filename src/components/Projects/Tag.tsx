@@ -5,7 +5,6 @@ import {
   HoverCardTrigger,
 } from "../ui/hover-card";
 import { Badge } from "../ui/badge";
-import { ITag } from "@//lib/data";
 import { Category } from "@/payload-types";
 
 const Tag: React.FC<Category> = ({

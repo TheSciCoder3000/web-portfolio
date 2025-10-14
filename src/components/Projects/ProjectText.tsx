@@ -7,7 +7,6 @@ import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
 import { Route } from "next";
 import { BiDesktop } from "react-icons/bi";
-import { IProject } from "@//lib/data";
 import { motion, stagger, Variants } from "motion/react";
 import { Project } from "@/payload-types";
 
