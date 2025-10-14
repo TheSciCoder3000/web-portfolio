@@ -13,7 +13,6 @@ interface ItemProps {
   item: Project;
 }
 const ProjectItem: React.FC<ItemProps> = ({ item }) => {
-  console.log(item.images);
   return (
     <div className="flex flex-col gap-12 lg:flex-row">
       <ItemInfo item={item} />
